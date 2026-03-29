@@ -1,50 +1,73 @@
-# 🏆 The Architect's Protocol (SOP)
-## AI-Human Collaborative Engineering — 2026 Master Edition
+# 🏆 AI-Human 协同开发：终极 SOP 模型 (2026 Master Edition)
 
 > [!IMPORTANT]
-> **Engineering Philosophy**: Shift from "AI Copilot" to "AI Agent Management". 
-> This protocol forces AI agents into a rigorous, auditable, and atomic software engineering lifecycle. 
-> Developed for L6+ Staff Engineer mindset to achieve 10x productivity without sacrificing quality.
+> **本协议的核心：** 让 AI 负责 90% 的体力活（设计、实现、自检、原子 Commit），让人类仅负责 10% 的核心决策（架构对齐、方案审核、Diff 审计）。
 
 ---
 
-## 🏛️ 1. Execution Pyramid (The Three Layers)
-
-This protocol解构 (deconstructs) complex development tasks into three auditable dimensions:
-
-### 1.1 Horizontal: Module Decoupling (Module Level)
-- **Logic**: Enforce **Phase 0 Contract Lock**. Before writing any implementation code, the AI must define API Stubs or Interface definitions.
-- **Purpose**: Ensure clear boundaries and zero semantic drift during multi-module collaboration.
-
-### 1.2 Vertical: Layered Progression (Layer Level)
-- **Logic**: Strictly follow the **Schema -> Logic -> Store -> UI** development order.
-- **Purpose**: Prevent business logic from being stacked directly in UI components, maintaining long-term maintainability.
-
-### 1.3 Micro: Atomic Audit (Atomic Level)
-- **Logic**: Single logic changes are strictly limited to **20 lines**.
-- **Purpose**: Minimize the cost of Diffs auditing. Without human confirmation (replying "1"), AI is prohibited from performing physical Git commits.
-
----
-
-## ⌨️ 2. Command Set & Collaboration Loop (Command Toolkit)
-
-| Command | Action | Collaboration Gate (The Gates) |
+## 👥 1. 协同权责表 (Operational Ownership)
+| 责任项 | AI 的职责 (自动化执行) | 人类的职责 (战略审计) |
 | :--- | :--- | :--- |
-| `/r` | **Research** | **[Gate 1]**: Output research summary, identify dependencies, wait for human confirmation. |
-| `/p` | **Plan** | **[Gate 2]**: Output step-by-step plan, lock implementation path, wait for human confirmation. |
-| `/e` | **Execute** | **[Atomic Audit Loop]**: Modify code -> Show Diffs -> Human confirms "1" -> Auto Commit. |
-| `/f` | **Flash** | **[Fast Track]**: Small UI tweaks only, skip documentation and apply directly. |
-| `/d` | **Debug** | **[Gate 3]**: Force evidence gathering and test reproduction, prohibit guessing. |
-| `/v` | **Verify** | **[Quality Gate]**: Run TSC/Linter/UI-Proof automation. |
-| `/c` | **Clean** | **[Final Cleanup]**: Destroy process Markdown docs, keep repo clean. |
+| **方案设计** | 自动识别模式、产出分阶段 Plan | 审核计划逻辑编号 (**Gate 2**) |
+| **原子实现** | 单一逻辑变更 (10-20行)、自动纠错 | 阅读 Diffs 确认并回复 **"1"** |
+| **故障排查** | **证据驱动**：注入 Log 取证 + 编写测试复现 | 提供运行日志与报错现场 (**Gate 3**) |
+| **版本管理** | 自动建分支、**审计通过后自动 Commit** | **Push 远程、由人类发起并合并 PR** |
 
 ---
 
-## 🛡️ 3. Red Lines (The Hard-Locks)
-
-1.  **Anti-Hallucination**: Prohibit the use of `TODO`, `...`, or placeholders. All code must be production-ready.
-2.  **Audit-First**: Any Shell command or Git operation requires explicit human permission (replying "1").
-3.  **No Logic in UI**: UI components must only be responsible for rendering and state-mapping; all algorithms must be abstracted into Logic layers.
+## 🏛️ 2. 工程架构深度对齐 (Engineering Excellence & Aesthetics)
+*   **SOLID/DRY 原则**：强制执行单一职责（SRP）与开闭原则（OCP）。严禁逻辑堆叠。
+*   **解耦协议**：UI 仅负责渲染，所有业务算法、数据变换必须抽离至 `Hooks` 或 `Services`。
+*   **模式发现权**：在 `/r` (研究阶段)，AI **必须**主动分析并建议设计模式（策略、工厂、单例等）。
 
 ---
-"AI doesn't lack intelligence; it lacks discipline. The Architect's Protocol provides that discipline."
+
+## 📐 3. 工程执行金字塔 (The Hierarchy of Execution)
+1.  **横向：模块解耦 (Module Level)**：强制执行 **Phase 0 契约锁**（先写 Stub 接口定义，全量类型通过后再编码）。
+2.  **纵向：分层迭进 (Layer Level)**：严格遵循 **Schema -> Logic -> Store -> UI** 顺序。
+3.  **末端：微型原子 (Atomic Level)**：
+    *   **单一原子任务**：一个原子任务（1.1, 1.3）仅限 **单一逻辑变更或单一 UI 功能块**。
+    *   **行数红线 (Web 适配版)**：
+        *   **纯逻辑 (JS/TS)**：严格限制在 20 行左右。
+        *   **模板 (HTML/Vue/CSS)**：允许放宽至 **1 个完整 UI 功能单元** (如新增一个 Modal 或 Table)，但严禁在同一 Commit 中混杂不同维度的逻辑修改。
+    *   **失败熔断器 (Two-Strike Rule)**：原子任务连续 2 次修复失败 -> `git reset --hard` 归位 -> 退回 `/r` 阶段重新归因分析。
+
+---
+
+## ⌨️ 4. 全量指令集与审计闸门 (The Audit-First Loop)
+**[红线]：复杂任务必须产出带编号文档。AI 必须在获得人类 “1” 后方可执行物理 Commit。**
+
+*   **`/r` (Research)**：**[闸门 1]**。产出编号化的 `research_summary.md`。必须包含依赖识别与设计模式建议。
+*   **`/p` (Plan)**：**[闸门 2]**。产出编号化的 `implementation_plan.md`。
+*   **审计流**：人类反馈（如 "1.2 这里漏了逻辑"） -> AI 更新文档 -> 人类回复 "1" -> 开启执行。
+*   **`/e` (Execute)**：原子审计循环。
+*   **动作**：改动代码 -> 展示 Diffs -> 展示自检存证 (TSC) -> **等待人类 "1" 后再提交 Git Commit**。
+*   **`/f` (Flash)**：**[极速通道]**。跳过过程文档直接改代码 + 自检 + 通过后物理提交。仅限 UI 样式/文案等小微改动。
+*   **`/d` (Debug)**：**[闸门 3]**。产出取证计划。**强制结构化 Log 注入（包含文件/函数/ID）+ 编写测试用例复现 Bug**。
+*   **`/v` (Verify)**：执行 **Tier 1-3 验证阶梯** (Linter -> Integration -> UI Proof 存证)。
+*   **`/c` (Clean)**：**[一键物理清理]**。合并 dev 之前销毁所有过程 Markdown 文档。
+*   **`/cp` (Checkpoint)**：随时汇总当前任务状态进度。
+
+---
+
+## 🔱 5. 专业 Git 协议与防御性机制 (Git & Safeguards)
+1.  **原子提交**：每一个 [原子项] 经人类审核后，AI 必须自动执行 Angular 规范语义 Commit。
+2.  **变更隔离**：严禁在同一个原子提交中混入两个不同的子项逻辑。
+3.  **冲突熔断 (Conflict)**：**[死命令]** 遇 Git 冲突必须停止执行，禁止 AI 擅自胡乱合并。AI 必须标记现场并移交人类。
+
+---
+
+## 🧹 6. 标准清理协议 (Cleanup Protocol)
+*   **时机**：需求分支验证通过，**合并至 dev 之前**。
+*   **命令**：
+    ```bash
+    rm research_summary.md implementation_plan.md task.md walkthrough.md
+    ```
+
+---
+
+## 🌐 7. 沟通语言规范 (Communication Protocol)
+*   **全量中文**：为确保架构理解与需求对齐的零偏差，AI 与人类的所有互动（包含方案设计、审计反馈、报错分析）**必须全量使用中文**。
+
+---
+> [🔑 核心口令]：/r 研究 | 编号审核 | /p 计划 | /e 执行 | /f 闪击 | /d [报错现象] | /c 清理
