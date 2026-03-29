@@ -4,6 +4,42 @@ export default defineConfig({
   title: "The Architect's Protocol",
   description: "AI-Human Collaborative Engineering — 2026 Master Edition",
   base: '/The-Architect-Protocol/',
+  
+  locales: {
+    root: {
+      label: '简体中文',
+      lang: 'zh-CN'
+    },
+    en: {
+      label: 'English',
+      lang: 'en-US',
+      link: '/en/',
+      themeConfig: {
+        nav: [
+          { text: 'Home', link: '/en/' },
+          { text: 'Protocol', link: '/en/SOP' },
+          { text: 'Usage', link: '/en/USAGE_EXAMPLE' }
+        ],
+        sidebar: [
+          {
+            text: 'Core System',
+            items: [
+              { text: 'SOP Protocol', link: '/en/SOP' },
+              { text: 'Usage Example', link: '/en/USAGE_EXAMPLE' },
+              { text: 'Universal Prompts', link: '/en/PROMPTS' }
+            ]
+          },
+          {
+            text: 'Community',
+            items: [
+              { text: 'Contributing', link: '/en/CONTRIBUTING' }
+            ]
+          }
+        ]
+      }
+    }
+  },
+
   themeConfig: {
     logo: '/hero-banner.png',
     nav: [

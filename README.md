@@ -12,6 +12,7 @@
 > **Engineering Philosophy**: Shift from "AI Copilot" to "AI Agent Management". 
 > This protocol forces AI agents into a rigorous, auditable, and atomic software engineering lifecycle. 
 > Developed for L6+ Staff Engineer mindset to achieve 10x productivity without sacrificing quality.
+> **[English Version Available Here](./en/SOP.md)** | **[Official Documentation Site](https://wangjiajiajohn.github.io/The-Architect-Protocol/)**
 
 ---
 
