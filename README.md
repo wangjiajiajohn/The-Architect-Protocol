@@ -1,63 +1,79 @@
 ![The Architect's Protocol](./public/hero-banner.png)
 
-# 🏆 The Architect's Protocol (SOP)
-## AI-Human 协作工程方案 — 2026 大师版
+# 🏆 The Architect's Protocol
+## 人机协作工程宣言 — 2026 大师版 (The Engineering Manifesto)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 [![Documentation](https://img.shields.io/badge/Docs-Official-blue.svg)](https://wangjiajiajohn.github.io/The-Architect-Protocol/)
-[![English Version](https://img.shields.io/badge/Language-English-blue.svg)](./en/SOP.md)
 
 > [!IMPORTANT]
-> **工程哲学**：从“AI 助手”向“AI 经纪人管理”转型。
-> 本协议旨在通过硬性的 **工程纪律** 与 **多维治理**，将 AI 强制纳入资深架构师的研发生命周期。在获得 10x 生产力的同时，确保工程健康与上下文效率。
+> **核心哲学**：AI 并不缺乏智慧，它缺乏的是纪律。
+> 本协议并非简单的提示词集合，而是一套**硬性工程纪律**。它通过物理约束，将 AI 强制纳入资深架构师（Staff Engineer+）的研发逻辑中，旨在解决 AI 时代下“高生产力”与“低工程质量”的尖锐冲突。
 
 ---
 
-## 💎 1. 多维挑战矩阵 (The multi-dimensional Challenges)
+## 🏛️ 一、 工程学背景：为什么需要这套协议？
 
-我们不仅仅在修补 AI 的 Bug，我们是在解决 **“人-机-流程-效能”** 四位一体的工程腐烂问题：
+在 AI 参与的软件工程中，传统的研发模式正面临前所未有的**“架构坍塌”**风险：
 
-### 🤖 AI 维度：对抗本能 (Combat AI Instincts)
--   **幻觉占位**：AI 习惯性留下 `// TODO: Implement this`。
--   **逻辑堆叠**：AI 倾向于将业务算法直接塞进 UI 组件（如 `page.tsx`）。
--   **治理方案**：**契约硬锁 (Contract Lock)**。在定义接口前禁止编写逻辑，将 AI 从“聊天者”强制降维为“工程执行单元”。
+1.  **审计坍塌**：AI 生成代码的低成本，导致人类 Reviewer 进入“扫读模式”，大量隐藏 Bug 绕过人类直觉。
+2.  **契约蒸发**：AI 倾向于自顶向下的“全连通”开发，导致底层数据结构与顶层 UI 逻辑深度耦合，接口边界在迭代中迅速蒸发。
+3.  **认知漂移**：随对话增长，Context Window 填充了大量废料，导致 AI 逻辑信噪比下降，产生逻辑漂移。
 
-### 👨‍💻 开发者维度：消除审计焦虑 (Auditor Anxiety)
--   **审计疲劳**：面对 200 行 Diff 时的“无能为力”感。
--   **治理方案**：**20 行原子阈值**。将人类的审计压力控制在秒级理解范围内，确保每一行代码都经过“真实的”人类眼眸校验。
-
-### 🌀 流程维度：对抗架构漂移 (Architectural Drift)
--   **熵增效应**：由于缺乏标准化，多人/多 AI 协作导致代码分层名存实亡。
--   **治理方案**：**全生命周期标准化 (R-P-E-V-C)**。统一指令集确保无论哪个 AI 或人类接手，输出的质量与路径都是百分之百可预测的。
-
-### ⚡ 效能维度：上下文清理与 Token 节约 (Token Hygiene)
--   **Context 膨胀 (核心痛点)**：冗余的调研、临时计划不断占据对话空间，导致 AI 逻辑混乱、成本飞升。
--   **治理方案**：**`/c` 上下文垃圾回收 (Context GC)**。任务结束后强制销毁中间 Markdown 文件，通过频繁重置“上下文清洁度”来节省 Token 消耗，并将 AI 的幻觉率降至最低。
+**本协议通过以下四项核心工程实践，建立弹性且严谨的治理体系：**
 
 ---
 
-## 🏛️ 2. 执行金字塔 (The Execution Pyramid)
+## 💎 二、 四大核心实践 (The Core Practices)
 
-1.  **横向：模块解耦 (Module Level)**
-    - **逻辑**：Phase 0 契约锁。Interface 确认前禁止 implementation。
-2.  **纵向：分层治理 (Layer Level)**
-    - **逻辑**：强制 **Schema -> Logic -> Store -> UI** 依赖顺序。
-3.  **微观：原子审计 (Atomic Level)**
-    - **逻辑**：单次变更 < 20 行，回复 "1" 才准物理提交。
+### 1. 原子化审计 (Atomic Auditing)
+*   **工程逻辑**：单次逻辑变更严格限制在 **20 行** 以内。
+*   **解决问题**：解决**认知过载**。
+*   **工程价值**：将“大规模集成风险”离散化。20 行是人类能瞬时理解、精准校验的认知极限。它确保每一行 AI 代码都经过了真实的“人类眼眸校验”，而非盲目的 Apply。
+
+### 2. Phase 0 契约锁 (Contract-First)
+*   **工程逻辑**：严禁在定义 Interface / API Stub 之前编写任何实现代码。
+*   **解决问题**：解决**语义偏差与分层破坏**。
+*   **工程价值**：物理隔离“做什么”和“怎么做”。契约锁是大型模块化工程的“交通准则”，它确保了无论 AI 后续如何重构实现，模块的边界始终保持刚性。
+
+### 3. 三层执行金字塔 (Layered Governance)
+*   **工程逻辑**：强制遵循 **Schema -> Logic -> Store -> UI** 的单向依赖。
+*   **解决问题**：解决**逻辑堆叠 (Spaghetti Code)**。
+*   **工程价值**：实现业务逻辑的“宿主无关性”。通过工程纪律禁止 AI 在 `page.tsx` 中编写核心算法。这意味着你的业务逻辑是纯粹的、可单独测试的，且重构成本极低。
+
+### 4. 上下文垃圾回收 (Context Garbage Collection)
+*   **工程逻辑**：通过指令 `/c` 物理销毁研发过程中的中间文档（Research/Plan）。
+*   **解决问题**：解决 **Token 膨胀与逻辑幻觉**。
+*   **工程价值**：维护“认知信噪比”。AI 的稳定性与 Context 的清洁度成正比。通过定期重置上下文，我们可以用更少的 Token、更低的成本，获得更清晰、更准确的 AI 指令推演。
 
 ---
 
-## ⌨️ 3. 指令集 (Command Toolkit)
+## ⌨️ 三、 指令集：人机协作的统一接口
 
-| 指令 | 动作 | 维度价值 |
+本协议定义了五项标准动作，形成完整的软件开发生命周期 (SDLC)：
+
+| 指令 | 动作 | 工程使命 |
 | :--- | :--- | :--- |
-| `/r` | **调研** | **确定性**：消除物理依赖猜想。 |
-| `/p` | **计划** | **透明性**：锁定实现成本，拒绝博弈。 |
-| `/e` | **执行** | **高频审计**：小步快跑，确保代码真实可读。 |
-| `/d` | **调试** | **证据驱动**：禁止猜测，强制日志定位逻辑。 |
-| `/c` | **清理** | **效能治理**：销毁冗余 Context，节约 Token，重塑对话清晰度。 |
+| `/r` | **Research** | **调研**：消除物理依赖猜想，确定演进边界。 |
+| `/p` | **Plan** | **博弈**：在产生代码前，先行对齐实现成本与物理路径。 |
+| `/e` | **Execute** | **原子交付**：高频、小步、受控的物理修改。 |
+| `/d` | **Debug** | **证据还原**：禁止猜测，通过日志与复现建立诊断依据。 |
+| `/c` | **Clean** | **效能重置**：销毁冗余信息，维持 AI 的逻辑一致性。 |
 
 ---
 
-"AI 不缺智慧，缺的是像工业流水线一样的纪律。本协议即是这种纪律的物理实现。"
+## 📂 四、 仓库结构与集成
+
+```text
+.
+├── 📄 SOP.md             # 详细操作指南 (Operational Manual)
+├── 📄 .cursorrules       # IDE 侧的刚性约束 (Physical Hard-Locks)
+├── 📂 templates/         # 标准化文档模板
+├── 📂 zh / 📂 en          # 多语言支持
+└── 📄 PROMPTS.md         # 全平台初始化提示词
+```
+
+---
+
+"AI 不会毁掉软件工程，缺乏纪律的 AI 使用才会。The Architect's Protocol 正是回归工程本质的纪律之笔。"
