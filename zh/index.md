@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: 立即阅读 SOP
-      link: /SOP
+      link: /zh/SOP
     - theme: alt
       text: 查看实战案例
-      link: /USAGE_EXAMPLE
+      link: /zh/USAGE_EXAMPLE
 
 features:
   - icon: 🛡️

@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: Read SOP
-      link: /en/SOP
+      link: /SOP
     - theme: alt
       text: View Usage Example
-      link: /en/USAGE_EXAMPLE
+      link: /USAGE_EXAMPLE
 
 features:
   - icon: 🛡️
