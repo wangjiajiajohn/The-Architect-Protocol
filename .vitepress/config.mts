@@ -7,32 +7,56 @@ export default defineConfig({
   
   locales: {
     root: {
-      label: '简体中文',
-      lang: 'zh-CN'
-    },
-    en: {
       label: 'English',
       lang: 'en-US',
-      link: '/en/',
+      // Root is English
       themeConfig: {
         nav: [
-          { text: 'Home', link: '/en/' },
-          { text: 'Protocol', link: '/en/SOP' },
-          { text: 'Usage', link: '/en/USAGE_EXAMPLE' }
+          { text: 'Home', link: '/' },
+          { text: 'Protocol', link: '/SOP' },
+          { text: 'Usage', link: '/USAGE_EXAMPLE' }
         ],
         sidebar: [
           {
             text: 'Core System',
             items: [
-              { text: 'SOP Protocol', link: '/en/SOP' },
-              { text: 'Usage Example', link: '/en/USAGE_EXAMPLE' },
-              { text: 'Universal Prompts', link: '/en/PROMPTS' }
+              { text: 'SOP Protocol', link: '/SOP' },
+              { text: 'Usage Example', link: '/USAGE_EXAMPLE' },
+              { text: 'Universal Prompts', link: '/PROMPTS' }
             ]
           },
           {
             text: 'Community',
             items: [
-              { text: 'Contributing', link: '/en/CONTRIBUTING' }
+              { text: 'Contributing', link: '/CONTRIBUTING' }
+            ]
+          }
+        ]
+      }
+    },
+    zh: {
+      label: '简体中文',
+      lang: 'zh-CN',
+      link: '/zh/',
+      themeConfig: {
+        nav: [
+          { text: '首页', link: '/zh/' },
+          { text: 'SOP 协议', link: '/zh/SOP' },
+          { text: '实战演示', link: '/zh/USAGE_EXAMPLE' }
+        ],
+        sidebar: [
+          {
+            text: '核心体系',
+            items: [
+              { text: 'SOP 核心协议', link: '/zh/SOP' },
+              { text: '实战演示', link: '/zh/USAGE_EXAMPLE' },
+              { text: '全平台提示词', link: '/zh/PROMPTS' }
+            ]
+          },
+          {
+            text: '社区与贡献',
+            items: [
+              { text: '贡献指南', link: '/zh/CONTRIBUTING' }
             ]
           }
         ]
@@ -42,27 +66,6 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/hero-banner.png',
-    nav: [
-      { text: '首页', link: '/' },
-      { text: 'SOP 协议', link: '/SOP' },
-      { text: '实战演示', link: '/USAGE_EXAMPLE' }
-    ],
-    sidebar: [
-      {
-        text: '核心体系',
-        items: [
-          { text: 'SOP 核心协议', link: '/SOP' },
-          { text: '实战演示', link: '/USAGE_EXAMPLE' },
-          { text: '全平台提示词', link: '/PROMPTS' }
-        ]
-      },
-      {
-        text: '社区与贡献',
-        items: [
-          { text: '贡献指南', link: '/CONTRIBUTING' }
-        ]
-      }
-    ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/wangjiajiajohn/The-Architect-Protocol' }
     ],

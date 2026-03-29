@@ -4,29 +4,29 @@ layout: home
 hero:
   name: The Architect's Protocol
   text: AI-Human Collaborative Engineering
-  tagline: 2026 Master Edition — 为 AI 时代量身定制的工程纪律
+  tagline: 2026 Master Edition — Engineering Discipline for the AI Era
   image:
     src: /hero-banner.png
     alt: The Architect's Protocol
   actions:
     - theme: brand
-      text: 立即阅读 SOP
-      link: /SOP
+      text: Read SOP
+      link: /en/SOP
     - theme: alt
-      text: 查看实战案例
-      link: /USAGE_EXAMPLE
+      text: View Usage Example
+      link: /en/USAGE_EXAMPLE
 
 features:
   - icon: 🛡️
-    title: 原子审计
-    details: 强制原子化提交 (10-20行)，确保每一行 AI 代码都经过人类审计。
+    title: Atomic Audit
+    details: Force atomic commits (10-20 lines), ensuring every line of AI code is audited by a human.
   - icon: 💎
-    title: 工程卓越
-    details: 深度对齐 SOLID/DRY 原则，UI 与业务逻辑彻底解耦。
+    title: Engineering Excellence
+    details: Deep alignment with SOLID/DRY principles, completely decoupling UI from business logic.
   - icon: 🚀
-    title: 10x 生产力
-    details: AI 负责 90% 的执行，人类负责 10% 的高杠杆决策与审计。
+    title: 10x Productivity
+    details: AI handles 90% of execution; Human handles 10% of high-leverage decision making and auditing.
   - icon: 📜
-    title: 契约优先
-    details: 先定义接口 Stub，后编写具体实现，消除 80% 的集成 Bug。
+    title: Contract-First
+    details: Define API Stubs first, then implement logic, eliminating 80% of integration bugs.
 ---
