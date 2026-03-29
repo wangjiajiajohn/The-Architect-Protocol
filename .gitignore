@@ -45,3 +45,6 @@ next-env.d.ts
 # AI-Human Collaborative SOP & Rules
 AI_HUMAN_SOP_MASTER.md
 .cursorrules
+node_modules
+.vitepress/dist
+.vitepress/cache

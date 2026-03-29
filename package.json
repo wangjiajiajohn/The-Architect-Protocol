@@ -1,0 +1,22 @@
+{
+  "name": "the-architect-protocol",
+  "version": "1.0.0",
+  "description": "AI-Human Collaborative Engineering — 2026 Master Edition",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "keywords": [
+    "SOP",
+    "AI",
+    "Engineering",
+    "Collaboration"
+  ],
+  "author": "Jiajia Wang",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  }
+}

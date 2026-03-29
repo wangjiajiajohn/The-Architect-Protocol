@@ -3,6 +3,7 @@
 # 🏆 The Architect's Protocol (SOP)
 ## AI-Human Collaborative Engineering — 2026 Master Edition
 
+[![Documentation](https://img.shields.io/badge/Docs-Official-blue.svg)](https://wangjiajiajohn.github.io/The-Architect-Protocol/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 [![AI Engineering](https://img.shields.io/badge/AI-Engineering-blueviolet.svg)](#)
