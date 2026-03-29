@@ -4,29 +4,29 @@ layout: home
 hero:
   name: The Architect's Protocol
   text: AI-Human Collaborative Engineering
-  tagline: 2026 Master Edition — Engineering Discipline for the AI Era
+  tagline: 2026 Master Edition — AI doesn't lack intelligence; it lacks discipline.
   image:
     src: /hero-banner.png
     alt: The Architect's Protocol
   actions:
     - theme: brand
-      text: Read SOP
+      text: Start Engineering Manifesto
       link: /en/SOP
     - theme: alt
-      text: View Usage Example
+      text: What is SOP?
       link: /en/USAGE_EXAMPLE
 
 features:
-  - icon: 🧠
-    title: Combat AI Instincts
-    details: Force Interface definitions BEFORE AI generated code implementations. Demote AI from scatter chatter to precise execution unit.
-  - icon: 🔬
-    title: Stop Audit Anxiety
-    details: Force 20-line atomic changes. Keep audit costs within second-level comprehension. Ensure every change is human-verified.
-  - icon: ⚡
-    title: Context Hygiene
-    details: Original /c command for Garbage Collection. Reset context clarity, save Token costs, and reduce AI-drifting.
-  - icon: 📜
-    title: Uniform Lifecycle
-    details: Universal R-P-E-V-C commands. Ensure architectural paths & implementation details are 100% predictable regardless of the user.
+  - icon: 🛡️
+    title: Don't Let AI Run Wild
+    details: Force 20-line atomic change limits. Refuse to leave TODOs in the code, and ensure every AI change is actually audited by a human.
+  - icon: 💎
+    title: End the Spaghetti Heap
+    details: Force layered architecture. UI is just skin; Logic is the bone. Pure business logic ensures a nightmare-free refactor.
+  - icon: 🚀
+    title: Direct Like a Director
+    details: Split tasks into Research-Plan-Execute stages. AI is no longer a random chatter but a controlled, industrial assembly unit.
+  - icon: 🧹
+    title: Keep Context Hygiene
+    details: Original /c command for Context Garbage Collection. Periodically reset clarity, save Token costs, and keep AI at its peak logic.
 ---

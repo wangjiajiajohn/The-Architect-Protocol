@@ -1,62 +1,72 @@
 ![The Architect's Protocol](../public/hero-banner.png)
 
 # 🏆 The Architect's Protocol
-## The Engineering Manifesto — 2026 Master Edition
+## Human-AI Survival Guide: How to Stop Building "Spaghetti Code" with AI
 
 > [!IMPORTANT]
-> **Core Philosophy**: AI doesn't lack intelligence; it lacks discipline.
-> This protocol is not a collection of prompts; it's a set of **Rigid Engineering Disciplines**. It physically constrains AI agents into a Staff Architect-level workflow to resolve the conflict between high productivity and crumbling engineering quality.
+> **One-Sentence Core**: This isn't just about teaching AI to code; it's about giving you the "Golden Reins."
+> We use a set of **Rigid Disciplines** to turn AI from an "impulsive executor" into a "precise engineering assembler."
 
 ---
 
-## 🏛️ 1. Engineering Background: Why This Manual?
+## 🏗️ 1. The Reality: We are on the Brink of "Engineering Collapse"
 
-In AI-integrated software development, traditional workflows face unprecedented **"Architectural Collapse"**:
+### Before: The Craftsmanship Era
+We built code like carpenters, one brick at a time. It was slow, but every logic was in our heads. The architecture grew like a tree.
 
-1.  **Audit Collapse**: The low cost of AI-generated code leads to the "Skim and Apply" syndrome, where bugs bypass human intuition.
-2.  **Contract Evaporation**: AI tends towards top-down "fully-connected" development, causing tight coupling and evaporation of interface boundaries.
-3.  **Cognitive Drift**: As conversations grow, the Context Window fills with draft waste, lowering the signal-to-noise ratio and causing logic drift.
-
-**The Architect's Protocol establishes a resilient yet rigorous governance system through four core practices:**
-
----
-
-## 💎 2. The Core Engineering Practices
-
-### 1. Atomic Auditing
-*   **Engineering Rationale**: Limit single logic changes to **20 lines**.
-*   **The Problem**: Cognitive Overload.
-*   **The Value**: Discretizing "Integration Risk". 20 lines is the cognitive limit for precise human verification. It ensures every line of AI code is actually verified by a human eye, not blindly applied.
-
-### 2. Phase 0 Contract Lock (Contract-First)
-*   **Engineering Rationale**: Strictly prohibit implementation code before finalizing Interface / API Stubs.
-*   **The Problem**: Semantic Deviation & Layer Violation.
-*   **The Value**: Physically isolating "What" from "How". The Contract Lock is the "Traffic Rule" for modular systems, ensuring boundaries remain rigid regardless of implementation adjustments.
-
-### 3. Three-Layer Execution Pyramid (Layered Governance)
-*   **Engineering Rationale**: Force a unidirectional **Schema -> Logic -> Store -> UI** dependency chain.
-*   **The Problem**: Logic Stacking (Spaghetti Code).
-*   **The Value**: Host-independent business logic. By prohibiting AI from writing algorithms in UI files, your business logic remains pure, separately testable, and cheap to refactor.
-
-### 4. Context Garbage Collection (Context GC)
-*   **Engineering Rationale**: Use the `/c` command to physically destroy intermediate docs (Research/Plan).
-*   **The Problem**: Context Inflation & Logic Hallucination.
-*   **The Value**: Signal-to-Noise Ratio (SNR). AI stability is proportional to Context Hygiene. Periodically resetting the context window results in cleaner logic and lower Token costs.
+### Now: The High-Speed Era
+With AI, it's like we've hired a team of **"Tireless, Knowledgeable, but Extremely Impulsive" Interns**.
+They can lay 10 miles of track in a second, but they:
+- **Lack Responsibility**: They leave `// TODO` everywhere and run away.
+- **Over-Confidence**: They stack 100 features into one file just to "make it work."
+- **Digging Pits**: To meet today's deadline, they sacrifice the next 3 years of your project's maintenance life.
 
 ---
 
-## ⌨️ 3. The Command Toolkit: A Uniform Interface
+## 💔 2. The Fatal Problem: Humans and AI are both making mistakes
 
-Standardizing the Software Development Lifecycle (SDLC):
+### AI's Flaws
+1.  **Logic Stacking**: They love to bundle database calls, logic analysis, and UI styles together into a mess.
+2.  **Placeholder Hallucination**: During refactoring, they might quietly delete 50 lines of core logic and leave you with "// implement later."
 
-| Command | Action | Engineering Mission |
+### Human's Flaws
+1.  **Audit Fatigue**: AI throws a 200-line change at you. You glance at it, feel it looks okay, and hit "Apply." **This is where the spaghetti begins.**
+2.  **Loss of Control**: You start fearing refactoring because you can no longer understand the black-box logic the AI has nested.
+
+---
+
+## 🛡️ 3. Our Solution: A "Collaborative Contract"
+
+**The Architect's Protocol** forces you and the AI to follow four core laws:
+
+### 🧱 Law 1: Atomic Auditing (Don't change too much at once!)
+*   **The Rule**: Never modify more than **20 lines** per commit.
+*   **The Logic**: AI must take small steps. 20 lines is the human "cognitive limit" for instant verification. Ensure you actually UNDERSTAND every line before hitting "Apply."
+
+### 🔌 Law 2: Contract-First (Draw the blueprints before building!)
+*   **The Rule**: Do not write implementation code until the Interface (API Stub) is finalized.
+*   **The Logic**: Rules before work. This prevents the AI from tangling UI and logic into a knot.
+
+### 🏗️ Law 3: Three-Layer Pyramid (Keep skin and bone separate!)
+*   **The Rule**: Logic belongs in the Logic layer; display belongs in the UI layer.
+*   **The Logic**: Pure business logic. This way, if you want to change the "skin" of your App one day, you don't have to touch a single line of business code.
+
+### 🧹 Law 4: Context GC (Clean the whiteboard, save Tokens!)
+*   **The Rule**: Immediately use `/c` to delete outdated research and plans.
+*   **The Logic**: **"Clear the whiteboard."** AI memory (Context) is limited. Too much noise makes it drift. Periodic cleaning saves you money (Tokens) and keeps the AI's logic sharp.
+
+---
+
+## ⌨️ 4. The Toolkit: Controlling the Industrial Pipeline
+
+| Command | Purpose | Subtext |
 | :--- | :--- | :--- |
-| `/r` | **Research** | **Determinism**: Eliminate dependency guessing & define boundaries. |
-| `/p` | **Plan** | **Negotiation**: Align on implementation costs & paths before execution. |
-| `/e` | **Execute** | **Atomic Delivery**: High-frequency, small-step, controlled changes. |
-| `/d` | **Debug** | **Evidence-Driven**: No guessing; use log injection & reproduction logs. |
-| `/c` | **Clean** | **Efficiency Reset**: Destroy redundant waste to maintain AI clarity. |
+| `/r` | **Research** | Don't guess. Find the foundations first. |
+| `/p` | **Plan** | Show me the blueprints and the cost before we start. |
+| `/e` | **Execute** | Following the blueprint, lay these 20 bricks now. |
+| `/d` | **Debug** | Stop guessing. Go get the logs and find the evidence. |
+| `/c` | **Clean** | Task done. Empty the wastebasket so we can start fresh. |
 
 ---
 
-"AI will not destroy software engineering; AI usage without discipline will. The Architect's Protocol is the pen of discipline."
+"AI will not destroy software engineering; using AI **without thinking** will. This protocol is the pen you use to take back control."
