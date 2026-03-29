@@ -6,7 +6,7 @@ hero:
   text: AI-Human Collaborative Engineering
   tagline: 2026 Master Edition — 为 AI 时代量身定制的工程纪律
   image:
-    src: /assets/hero-banner.png
+    src: /hero-banner.png
     alt: The Architect's Protocol
   actions:
     - theme: brand
