@@ -13,20 +13,20 @@ hero:
       text: 立即阅读 SOP
       link: /SOP
     - theme: alt
-      text: 查看实战案例
+      text: 查看实战演示
       link: /USAGE_EXAMPLE
 
 features:
   - icon: 🛡️
-    title: 原子审计
-    details: 强制原子化提交 (10-20行)，确保每一行 AI 代码都经过人类审计。
+    title: 拒绝审计疲劳
+    details: 强制 20 行原子化提交，让每一行 AI 代码都被人类真正“看清楚”，杜绝黑盒 BUG 流入生产环境。
   - icon: 💎
-    title: 工程卓越
-    details: 深度对齐 SOLID/DRY 原则，UI 与业务逻辑彻底解耦。
+    title: 终结逻辑堆叠
+    details: 强制 Schema -> Logic -> UI 的单向依赖，禁止 AI 在视图层堆砌业务逻辑，确保工程长久可维护。
   - icon: 🚀
-    title: 10x 生产力
-    details: AI 负责 90% 的执行，人类负责 10% 的高杠杆决策与审计。
+    title: 工业化生产线
+    details: 将开发任务拆解为 Research-Plan-Execute 标准环节，AI 不再是随意的聊天者，而是精确的执行单元。
   - icon: 📜
-    title: 契约优先
-    details: 先定义接口 Stub，后编写具体实现，消除 80% 的集成 Bug。
+    title: 契约优先驱动
+    details: 先定义接口 Stub，再实现逻辑细节。先行博弈架构边界，消除 80% 的模块集成冲突。
 ---

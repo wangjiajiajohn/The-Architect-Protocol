@@ -11,22 +11,22 @@ hero:
   actions:
     - theme: brand
       text: Read SOP
-      link: /SOP
+      link: /en/SOP
     - theme: alt
       text: View Usage Example
-      link: /USAGE_EXAMPLE
+      link: /en/USAGE_EXAMPLE
 
 features:
   - icon: 🛡️
-    title: Atomic Audit
-    details: Force atomic commits (10-20 lines), ensuring every line of AI code is audited by a human.
+    title: Stop Audit Fatigue
+    details: Force 20-line atomic commits. Ensure every AI change is clearly visible to humans, preventing black-box bugs.
   - icon: 💎
-    title: Engineering Excellence
-    details: Deep alignment with SOLID/DRY principles, completely decoupling UI from business logic.
+    title: End Logic Stacking
+    details: Force Schema -> Logic -> UI dependency. Prohibit AI from bundling business logic in view layers for long-term health.
   - icon: 🚀
-    title: 10x Productivity
-    details: AI handles 90% of execution; Human handles 10% of high-leverage decision making and auditing.
+    title: Industrial Pipeline
+    details: Split development into Research-Plan-Execute stages. AI is no longer a random chatter but a precise execution unit.
   - icon: 📜
-    title: Contract-First
-    details: Define API Stubs first, then implement logic, eliminating 80% of integration bugs.
+    title: Contract-Driven
+    details: Define API Stubs first. Negotiate architectural boundaries beforehand to eliminate 80% of integration conflicts.
 ---
