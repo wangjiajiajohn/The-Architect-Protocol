@@ -4,47 +4,53 @@
 > [!IMPORTANT]
 > **Engineering Philosophy**: Shift from "AI Copilot" to "AI Agent Management". 
 > This protocol forces AI agents into a rigorous, auditable, and atomic software engineering lifecycle. 
-> Developed for L6+ Staff Engineer mindset to achieve 10x productivity without sacrificing engineering integrity.
+> Developed for L6+ Staff Engineer mindset to achieve 10x productivity while maintaining human-level code integrity.
 
 ---
 
-## 💎 1. Empathy: What Problems Do We Solve?
+## 💎 1. Multi-Dimensional Challenge Matrix
 
-### 💔 AI Smells (The Chaos)
--   **Audit Fatigue**: AI modifies 200 lines across 10 files. You scan it, feel "it's okay", hit Apply, and 2 hours later, production crashes.
--   **Logic Stacking**: AI lazily puts DB logic, auth, and complex algorithms directly into the UI layer (like `page.tsx`). In 3 months, your project becomes an unmaintainable "spaghetti pile".
--   **Placeholder Hallucination**: During refactoring, AI leaves `// TODO: Implement this` and disappears, leaving you debugging ghost errors.
+We don't just fix AI bugs; we solve the **"AI-Human-Process-Efficiency"** engineering rot:
 
-### 🏗️ Engineering Decay (Lack of Standards)
--   **Architectural Drift**: Without hard-locks, every developer (or AI) follows a different style. Modularity dissolves and logic leaks everywhere.
--   **The Death of Refactoring**: Since UI is tightly coupled with logic, trying to fix a feature breaks the whole module. You end up with "fear of change".
--   **Unpredictable Delivery**: Without a standardized SOP, the same task produces different structural qualities every time.
+### 🤖 AI Dimension: Combat Instincts
+-   **Problem**: AI naturally generates placeholders or stacks logic in UI layers to feel "faster".
+-   **Governance**: **Contract Lock**. Prohibit coding implementation before finalizing the Interface boundary.
+
+### 👨‍💻 Developer Dimension: Reduce Audit Anxiety
+-   **Problem**: High-volume Diffs cause fatigue, leading to "skim and apply" syndrome.
+-   **Governance**: **20-Line Atomic Threshold**. Keep audit overhead within second-level comprehension.
+
+### 🌀 Process Dimension: Combat Architectural Drift
+-   **Problem**: Without standards, every addition by an AI or human slowly erodes modularity.
+-   **Governance**: **Standardized Lifecycle (R-P-E-V-C)**. Ensure architectural paths are 100% predictable.
+
+### ⚡ Efficiency Dimension: Context Hygiene & Token Savings
+-   **Problem (The Core)**: Redundant research/planning files bloat the context window, causing AI logic drift and skyrocketing costs.
+-   **Governance**: **`/c` Context Garbage Collection (GC)**. Force-destroy intermediate documents after tasks. This resets "Context Hygiene", significantly **saves Tokens**, and minimizes hallucination.
 
 ---
 
 ## 🏛️ 2. The Solution: Execution Pyramid & Hard-Locks
 
-The core is **deconstructing complex development into three auditable dimensions**:
-
 1.  **Horizontal: Module Decoupling (Module Level)**
-    - **Policy**: Enforce **Phase 0 Contract Lock**. Prohibit coding any logic before finalizing API Stubs or Interfaces.
+    - **Policy**: Phase 0 Contract Lock. Interface stubs must be fixed before implementation.
 2.  **Vertical: Layered Governance (Layer Level)**
-    - **Policy**: Strictly force **Schema -> Logic -> Store -> UI** dependency order. UI is just the "skin" of the Logic.
+    - **Policy**: Strictly force **Schema -> Logic -> Store -> UI** dependency order.
 3.  **Micro: Atomic Audit (Atomic Level)**
-    - **Policy**: Limit each logic change to **20 lines**. Prohibit physical Git commits without explicit human approval ("1").
+    - **Policy**: Limit each change to **20 lines**. Prohibit commits without human approval ("1").
 
 ---
 
-## ⌨️ 3. Command Set: Controlling the Production Line
+## ⌨️ 3. Command Set: Controlled Production
 
-| Command | Action | Key Value |
+| Command | Action | Dimension Value |
 | :--- | :--- | :--- |
-| `/r` | **Research** | **Determinism**: Identify dependencies & boundaries FIRST. |
-| `/p` | **Plan** | **Transparency**: Negotiate the implementation path BEFORE execution. |
-| `/e` | **Execute** | **Confidence**: Small, atomic steps that make auditing effortless. |
+| `/r` | **Research** | **Determinism**: Eliminate dependency guessing. |
+| `/p` | **Plan** | **Transparency**: Negotiate costs before spending Tokens. |
+| `/e` | **Execute** | **Confidence**: Atomic steps that make auditing effortless. |
 | `/d` | **Debug** | **Evidence-Driven**: Log Injection -> Reproduce -> Logical Fix. |
-| `/v` | **Verify** | **Closing the Loop**: TSC / Linter / UI-Proof automation. |
+| `/c` | **Clean** | **Efficiency**: Context GC to save Tokens and reset AI clarity. |
 
 ---
 
-"AI doesn't lack intelligence; it lacks discipline. This protocol is the physical implementation of that discipline."
+"AI has intelligence; it lacks discipline. This protocol provides the physical implementation of that discipline."

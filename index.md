@@ -17,16 +17,16 @@ hero:
       link: /USAGE_EXAMPLE
 
 features:
-  - icon: 🛡️
-    title: 拒绝审计疲劳
-    details: 强制 20 行原子化提交，让每一行 AI 代码都被人类真正“看清楚”，杜绝黑盒 BUG 流入生产环境。
-  - icon: 💎
-    title: 终结逻辑堆叠
-    details: 强制 Schema -> Logic -> UI 的单向依赖，禁止 AI 在视图层堆砌业务逻辑，确保工程长久可维护。
-  - icon: 🚀
-    title: 工业化生产线
-    details: 将开发任务拆解为 Research-Plan-Execute 标准环节，AI 不再是随意的聊天者，而是精确的执行单元。
+  - icon: 🧠
+    title: 对抗 AI 本能
+    details: 通过“契约硬锁”强制 AI 在接口定案前禁止产生实现代码，将其从无节制的聊天者降维为精确执行单元。
+  - icon: 🔬
+    title: 消除审计焦虑
+    details: 严格 20 行原子变更阈值。将审计压力控制在秒级理解范围内，确保每一行代码都经过真实的“人类校验”。
+  - icon: ⚡
+    title: 上下文垃圾回收
+    details: 独创 /c 指令销毁冗余调研与计划文档。强制重置上下文清洁度，显著节约 Token 消耗，并将 AI 幻觉降至最低。
   - icon: 📜
-    title: 契约优先驱动
-    details: 先定义接口 Stub，再实现逻辑细节。先行博弈架构边界，消除 80% 的模块集成冲突。
+    title: 标准化生命周期
+    details: 统一 R-P-E-V-C 指令集。确保无论谁接手，工程的分层架构与实现路径都百分之百可预测。
 ---
