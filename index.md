@@ -97,6 +97,12 @@ features:
 
 /* Feature Grid (Apple Style Card) */
 .VPFeature {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center;
+  padding: 40px 24px !important;
   background: rgba(var(--vp-c-bg-soft-rgb), 0.4) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -104,6 +110,12 @@ features:
   border-radius: 24px !important;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.VPFeature .icon {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem !important;
 }
 .VPFeature:hover {
   transform: translateY(-8px) scale(1.02);
