@@ -28,8 +28,6 @@ features:
     details: Master every line of change. Turn ephemeral chats into permanent digital assets (ADR/SOP), ensuring maintainable, iterable, and high-quality code.
 ---
 
-[Why use this?](./guide/why-protocol) | [SOP Protocol](./SOP) | [ADR Records](./ARCH) | [Guide](./guide/1-crisis)
-
 <div class="premium-dashboard">
 <div class="control-grid">
 <div class="control-panel terminal-window">

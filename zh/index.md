@@ -28,8 +28,6 @@ features:
     details: 把每一行变更转化为数字资产。通过原子审核将对话沉淀为 ADR (架构决策) 与可复用 SOP，构建长久的工程遗产。
 ---
 
-[为什么用它？](./guide/why-protocol) | [SOP 协议](./SOP) | [ADR 记录](./ARCH) | [演进向导](./guide/1-crisis)
-
 <div class="premium-dashboard">
 <div class="control-grid">
 <div class="control-panel terminal-window">
