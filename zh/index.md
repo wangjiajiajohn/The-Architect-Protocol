@@ -106,18 +106,29 @@ features:
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
-/* Compact Layout: Row 1 (Icon+Title), Row 2 (Details) */
+/* Force 2-Row Grid: [Icon][Title] (Row 1), [Details] (Row 2) */
 .VPFeature article {
-  display: flex !important;
-  flex-wrap: wrap !important;
+  display: grid !important;
+  grid-template-columns: auto 1fr !important;
+  grid-template-rows: auto auto !important;
+  column-gap: 16px !important;
   align-items: center !important;
+  justify-content: start !important;
+  text-align: left !important;
 }
 .VPFeature .icon { 
-  margin: 0 12px 0 0 !important; width: 32px; height: 32px;
-  display: flex !important; align-items: center; justify-content: center;
+  grid-column: 1 !important; grid-row: 1 !important;
+  margin: 0 !important; width: 32px !important; height: 32px !important;
+  display: flex !important; align-items: center !important; justify-content: center !important;
 }
-.VPFeature .title { margin: 0 !important; text-align: left !important; font-size: 1.15rem !important; flex: 1; }
-.VPFeature .details { width: 100% !important; margin: 12px 0 0 0 !important; text-align: left !important; line-height: 1.6 !important; }
+.VPFeature .title { 
+  grid-column: 2 !important; grid-row: 1 !important;
+  margin: 0 !important; text-align: left !important; font-size: 1.15rem !important;
+}
+.VPFeature .details { 
+  grid-column: 1 / span 2 !important; grid-row: 2 !important;
+  margin: 12px 0 0 0 !important; text-align: left !important; line-height: 1.6 !important;
+}
 
 .VPFeature:hover {
   transform: translateY(-8px) scale(1.02);
