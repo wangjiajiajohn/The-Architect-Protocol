@@ -31,6 +31,14 @@ features:
     details: Cursor 原生 MDC 支持；Claude、ChatGPT、GitHub Copilot 使用通用系统提示词。一套协议，覆盖所有工具。
 ---
 
+<div class="hero-install">
+  <div class="hero-install-terminal">
+    <span class="hero-install-prompt">$</span>
+    <span class="hero-install-cmd">npx github:wangjiajiajohn/The-Architect-Protocol</span>
+  </div>
+  <div class="hero-install-note">无需安装 · 自动拷贝 MDC 规则、模板和 PROMPTS.md 到你的项目</div>
+</div>
+
 <div class="premium-dashboard">
 
 <!-- 工具支持条 -->
@@ -119,29 +127,6 @@ features:
     <div class="value-icon">💣</div>
     <h4>隐形债务贩子</h4>
     <p>AI 到处埋 TODO 地雷。闸门 400 的零占位符规则强制执行。</p>
-  </div>
-</div>
-
-<!-- CLI 安装区块 -->
-<div class="section-title">⚡ 一行命令安装</div>
-<div class="cli-install-block">
-  <div class="cli-terminal">
-    <div class="cli-header">
-      <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-      <span class="cli-title">terminal</span>
-    </div>
-    <div class="cli-body">
-      <span class="cli-prompt">$</span>
-      <span class="cli-cmd">npx github:wangjiajiajohn/The-Architect-Protocol</span>
-    </div>
-  </div>
-  <div class="cli-desc">
-    <p>在任意项目根目录执行，无需提前安装任何工具。</p>
-    <ul>
-      <li>📐 5 × MDC 闸门规则 → <code>.cursor/rules/</code></li>
-      <li>📋 3 × 文档模板 → <code>templates/</code></li>
-      <li>💬 Claude / ChatGPT / Copilot 系统提示词 → <code>PROMPTS.md</code></li>
-    </ul>
   </div>
 </div>
 
@@ -389,5 +374,40 @@ features:
 .cli-desc code { background: rgba(80,227,194,0.1); color: #50e3c2; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
 @media (max-width: 768px) {
   .cli-install-block { grid-template-columns: 1fr; }
+}
+
+/* Hero Install Bar */
+.hero-install {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 24px 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.hero-install-terminal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(80, 227, 194, 0.25);
+  border-radius: 12px;
+  padding: 14px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 30px rgba(80, 227, 194, 0.08), 0 8px 32px rgba(0,0,0,0.3);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.hero-install-terminal:hover {
+  border-color: rgba(80, 227, 194, 0.5);
+  box-shadow: 0 0 40px rgba(80, 227, 194, 0.15), 0 8px 32px rgba(0,0,0,0.3);
+}
+.hero-install-prompt { color: #50e3c2; font-family: 'SF Mono', 'Consolas', monospace; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+.hero-install-cmd { color: #e5e5e5; font-family: 'SF Mono', 'Consolas', monospace; font-size: 0.95rem; }
+.hero-install-note { font-size: 0.8rem; color: #666; text-align: center; }
+@media (max-width: 480px) {
+  .hero-install { padding: 20px 16px 4px; }
+  .hero-install-cmd { font-size: 0.8rem; }
 }
 </style>
