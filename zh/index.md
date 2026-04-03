@@ -130,6 +130,17 @@ features:
   </div>
 </div>
 
+<!-- 演示 GIF -->
+<div class="section-title">🎥 看看实际效果</div>
+<div class="demo-gif-block">
+  <img src="/The-Architect-Protocol/demo.gif" alt="协议使用前后对比演示" class="demo-gif" />
+  <div class="demo-gif-caption">
+    <span>不用协议：1,604 行代码，无人审计。</span>
+    <span>用了协议：3 个原子步骤，每步都可审计。</span>
+    <a href="/The-Architect-Protocol/zh/guide/quick-start">→ 3 分钟开始使用</a>
+  </div>
+</div>
+
 </div>
 
 <style>
@@ -410,4 +421,26 @@ features:
   .hero-install { padding: 20px 16px 4px; }
   .hero-install-cmd { font-size: 0.8rem; }
 }
+
+/* Demo GIF block */
+.demo-gif-block {
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(80, 227, 194, 0.2);
+  box-shadow: 0 0 40px rgba(80, 227, 194, 0.08), 0 20px 60px rgba(0,0,0,0.3);
+}
+.demo-gif { display: block; width: 100%; height: auto; border-radius: 16px 16px 0 0; }
+.demo-gif-caption {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px; padding: 12px 20px;
+  background: rgba(80, 227, 194, 0.04);
+  border-top: 1px solid rgba(80, 227, 194, 0.1);
+  font-size: 0.8rem;
+}
+.demo-gif-caption span { color: #86868b; }
+.demo-gif-caption a { color: #50e3c2; text-decoration: none; font-weight: 600; white-space: nowrap; }
+.demo-gif-caption a:hover { text-decoration: underline; }
+@media (max-width: 600px) { .demo-gif-caption { flex-direction: column; align-items: flex-start; } }
 </style>

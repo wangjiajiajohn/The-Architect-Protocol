@@ -130,6 +130,16 @@ features:
   </div>
 </div>
 
+<!-- Demo GIF: Problem → Solution payoff -->
+<div class="section-title">🎥 See It in Action</div>
+<div class="demo-gif-block">
+  <img src="/The-Architect-Protocol/demo.gif" alt="Protocol before & after — terminal demo" class="demo-gif" />
+  <div class="demo-gif-caption">
+    <span>Without protocol: 1,604 lines, no control.</span>
+    <span>With protocol: 3 atomic steps, every one auditable.</span>
+    <a href="/The-Architect-Protocol/guide/quick-start">→ Get started in 3 minutes</a>
+  </div>
+</div>
 
 </div>
 
@@ -426,5 +436,43 @@ features:
 @media (max-width: 480px) {
   .hero-install { padding: 20px 16px 4px; }
   .hero-install-cmd { font-size: 0.8rem; }
+}
+
+/* Demo GIF block */
+.demo-gif-block {
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(80, 227, 194, 0.2);
+  box-shadow: 0 0 40px rgba(80, 227, 194, 0.08), 0 20px 60px rgba(0,0,0,0.3);
+}
+.demo-gif {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px 16px 0 0;
+}
+.demo-gif-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(80, 227, 194, 0.04);
+  border-top: 1px solid rgba(80, 227, 194, 0.1);
+  font-size: 0.8rem;
+}
+.demo-gif-caption span { color: #86868b; }
+.demo-gif-caption a {
+  color: #50e3c2;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.demo-gif-caption a:hover { text-decoration: underline; }
+@media (max-width: 600px) {
+  .demo-gif-caption { flex-direction: column; align-items: flex-start; }
 }
 </style>
