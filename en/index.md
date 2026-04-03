@@ -50,31 +50,31 @@ In the era of collapsing engineering standards, we provide a **Defense System** 
 
 ---
 
-## 💎 Why you MUST build the "Architect's Protocol"?
-### From "Chaos Conversation" to "Engineered Pipeline"
+## 💎 Why do you NEED the "Architect's Protocol" in the AI Era?
+### From "Black Box Generation" to "Industrial-Grade Determinism"
 
 | Dimension | Standard AI Chat (Chaos) | Architect Protocol V2.0 (Order) |
 | :--- | :--- | :--- |
-| **Execution Model** | Probabilistic (Cross your fingers) | Deterministic Pipeline (Gated Docs) |
-| **Cognitive Load** | Waterfall Screen Spams (Unreadable) | Atomic Audits (20/100 Rule) |
-| **Quality Control** | Relies on Luck / No Physical Locks | MDC Iron Lock / Forced Discipline |
-| **Knowledge Assets** | Ephemeral Chats / Unmaintainable | ADR Records / Long-term SOPs |
+| **Collaboration** | **Rolling the Dice**: Fingers crossed for code, chasing AI bugs | **Pipeline**: Contracts locked in docs, precise delivery via blueprints |
+| **Code Quality** | **"Poop-Mountains"**: Junk logic and hidden pits thrown by AI | **Pure Architecture**: 20/100 physical gating, zero-redundancy audit |
+| **Sovereignty** | **Passive Proofreading**: Lost in AI screen spams | **Absolute Command**: You are the General, AI is the Special Ops |
+| **Knowledge** | **Ephemeral Chats**: Conversations vanish without assets | **Digital Legacy**: ADRs and SOPs lock in your engineering taste |
 
 <div class="value-grid">
   <div class="value-card">
     <div class="value-icon">🎯</div>
-    <h4>Deterministic Engineering</h4>
-    <p>Transforming AI from a "probabilistic dice roller" into a "blueprint-driven engineer."</p>
+    <h4>Deterministic Engineering Pipeline</h4>
+    <p>Refuse probabilistic "lotteries." By forcing research (/r) and planning (/p), AI is transformed from an "impulsive implementer" into a "blueprint-driven precision machine."</p>
   </div>
   <div class="value-card">
-    <div class="value-icon">🧠</div>
-    <h4>Cognitive Freedom</h4>
-    <p>Controlled auditing ensures you always understand and master every line of change.</p>
+    <div class="value-icon">🛡️</div>
+    <h4>Defense against AI Entropy</h4>
+    <p>AI can vomit 500 lines of junk in a second. The 20/100 physical handbrake forces it to evolve at a speed your brain can "instantly grasp," eradicating code-rot.</p>
   </div>
   <div class="value-card">
-    <div class="value-icon">🏗️</div>
-    <h4>Physical-Level Defense</h4>
-    <p>Using MDC rules to completely eradicate "hallucination drift" in complex projects.</p>
+    <div class="value-icon">🏛️</div>
+    <h4>Micro-Constitution for the AI Era</h4>
+    <p>Built for the future of multi-agent collaboration. Upgrade fleeting verbal agreements to physical-level MDC locks, ensuring every line meets the Architect's standards.</p>
   </div>
 </div>
 

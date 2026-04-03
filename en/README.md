@@ -1,18 +1,18 @@
 ![The Architect's Protocol](../public/hero-banner.png)
 
-# 🏆 The Architect's Protocol
-## Survival Guide for Human-AI Collaboration: Stop Building "Code Sprawls" in the AI Era
+# The Architect's Protocol — V2.0 Modular MDC
 
-> [!IMPORTANT]
-> **The Core Philosophy**: This is not about teaching AI to code; it's about teaching you how to put a "Golden Hoop" on the AI.
-> Through a set of **Iron Discipline**, we transform the AI from an "irresponsible, hyperactive implementer" into a "rigged engineering assembly officer."
+> **Don't let AI become your master, and don't let your projects become AI's "Poop-Mountains".**
+
+**The Architect's Protocol** is an **AI-Human industrial standard** designed to transform AI from an "impulsive generator" into a "precision engineering officer." Through physical-level gating and atomic audit loops, we ensure every line of code written by AI is: **Maintainable, Iterable, High-Quality**.
 
 ---
 
-## 🏗️ 1. Current State: On the Verge of "Engineering Collapse"
+## 💎 Why do you NEED it?
 
-### Before: The Craftsmanship Era
-We were like carpenters, writing code brick by brick. It was slow, but every line of logic was in our heads, and the architecture grew like a tree.
+1.  **From "Dice-Rolling" to "Pipeline"**: Refuse luck-based code generation. Enforce **Research (/r) -> Plan (/p) -> Execute (/e)**, ensuring architectural alignment.
+2.  **The "Handbrake" against AI Entropy**: AI can vomit 500 lines of junk in a second. Our **20/100 Atomic Audit** forces it to evolve at a speed your brain can "instantly grasp."
+3.  **Digital Assets, Not Just Chat History**: Every task leaves behind **ADRs (Arch Decisions)** and **SOPs**, turning conversations into permanent, maintainable assets.
 
 ### Now: The High-Speed Rail Era
 With AI, we have hired a "tireless, knowledgeable, but extremely impulsive" **intern engineering team**.
