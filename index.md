@@ -32,4 +32,7 @@ features:
   - icon: 🧹
     title: 保持 Context 清洁
     details: 独创 /c 指令销毁中间调研文档。强制打扫战场，不仅帮你节省 Token，还能让 AI 保持在逻辑巅峰。
+  - icon: 🧠
+    title: AI 与工程师的未来
+    details: 代码不再是核心壁垒。探索在 AI 协作时代，人类如何从“编码者”升维成为掌握架构与决策的“总工程师”。<br><a href="/PHILOSOPHY">阅读深度思考文章 →</a>
 ---
