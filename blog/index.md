@@ -14,7 +14,7 @@ Insights on AI-Human collaborative engineering — from practical failures to ba
 
 <div class="post-meta">2026-04-04 · 10 min read · <span class="tag">AI Engineering</span> <span class="tag">Anti-Patterns</span></div>
 
-<!--@include: ./ai-6-deaths.md-->
+<!--@include: ./ai-7-deaths.md-->
 
 <style>
 .post-meta {

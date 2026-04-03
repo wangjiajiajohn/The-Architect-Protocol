@@ -1,4 +1,4 @@
-# 6 Ways AI Coding Goes Out of Control (And How We Fixed It Systematically)
+# 7 Ways AI Coding Goes Out of Control (And How We Fixed It Systematically)
 
 **Reading time:** 10 min · **Published:** 2026-04-04
 
@@ -12,7 +12,7 @@ This isn't a problem with AI tools. It's a problem with how we use them.
 
 More precisely: we're using a conversational interface to manage work that requires engineering discipline. The two are fundamentally incompatible without structure.
 
-Here are six ways it kills your project. You've probably experienced at least three.
+Here are seven ways it kills your project. You've probably experienced at least three.
 
 ---
 
@@ -213,6 +213,41 @@ Long-term maintenance cost compounds silently
 
 ---
 
+## Death Mode 7: The Guesswork Debugger
+
+> "It's playing 'needle in a haystack': fixing things here, breaking things there, and having no idea why."
+
+### The scenario
+
+```
+You: This login endpoint is intermittently throwing a 500. Fix it.
+AI:  It looks like a database connection issue. I've added a retry logic...
+(30 minutes later)
+AI:  I found that the cache layer is also problematic. I've refactored the cache module...
+(2 hours later)
+AI:  Now the error is a 403. I suspect it's a permissions issue...
+```
+
+This is **Guesswork-Driven Development**. Without seeing the stack trace or log evidence, the AI starts "blindly striking" at your code. It tries one possibility, then another, then another.
+
+The result: Your codebase is bloated with useless defensive code, while the real bug remains hidden and laughs at you.
+
+### Why it happens
+
+AI models are probabilistic, not analytical. When faced with a bug, they excel at providing the "most likely solution" rather than the "most rigorous diagnosis." 
+
+Without a mandatory troubleshooting process, the AI will prioritize **giving you a code change immediately** (to be helpful) rather than **asking for more evidence first**.
+
+### The death path
+
+```
+Intermittent Bug → AI guesses and modifies code blindly → 
+Introduces more uncertainty → Code becomes bloated and unmaintainable → 
+Bug persists and becomes harder to reproduce due to code churn
+```
+
+---
+
 ## The Common Root Cause
 
 None of these are AI's fault.
@@ -244,6 +279,16 @@ Gate 3: /v (Verify)     → AI verifies results, outputs a verification report
 Each gate requires an explicit `1` from you to open.
 
 **The AI cannot decide to skip research and start coding. Structurally impossible — not relying on AI's self-control.**
+
+### Evidence-Based Debugging
+
+To address Death Mode 7 (Guesswork), the protocol defines the `/d` (Debug) command:
+- **No Guessing**: Modifying business logic without evidence is strictly prohibited.
+- **Log Injection**: AI must first write structured logs or reproduction scripts to trap the bug.
+- **Wait for Human**: AI must pause and wait for the human to provide actual crash logs or reproduction results.
+- **Data Finality**: Only after the evidence loop is closed can the AI proceed to the `/p` (Plan) stage.
+
+This turns the AI from a "blind fixer" into a "surgeon with a scalpel."
 
 This directly addresses Death Mode 1 (Avalanche) and Death Mode 5 (Yes-Man).
 

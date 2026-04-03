@@ -78,7 +78,7 @@ export default defineConfig({
           {
             text: '📝 Blog',
             items: [
-              { text: '6 Ways AI Coding Goes Out of Control', link: '/blog/ai-6-deaths' },
+              { text: '7 Ways AI Coding Goes Out of Control', link: '/blog/ai-7-deaths' },
             ]
           }
         ]
@@ -146,7 +146,7 @@ export default defineConfig({
           {
             text: '📝 博客',
             items: [
-              { text: 'AI 写代码失控的 6 种死法', link: '/zh/blog/ai-6-deaths' },
+              { text: 'AI 写代码失控的 7 种死法', link: '/zh/blog/ai-7-deaths' },
             ]
           }
         ]

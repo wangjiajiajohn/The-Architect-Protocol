@@ -14,7 +14,7 @@ import { withBase } from 'vitepress'
 
 <div class="post-meta">2026-04-04 · 10 分钟阅读 · <span class="tag">AI 工程</span> <span class="tag">反模式</span></div>
 
-<!--@include: ./ai-6-deaths.md-->
+<!--@include: ./ai-7-deaths.md-->
 
 <style>
 .post-meta {
