@@ -23,6 +23,7 @@ export default defineConfig({
           { text: 'Protocol', link: '/SOP' },
           { text: 'Real-World Cases', link: '/guide/4-real-world-cases' },
           { text: 'AI Tool Setup', link: '/guide/6-ai-tool-setup' },
+          { text: '📝 Blog', link: '/blog/' },
         ],
         sidebar: [
           {
@@ -69,6 +70,12 @@ export default defineConfig({
             items: [
               { text: 'Contributing', link: '/CONTRIBUTING' },
             ]
+          },
+          {
+            text: '📝 Blog',
+            items: [
+              { text: '6 Ways AI Coding Goes Out of Control', link: '/blog/ai-6-deaths' },
+            ]
           }
         ]
       }
@@ -84,6 +91,7 @@ export default defineConfig({
           { text: 'SOP 协议', link: '/zh/SOP' },
           { text: '实战案例', link: '/zh/guide/4-real-world-cases' },
           { text: 'AI 工具配置', link: '/zh/guide/6-ai-tool-setup' },
+          { text: '📝 博客', link: '/zh/blog/' },
         ],
         sidebar: [
           {
@@ -129,6 +137,12 @@ export default defineConfig({
             text: '🤝 社区与贡献',
             items: [
               { text: '贡献指南', link: '/zh/CONTRIBUTING' },
+            ]
+          },
+          {
+            text: '📝 博客',
+            items: [
+              { text: 'AI 写代码失控的 6 种死法', link: '/zh/blog/ai-6-deaths' },
             ]
           }
         ]
