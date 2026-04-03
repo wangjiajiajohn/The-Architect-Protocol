@@ -4,42 +4,77 @@
  */
 
 /* ============================================================
-   Mobile Nav: Fix navbar overflow on small screens
-   
-   Problem: Too many icons in navbar on mobile:
-   [logo] [search] [lang-switcher] [appearance] [github] [hamburger]
-   
-   Solution: Hide lower-priority icons from the top navbar on mobile.
-   They remain accessible inside the hamburger (sidebar) menu.
-   - Appearance toggle (dark/light): in hamburger ✅
-   - Language switcher: in hamburger ✅
-   - Search: KEEP VISIBLE — no alternative on mobile
+   Mobile Nav: Hide title text, keep logo only
+   Before: [logo] THE ARCHITECT'S PROTOCOL [search-icon] [☰]
+   After:  [logo] [search-input-bar........] [☰]
    ============================================================ */
 @media (max-width: 768px) {
-  /* Hide the long site title text — keep only the logo icon
-     Before: [logo] THE ARCHITECT'S PROTOCOL 🔍 ☰  (too wide)
-     After:  [logo] 🔍 ☰  (clean) */
+  /* 1. Hide the long site title text — keep only the logo icon */
   .VPNavBarTitle .title {
     display: none !important;
   }
 
-  /* Hide appearance (dark/light mode) toggle — still in hamburger */
-  .VPNavBarAppearance {
+  /* 2. Hide appearance toggle & lang switcher — still in hamburger menu */
+  .VPNavBarAppearance,
+  .VPNavBarTranslations {
     display: none !important;
   }
 
-  /* Hide language switcher from top navbar — still in hamburger */
-  .VPNavBarTranslations {
+  /* 3. Make the search container fill all remaining space */
+  .VPNavBarSearch {
+    flex: 1 !important;
+    max-width: none !important;
+    padding: 0 8px !important;
+  }
+
+  /* 4. Style the search button to look like a full input box */
+  .DocSearch-Button {
+    width: 100% !important;
+    border-radius: 8px !important;
+    padding: 0 12px !important;
+    height: 36px !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    transition: border-color 0.2s ease, background 0.2s ease !important;
+  }
+
+  .DocSearch-Button:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(80, 227, 194, 0.5) !important;
+  }
+
+  /* 5. Show the "Search" placeholder text on mobile (hidden by default) */
+  .DocSearch-Button-Placeholder {
+    display: inline !important;
+    font-size: 13px !important;
+    color: rgba(255, 255, 255, 0.35) !important;
+  }
+
+  /* 6. Hide the keyboard shortcut (⌘K) — irrelevant on mobile */
+  .DocSearch-Button-Keys {
     display: none !important;
+  }
+
+  /* 7. Align the search icon to the left */
+  .DocSearch-Button-Container {
+    justify-content: flex-start !important;
+    width: auto !important;
   }
 }
 
 /* ============================================================
-   Mobile Nav: Extra breathing room on very narrow screens
+   Light mode adjustments for the search input
    ============================================================ */
+.vp-doc-theme-light .DocSearch-Button,
+html:not(.dark) .DocSearch-Button {
+  background: rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
 @media (max-width: 375px) {
-  /* Tighten spacing between right-side icons */
-  .VPNavBarExtra {
-    gap: 2px !important;
+  .VPNavBarSearch {
+    padding: 0 4px !important;
   }
 }
