@@ -1,26 +1,26 @@
 ---
-description: Research Phase Gating and Requirements Analysis Protocols.
+description: 研究阶段闸门与需求分析协议。
 globs: research_summary.md
 alwaysApply: false
 ---
 
-# 🔍 Phase 0: Research & Boundary Identification
+# 🔍 阶段 0：研究与边界识别 (Research Gate)
 
-## 📜 Research Mission
-- Use **Browser/Web Search** to identify best practices.
-- Use **list_dir/view_file** to map dependencies.
-- **NO Implementation**: Research phase is **READ-ONLY** on existing codebase.
+## 📜 研究使命
+- 使用 **Browser/Web Search** 搜索最佳实践和技术文档。
+- 使用 **list_dir/view_file** 梳理现有代码依赖。
+- **严禁改动源码**：研究阶段是源码库的 **只读 (Read-Only)** 模式。
 
-## 🏛️ 1. Output Standards (research_summary.md)
-- **Problem Statement**: What is the core engineering challenge?
-- **Pattern Recommendation**: Suggest Design Patterns (Strategy, Factory, etc.).
-- **Dependency Audit**: List all affected modules and libraries.
-- **Options**: Provide 2-3 implementation paths (A, B, C) with Pros/Cons.
+## 🏛️ 1. 输出标准 (research_summary.md)
+- **问题定义**：识别核心工程挑战。
+- **模式建议**：主动提议设计模式（策略、工厂、单例等）。
+- **依赖审计**：列出受影响的所有模块和第三方库。
+- **方案对比**：提供 A, B, C 三种路径及其优缺点供人类点选。
 
-## 🛡️ 2. The Interaction Lock
-- **Wait for Gate**: AI must stop after generating/updating this file.
-- **Inferred Completion (FORBIDDEN)**: Even with full chat data, do NOT progress to `/p` until a formal "1" or "Ready for Plan" signal is received.
-- **Silent Update**: Use chat feedback ONLY to update this summary, not to trigger the next phase.
+## 🛡️ 2. 交互锁 (The Interaction Lock)
+- **物理停顿**：生成或更新摘要后，必须停止。
+- **严禁推测**：哪怕拥有完整的聊天信息，也**严禁**在未获准 `1` 确认前切换到 `/p`。
+- **静默更新**：聊天框的细节仅用于更新 `research_summary.md`，而不作为阶段步进的触发器。
 
-## ⌨️ Command: `/r`
-- **Action**: Init or Update `research_summary.md`. Identify patterns and risks.
+## ⌨️ 指令：`/r`
+- **动作**：初始化或更新 `research_summary.md`。识别边界与风险。

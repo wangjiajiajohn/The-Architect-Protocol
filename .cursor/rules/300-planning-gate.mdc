@@ -1,29 +1,29 @@
 ---
-description: Planning Phase Protocols for Technical Architecture and Execution Strategy.
+description: 计划阶段协议，涵盖技术架构与原子执行策略。
 globs: implementation_plan.md
 alwaysApply: false
 ---
 
-# 📐 Phase 1: Planning & Atomic Design
+# 📐 阶段 1：计划与原子设计 (Planning Gate)
 
-## 📜 Planning Mission
-- Architect the entire technical implementation before a single byte of code is written.
-- Break down the task into **Atomic Units**.
+## 📜 计划使命
+- 在动笔前完成完整的技术架构设计。
+- 拆解出 **原子化任务循环**。
 
-## 🏛️ 1. Technical Prerequisites (Type-First Contract)
-- **Schema & Types**: Define all interfaces, props, and data structures.
-- **Contract-First**: Describe REST/GraphQL/Shared-State schemas.
-- **Edge Case Detection**: List error handling logic.
+## 🏛️ 1. 技术前置 (契约优先)
+- **类型与 Schema**：定义好所有接口、Props 和数据结构。
+- **契约定义**：详细描述 REST/GraphQL 或共享状态的 Schema。
+- **异常捕获**：列出边界条件下的降级逻辑。
 
-## 🧱 2. Atomic Task Breakdown
-- **Unit Scale**: Maximum 20 lines of logic or 1 UI component.
-- **Independence**: Each unit (1.1, 1.2...) must be committable and reviewable on its own.
-- **Numbering**: Mandatory 1.1, 1.2, 2.1... style for easy feedback.
+## 🧱 2. 原子化任务拆解
+- **任务粒度**：最大逻辑变更不超过 20 行，或单个 UI 组件。
+- **独立性**：每个原子单元 (1.1, 1.2...) 必须能独立 Commit 和审计。
+- **编号规则**：强制使用 1.1, 2.1... 风格，方便人类点选确认。
 
-## 🛡️ 3. The Strict Gate (Wait for 1)
-- **Approval Required**: No file-writing or command execution allowed until the human reviews the plan and replies "1".
-- **Cold Reload**: AI MUST `view_file` the plan again after "1" is received to sync offline edits.
-- **No Inferred Transition**: Even if given code in chat, DO NOT start executing without a formal "1".
+## 🛡️ 3. 严格闸门 (Wait for 1)
+- **物理锁**：人类审核计划并回复 `1` 之前，物理上严禁开启任何代码修改 (`/e`)。
+- **冷启动检测**：AI 在接收到 `1` 后，必须首先 `view_file` 重新读取计划书，确保同步了人类的离线修改。
+- **严禁推测执行**：即使在 Chat 中给出了源码，也严禁在获得 `1` 前进入执行阶段。
 
-## ⌨️ Command: `/p`
-- **Action**: Propose and Update `implementation_plan.md`.
+## ⌨️ 指令：`/p`
+- **动作**：产出并更新 `implementation_plan.md`。

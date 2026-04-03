@@ -1,72 +1,58 @@
-![The Architect's Protocol](../public/hero-banner.png)
-
-# 🏆 The Architect's Protocol
-## Human-AI Survival Guide: How to Stop Building "Spaghetti Code" with AI
+# 🏆 AI-Human Collaborative SOP: High-Efficiency Protocol (2026 Master Edition)
 
 > [!IMPORTANT]
-> **One-Sentence Core**: This isn't just about teaching AI to code; it's about giving you the "Golden Reins."
-> We use a set of **Rigid Disciplines** to turn AI from an "impulsive executor" into a "precise engineering assembler."
+> **Core Principle**: Let AI handle 90% of the labor (design, implementation, self-check, atomic commit), while the human handles 10% of the strategic decision-making (architectural alignment, plan approval, Diff audit).
 
 ---
 
-## 🏗️ 1. The Reality: We are on the Brink of "Engineering Collapse"
+## 🏛️ 1. Engineering Execution Pyramid
 
-### Before: The Craftsmanship Era
-We built code like carpenters, one brick at a time. It was slow, but every logic was in our heads. The architecture grew like a tree.
-
-### Now: The High-Speed Era
-With AI, it's like we've hired a team of **"Tireless, Knowledgeable, but Extremely Impulsive" Interns**.
-They can lay 10 miles of track in a second, but they:
-- **Lack Responsibility**: They leave `// TODO` everywhere and run away.
-- **Over-Confidence**: They stack 100 features into one file just to "make it work."
-- **Digging Pits**: To meet today's deadline, they sacrifice the next 3 years of your project's maintenance life.
+1.  **Horizontal: Module Decoupling**: Phase 0 Contract Lock (write Stub interfaces first, verify via TSC, then implement logic).
+2.  **Vertical: Layer-by-Layer Progression**: Schema -> Logic -> Store -> UI layers.
+3.  **Atomic Micro-Units**:
+    - **Single Logic Change**: Atomic units must be <= 20 lines of logic.
+    - **UI Unit**: One complete UI feature block (e.g., adding a Modal or Table).
+    - **Two-Strike Rule**: If an atomic task fails twice -> `git reset --hard` -> Return to `/r` phase.
 
 ---
 
-## 💔 2. The Fatal Problem: Humans and AI are both making mistakes
+## 🧱 2. Document-First & MDC Iron Lock
 
-### AI's Flaws
-1.  **Logic Stacking**: They love to bundle database calls, logic analysis, and UI styles together into a mess.
-2.  **Placeholder Hallucination**: During refactoring, they might quietly delete 50 lines of core logic and leave you with "// implement later."
+**Core Philosophy**: Chat is only for triggers and confirmation; **Documents and Module Rules are the real thinking and collaboration interface.**
 
-### Human's Flaws
-1.  **Audit Fatigue**: AI throws a 200-line change at you. You glance at it, feel it looks okay, and hit "Apply." **This is where the spaghetti begins.**
-2.  **Loss of Control**: You start fearing refactoring because you can no longer understand the black-box logic the AI has nested.
-
----
-
-## 🛡️ 3. Our Solution: A "Collaborative Contract"
-
-**The Architect's Protocol** forces you and the AI to follow four core laws:
-
-### 🧱 Law 1: Atomic Auditing (Don't change too much at once!)
-*   **The Rule**: Never modify more than **20 lines** per commit.
-*   **The Logic**: AI must take small steps. 20 lines is the human "cognitive limit" for instant verification. Ensure you actually UNDERSTAND every line before hitting "Apply."
-
-### 🔌 Law 2: Contract-First (Draw the blueprints before building!)
-*   **The Rule**: Do not write implementation code until the Interface (API Stub) is finalized.
-*   **The Logic**: Rules before work. This prevents the AI from tangling UI and logic into a knot.
-
-### 🏗️ Law 3: Three-Layer Pyramid (Keep skin and bone separate!)
-*   **The Rule**: Logic belongs in the Logic layer; display belongs in the UI layer.
-*   **The Logic**: Pure business logic. This way, if you want to change the "skin" of your App one day, you don't have to touch a single line of business code.
-
-### 🧹 Law 4: Context GC (Clean the whiteboard, save Tokens!)
-*   **The Rule**: Immediately use `/c` to delete outdated research and plans.
-*   **The Logic**: **"Clear the whiteboard."** AI memory (Context) is limited. Too much noise makes it drift. Periodic cleaning saves you money (Tokens) and keeps the AI's logic sharp.
+*   **`/r` (Research)**: **[Gate 0]**. Triggers `.cursor/rules/200-research-gate.mdc`. AI enters **Read-Only Mode** for code, only allowing `research_summary.md` output.
+*   **`/p` (Plan)**: **[Gate 1]**. Triggers `.cursor/rules/300-planning-gate.mdc`. AI must produce interface contracts, type definitions, and atomic task lists.
+*   **Interaction Lock (Gating Lock)**:
+    1. Human reviews doc and replies "1".
+    2. AI must **Cold Reload** the file via `view_file` to sync offline edits.
+    3. Before receiving "1", Execution Rules (`400-execution`) are physically deactivated.
+*   **`/e` (Execute)**: **[Atomic Step]**. Triggers `.cursor/rules/400-execution-iron-lock.mdc`. 
+*   **Action Loop**:
+    1. Update Source Code.
+    2. **Show Diffs (Review)**.
+    3. Show Self-Check Results (TSC/Test) -> **Reply "1" to physical Git Commit**.
 
 ---
 
-## ⌨️ 4. The Toolkit: Controlling the Industrial Pipeline
+## 🔱 3. Git Protocol & Safeguards
 
-| Command | Purpose | Subtext |
-| :--- | :--- | :--- |
-| `/r` | **Research** | Don't guess. Find the foundations first. |
-| `/p` | **Plan** | Show me the blueprints and the cost before we start. |
-| `/e` | **Execute** | Following the blueprint, lay these 20 bricks now. |
-| `/d` | **Debug** | Stop guessing. Go get the logs and find the evidence. |
-| `/c` | **Clean** | Task done. Empty the wastebasket so we can start fresh. |
+1.  **Atomic Commitment**: For every [Atomic Unit] passed by human audit, AI automatically executes a semantic commit (Angular spec).
+2.  **Change Isolation**: Do not mix logic changes with UI changes in the same commit.
+3.  **Conflict Bailout**: If a Git conflict is detected, AI must STOP and hand over to humans.
 
 ---
 
-"AI will not destroy software engineering; using AI **without thinking** will. This protocol is the pen you use to take back control."
+## 🧹 4. Cleanup Protocol
+
+*   **Timing**: After requirement branch verification and BEFORE merging to dev.
+*   **Action**: `rm research_summary.md implementation_plan.md task.md walkthrough.md`.
+
+---
+
+## 🌐 5. Communication Protocol
+
+*   **Language Synchronization**: All interactions (design, audit feedback, error analysis) must match the user's current context (e.g., English for English users).
+
+---
+
+> [🔑 Key Commands]: /r Research | /p Plan | /e Execute | /f Flash | /d Debug | /c Clean | /gc Commit | /gp Push | /g Sync

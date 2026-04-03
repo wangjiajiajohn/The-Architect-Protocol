@@ -1,32 +1,32 @@
 ---
-description: Zero-Default Execution and Mandatory Atomic Audit Loop.
+description: 零偏差执行与原子审计循环协议。
 globs: src/**/*, **/*.md, **/*.(ts|js|vue|css|html)
 alwaysApply: false
 ---
 
-# 🔩 Phase 2: Atomic Execution Iron Lock
+# 🔩 阶段 2：原子执行铁锁 (Execution Iron Lock)
 
-## 📜 Execution Mission
-- Implement tasks from the approved `implementation_plan.md` in **Atomic Increments**.
-- **Human-in-the-Loop**: No commit or large change without a Review Gate.
+## 📜 执行使命
+- 按照已获准的 `implementation_plan.md` 进行 **原子级任务递进**。
+- **人类审计环**：严禁在未经过审计闸门的情况下提交大流量改动。
 
-## 🛡️ 1. The Audit Loop (Atomic Guardrail)
-1.  **Read Plan**: AI MUST read the approved plan before starting Task X.X.
-2.  **Edit Code**: Implement exactly ONE atomic unit (max 20 lines).
-3.  **Review Diffs (MANDATORY)**: AI MUST display the `git diff` or use `view_file` to show the change.
-4.  **Self-Check (Verify)**: Run `tsc`, `lint`, or `npm test`. Show results.
-5.  **Wait for "1"**: DO NOT call `git commit` or start the next task until the user replies "1".
+## 🛡️ 1. 原子审计循环 (不可跳过)
+1.  **计划读取**：AI 必须在开始 1.1 任务前 `view_file` 确认计划内容。
+2.  **代码实现**：仅实现 ONE (1) 个原子单元（逻辑变更 < 20 行）。
+3.  **主动展示 Diffs (Review)**：AI 必须主动展示 `git diff` 或代码快照供人类评审。
+4.  **原子验证 (Verify)**：运行 `tsc`、`lint` 或 `npm test`。展示通过结果。
+5.  **等待回复 `1`**：**严禁**在未获收 `1` 之前调用 `git commit` 或开启下一个原子项。
 
-## 🏗️ 2. Coding Rules (SOLID/DRY)
-- UI: Use premium aesthetics (Fuchsia, Neon, Gradients).
-- Logic: Decouple from UI via service/hook layers.
-- No Placeholders: Never use `TODO`.
+## 🏗️ 2. 编码准则 (SOLID/DRY)
+- 前端：使用极致设计感（视觉动态、和谐配色）。
+- 逻辑：业务逻辑必须抽离到服务层或 Hooks，严禁在渲染层堆叠算法。
+- 零占位符：禁止任何形式的 `TODO`。
 
-## 🔱 3. Commit Protocol
-- **Format**: Conventional Commits (e.g., `feat: ...`, `fix: ...`).
-- **Isolation**: One atomic unit = One commit.
-- **Conflict**: Stop immediately on Git conflict.
+## 🔱 3. Commit 协议
+- **格式**：严格遵循 Conventional Commits (feat/fix/chore)。
+- **逻辑隔离**：一原子一提交。禁止在同一个提交中混合 UI 改动与业务逻辑。
+- **冲突熔断**：遇 Git 冲突立即停止，禁止 AI 私自胡搞。
 
-## ⌨️ Command Set:
-- `/e` | `/v` | `/gc` | `/g` (Sync)
-- `/cp` (Checkpoint)
+## ⌨️ 指令：
+- `/e` (执行) | `/v` (验证) | `/gc` (物理提交) | `/g` (全量同步)
+- `/cp` (进度汇总)

@@ -34,27 +34,22 @@
 
 ---
 
-## 🧱 4. 文档先行：基于实证的协作锁 (Document-First Audit)
-**核心哲学**：Chat 仅用于触发与确认，**文档才是真正的思考与协作界面**。
+## 🧱 4. 文档先行与模组化物理锁 (Document-First & MDC Iron Lock)
+**核心哲学**：Chat 仅用于触发与确认，**文档与模块规则才是真正的思考与协作界面**。
 
-*   **`/r` (Research)**：**[闸门 1]**。产出编号化的 `research_summary.md`。必须包含依赖识别与设计模式建议。
-*   **`/p` (Plan)**：**[闸门 2]**。产出编号化的 `implementation_plan.md`。
-*   **文档级交互 (Document-Interaction)**：
-    1. 人类直接在 `.md` 文件中进行**标记 (Comment)** 或 **直接修改** (如改逻辑口径、加接口定义)。
-    2. 人类在聊天框回复 `1`（或告知“已修改”） -> AI 必须**重新读取文件**以同步最新意志。
-*   **`/e` (Execute)**：原子审计循环。
-*   **动作**：
-    1. 改动代码。
-    2. **主动展示 Diffs (Review)**：让用户确认改动的物理真实性。
-    3. 展示自检结果 (TSC/Test) -> **等待人类回复 "1" 后执行物理 Commit**。
-*   **`/f` (Flash)**：**[极速通道]**。跳过过程文档直接改代码 + 自检 + 通过后物理提交。仅限 UI 样式/文案等小微改动。
-*   **`/d` (Debug)**：**[闸门 3]**。产出取证计划。**强制结构化 Log 注入（包含文件/函数/ID）+ 编写测试用例复现 Bug**。
-*   **`/v` (Verify)**：执行 **Tier 1-3 验证阶梯** (Linter -> Integration -> UI Proof 存证)。
-*   **`/c` (Clean)**：**[一键物理清理]**。合并 dev 之前销毁所有过程 Markdown 文档。
-*   **`/cp` (Checkpoint)**：随时汇总当前任务状态进度。
-*   **`/gc` (Git Commit)**：**[原子提交]**。AI 代劳一键执行 `git add .` 并撰写语义化 Commit 信息并提交。
-*   **`/gp` (Git Push)**：**[推送到云端]**。仅执行 `git push` 将本地提交推送到远程仓库。
-*   **`/g` (Git Sync)**：**[全量同步]**。AI 代劳一键执行 add, commit 并在审核后 push。
+*   **`/r` (Research)**：**[闸门 0]**。触发 `.cursor/rules/200-research-gate.mdc`。AI 进入**只读模式**，仅允许产出 `research_summary.md`。
+*   **`/p` (Plan)**：**[闸门 1]**。触发 `.cursor/rules/300-planning-gate.mdc`。AI 必须产出接口契约、类型定义及原子任务列表。
+*   **交互锁 (Gating Lock)**：
+    1. 人类在 `.md` 文件中进行**批注**或回复 `1`。
+    2. AI 必须**重新读取文件 (Cold Reload)** 以同步最新意志。
+    3. 在获得 `1` 之前，执行层规则 (`400-execution`) 处于物理失活状态。
+*   **`/e` (Execute)**：**[原子操作]**。触发 `.cursor/rules/400-execution-iron-lock.mdc`。
+*   **动作循环**：
+    1. 改动源码。
+    2. **主动展示 Diffs (Review)**。
+    3. 展示自检结果 (TSC/Test) -> **回复 "1" 后执行物理 Commit**。
+*   **`/g` (Git Sync)**：一键 add, commit, push 同步全量进度。
+*   **`/cp` (Checkpoint)**：汇总当前协议执行状态。
 
 ---
 

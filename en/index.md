@@ -31,6 +31,27 @@ features:
     details: Pursue minimal cognitive load. Through efficient shortcuts and atomic development, simplify complex refactoring into the high-efficiency "Review Diff -> Reply 1" experience.
 ---
 
+# 🏆 The Architect's Protocol
+## AI-Human Collaborative Engineering — High-Efficiency Edition (2026)
+
+> [!IMPORTANT]
+> **Reclaiming Control**: This is not just about using AI to code; it's about establishing an **Audit-First** engineering discipline.
+> We transform AI from an "impulsive implementer" into a "precision engineering officer" through a hard-coded **SOP & Gating Matrix**.
+
+---
+
+### 🏛️ The Survival Guide for Modern Engineers
+
+In the era of collapsing engineering standards, we provide a **Defense System** for your architecture:
+
+1.  **Atomic Audit Loop**: Small logic increments (<= 20 lines) to ensure you understand every byte.
+2.  **Document-First Gating**: Mandatory Research (/r) and Planning (/p) docs before execution (/e).
+3.  **Modular MDC Rules (V2.0)**: Use Cursor's native `.mdc` to physically isolate phase-permissions.
+
+---
+
+[Explore the Protocol](./guide/1-crisis) | [SOP Manual](./SOP) | [Usage Example](./USAGE_EXAMPLE)
+
 <div class="premium-dashboard">
 <div class="control-grid">
 <div class="control-panel terminal-window">
