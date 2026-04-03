@@ -122,6 +122,29 @@ features:
   </div>
 </div>
 
+<!-- CLI Install Section -->
+<div class="section-title">⚡ One-Line Install</div>
+<div class="cli-install-block">
+  <div class="cli-terminal">
+    <div class="cli-header">
+      <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+      <span class="cli-title">terminal</span>
+    </div>
+    <div class="cli-body">
+      <span class="cli-prompt">$</span>
+      <span class="cli-cmd">npx github:wangjiajiajohn/The-Architect-Protocol</span>
+    </div>
+  </div>
+  <div class="cli-desc">
+    <p>Run this in any project root. No install required.</p>
+    <ul>
+      <li>📐 5 × MDC gate rules → <code>.cursor/rules/</code></li>
+      <li>📋 3 × doc templates → <code>templates/</code></li>
+      <li>💬 System prompts for Claude / ChatGPT / Copilot → <code>PROMPTS.md</code></li>
+    </ul>
+  </div>
+</div>
+
 </div>
 
 <style>
@@ -324,5 +347,47 @@ features:
 @media (max-width: 480px) {
   .metrics-strip { grid-template-columns: 1fr 1fr; }
   .tool-strip { flex-direction: column; align-items: flex-start; }
+}
+
+/* CLI Install Block */
+.cli-install-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.cli-terminal {
+  background: #000;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.cli-header {
+  background: rgba(255,255,255,0.03);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.cli-title { flex: 1; text-align: center; color: #555; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+.cli-body {
+  padding: 24px;
+  font-family: 'SF Mono', 'Consolas', monospace;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cli-prompt { color: #50e3c2; font-weight: 700; }
+.cli-cmd { color: #e5e5e5; word-break: break-all; }
+.cli-desc p { margin: 0 0 12px; color: var(--vp-c-text-2); font-size: 0.95rem; }
+.cli-desc ul { margin: 0; padding-left: 20px; }
+.cli-desc li { color: var(--vp-c-text-2); font-size: 0.9rem; line-height: 2; }
+.cli-desc code { background: rgba(80,227,194,0.1); color: #50e3c2; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
+@media (max-width: 768px) {
+  .cli-install-block { grid-template-columns: 1fr; }
 }
 </style>
