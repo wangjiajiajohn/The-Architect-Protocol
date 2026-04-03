@@ -3,14 +3,14 @@ layout: home
 
 hero:
   name: The Architect's Protocol
-  text: 人机协同终极状态
+  text: 人机协同高效范式
   tagline: 指令驱动 ・ 规则约束 ・ 人工审计 ・ 极简交互
   image:
     src: /hero-banner.png
     alt: The Architect's Protocol
   actions:
     - theme: brand
-      text: 开启终极范式
+      text: 开启高效范式
       link: /guide/1-crisis
     - theme: alt
       text: 查阅 SOP 协议
@@ -18,16 +18,16 @@ hero:
 
 features:
   - icon: 🕹️
-    title: 1. 指令驱动 (Instruction-Driven)
+    title: 1. 指令驱动
     details: 拒绝无目的性的闲聊。AI 仅根据预设的指令集（/r, /p, /e）执行精密逻辑。工程师不再是写作者，而是通过指令下发的指挥官。
   - icon: 🏰
-    title: 2. 规则约束 (Rule-Constraint)
+    title: 2. 规则约束
     details: 将工程品味固化为底层纪律。通过 SOP 与 .cursorrules 锁死 SOLID/DRY 原则，让 AI 的每一行产出都带着架构师的洁癖。
   - icon: 🔬
-    title: 3. 人工审计 (Human-Audit)
+    title: 3. 人工审计
     details: 每一个原子项都经由人类 Diff 级审核。回复“1”不仅是许可，更是对系统架构物理真实性的最高签字权。
   - icon: ⚡
-    title: 4. 极简交互 (Minimal-Interaction)
+    title: 4. 极简交互
     details: 追求认知的极小负荷。通过高效快捷指令与原子化开发分支，让复杂的系统重构简化为“看 Diff -> 回复 1”的极致体验。
 ---
 
@@ -36,25 +36,25 @@ features:
 <div class="control-panel terminal-window">
 <div class="window-header">
 <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-<span class="title">architect_os — audit_terminal</span>
+<span class="title">architect_os — 审计终端</span>
 </div>
 <div class="window-body">
-<div class="type-line">> System: Authenticated. <span class="status-ok">READY</span></div>
-<div class="type-line delay-1">> SOP: Protocol V2026 loaded. <span class="status-ok">LOCKED</span></div>
-<div class="type-line delay-2">> Atomic: Phase 1.1 generated. <span class="status-warn">AWAITING REVIEW</span></div>
-<div class="type-line delay-3">> Action: Waiting for command '1' <span class="blink">_</span></div>
+<div class="type-line">> 系统: 身份验证成功 <span class="status-ok">就绪</span></div>
+<div class="type-line delay-1">> SOP协议: V2026版本已加载 <span class="status-ok">已锁定</span></div>
+<div class="type-line delay-2">> 原子任务: Phase 1.1 已生成 <span class="status-warn">待审计</span></div>
+<div class="type-line delay-3">> 指令: 等待确认 '1' <span class="blink">_</span></div>
 </div>
 </div>
 
 <div class="status-panel">
 <div class="stat-card">
-<div class="stat-label">Engineering Taste</div>
-<div class="stat-value">SOLID/DRY</div>
+<div class="stat-label">工程品味</div>
+<div class="stat-value">SOLID / DRY</div>
 <div class="progress-bar"><div class="progress-fill fill-100"></div></div>
 </div>
 <div class="stat-card">
-<div class="stat-label">Human Cognitive Load</div>
-<div class="stat-value">MINIMAL</div>
+<div class="stat-label">人类认知负载</div>
+<div class="stat-value">极低 (Minimal)</div>
 <div class="progress-bar"><div class="progress-fill fill-low"></div></div>
 </div>
 </div>

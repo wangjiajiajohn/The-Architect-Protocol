@@ -1,4 +1,4 @@
-# 🏆 AI-Human 协同开发：终极 SOP 模型 (2026 Master Edition)
+# 🏆 AI-Human 协同开发：高效 SOP 模型 (2026 Master Edition)
 
 > [!IMPORTANT]
 > **本协议的核心：** 让 AI 负责 90% 的体力活（设计、实现、自检、原子 Commit），让人类仅负责 10% 的核心决策（架构对齐、方案审核、Diff 审计）。

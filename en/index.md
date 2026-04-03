@@ -3,14 +3,14 @@ layout: home
 
 hero:
   name: The Architect's Protocol
-  text: The Ultimate Hybrid-State
+  text: High-Efficiency Synergy
   tagline: Instruction-Driven ・ Rule-Constraint ・ Human-Audit ・ Minimal-Interaction
   image:
     src: /hero-banner.png
     alt: The Architect's Protocol
   actions:
     - theme: brand
-      text: Start Ultimate Paradigm
+      text: Start High-Efficiency Paradigm
       link: /en/guide/1-crisis
     - theme: alt
       text: View SOP Protocol
@@ -28,7 +28,7 @@ features:
     details: Every atomic unit is reviewed via human-level Diff audit. Replying "1" is not just permission—it is the final signature of physical system truth.
   - icon: ⚡
     title: 4. Minimal-Interaction
-    details: Pursue minimal cognitive load. Through efficient shortcuts and atomic development, simplify complex refactoring into the ultimate "Review Diff -> Reply 1" experience.
+    details: Pursue minimal cognitive load. Through efficient shortcuts and atomic development, simplify complex refactoring into the high-efficiency "Review Diff -> Reply 1" experience.
 ---
 
 <div class="premium-dashboard">

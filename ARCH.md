@@ -4,7 +4,7 @@
 
 ---
 
-## [ADR-001]：AI-Human 协同 SOP 协议 (2026 Master Edition)
+## [ADR-001]：AI-Human 协同 SOP 协议 (2026 高效协同版)
 
 ### 状态 (Status)
 **Accepted** (2026-04-03)
@@ -46,7 +46,7 @@
 
 ---
 
-## [ADR-003]：强制审计与 Git 快链协议 (2026 Master Edition)
+## [ADR-003]：强制审计与 Git 快链协议 (2026 高效版)
 
 ### 状态 (Status)
 **Accepted** (2026-04-03)
