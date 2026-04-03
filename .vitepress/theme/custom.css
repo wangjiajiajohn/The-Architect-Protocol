@@ -16,7 +16,14 @@
    - Search: KEEP VISIBLE — no alternative on mobile
    ============================================================ */
 @media (max-width: 768px) {
-  /* Hide appearance (dark/light mode) toggle from top navbar — still in hamburger */
+  /* Hide the long site title text — keep only the logo icon
+     Before: [logo] THE ARCHITECT'S PROTOCOL 🔍 ☰  (too wide)
+     After:  [logo] 🔍 ☰  (clean) */
+  .VPNavBarTitle .title {
+    display: none !important;
+  }
+
+  /* Hide appearance (dark/light mode) toggle — still in hamburger */
   .VPNavBarAppearance {
     display: none !important;
   }
