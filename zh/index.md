@@ -106,20 +106,18 @@ features:
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
-/* Horizontal Grid: Icon | Title */
+/* Compact Layout: Row 1 (Icon+Title), Row 2 (Details) */
 .VPFeature article {
-  display: grid !important;
-  grid-template-columns: auto 1fr !important;
-  grid-template-areas: "icon title" "icon details";
-  column-gap: 20px !important;
-  align-items: center;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
 }
 .VPFeature .icon { 
-  grid-area: icon; margin: 0 !important; width: 48px; height: 48px;
+  margin: 0 12px 0 0 !important; width: 32px; height: 32px;
   display: flex !important; align-items: center; justify-content: center;
 }
-.VPFeature .title { grid-area: title; margin: 0 !important; text-align: left !important; font-size: 1.25rem !important; }
-.VPFeature .details { grid-area: details; margin: 8px 0 0 0 !important; text-align: left !important; line-height: 1.5 !important; }
+.VPFeature .title { margin: 0 !important; text-align: left !important; font-size: 1.15rem !important; flex: 1; }
+.VPFeature .details { width: 100% !important; margin: 12px 0 0 0 !important; text-align: left !important; line-height: 1.6 !important; }
 
 .VPFeature:hover {
   transform: translateY(-8px) scale(1.02);
