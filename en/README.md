@@ -28,8 +28,8 @@ They can lay 10km of track in a second, but they:
 **The Architect's Protocol** forces both you and the AI to follow these four laws:
 
 ### 🧱 Law 1: Atomic Audit (Don't change too much at once!)
-*   **Rule**: Changes must not exceed **20 lines** per logic increment.
-*   **Logic**: 20 lines is the human brain's limit for "instant understanding." Ensure you actually understand every line before replying "1".
+*   **Rule**: Logic <= **20 lines**; UI/Markup/Config <= **100 lines**.
+*   **Logic**: 20 lines is the human brain's limit for instant logic understanding; 100 lines is the aesthetic limit for pure UI changes. Ensure you understand every byte.
 
 ### 🔌 Law 2: Contract Locking (Draw the blueprint before building!)
 *   **Rule**: No implementation without clear **Interfaces/Types**.

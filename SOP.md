@@ -26,11 +26,10 @@
 1.  **横向：模块解耦 (Module Level)**：强制执行 **Phase 0 契约锁**（先写 Stub 接口定义，全量类型通过后再编码）。
 2.  **纵向：分层迭进 (Layer Level)**：严格遵循 **Schema -> Logic -> Store -> UI** 顺序。
 3.  **末端：微型原子 (Atomic Level)**：
-    *   **单一原子任务**：一个原子任务（1.1, 1.3）仅限 **单一逻辑变更或单一 UI 功能块**。
-    *   **行数红线 (Web 适配版)**：
-        *   **纯逻辑 (JS/TS)**：严格限制在 20 行左右。
-        *   **模板 (HTML/Vue/CSS)**：允许放宽至 **1 个完整 UI 功能单元** (如新增一个 Modal 或 Table)，但严禁在同一 Commit 中混杂不同维度的逻辑修改。
-    *   **失败熔断器 (Two-Strike Rule)**：原子任务连续 2 次修复失败 -> `git reset --hard` 归位 -> 退回 `/r` 阶段重新归因分析。
+    - **Atomic Units**:
+    - **Logic Change**: Atomic logic units must be <= **20 lines**.
+    - **UI/Markup Change**: Atomic UI units (HTML/CSS) are allowed up to **100 lines** or one functional block (e.g., a Modal/Table).
+    - **Two-Strike Rule**: If an atomic task fails twice -> `git reset --hard` -> Return to `/r` phase.
 
 ---
 

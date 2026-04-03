@@ -9,9 +9,10 @@
 
 1.  **Horizontal: Module Decoupling**: Phase 0 Contract Lock (write Stub interfaces first, verify via TSC, then implement logic).
 2.  **Vertical: Layer-by-Layer Progression**: Schema -> Logic -> Store -> UI layers.
-3.  **Atomic Micro-Units**:
-    - **Single Logic Change**: Atomic units must be <= 20 lines of logic.
-    - **UI Unit**: One complete UI feature block (e.g., adding a Modal or Table).
+3. - **Atomic Units**:
+    - **Logic Change**: Atomic logic units must be <= **20 lines**. This is the limit for instant human verification.
+    - **UI/Markup Change**: Atomic UI units (HTML/CSS) are allowed up to **100 lines** or one functional block (e.g., a Modal/Table).
+    - **Config Change**: Config files (JSON/YAML) are allowed up to **100 lines**.
     - **Two-Strike Rule**: If an atomic task fails twice -> `git reset --hard` -> Return to `/r` phase.
 
 ---

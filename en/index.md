@@ -44,7 +44,7 @@ features:
 
 In the era of collapsing engineering standards, we provide a **Defense System** for your architecture:
 
-1.  **Atomic Audit Loop**: Small logic increments (<= 20 lines) to ensure you understand every byte.
+1.  **Atomic Audit Loop**: Logic <= **20 lines**; UI/Markup/Config <= **100 lines**.
 2.  **Modular MDC Rules (V2.0)**: Use Cursor's native `.mdc` to physically isolate phase-permissions.
 3.  **Document-First Gating**: Mandatory Research (/r) and Planning (/p) docs before execution (/e).
 
