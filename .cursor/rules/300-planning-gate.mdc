@@ -1,0 +1,29 @@
+---
+description: Planning Phase Protocols for Technical Architecture and Execution Strategy.
+globs: implementation_plan.md
+alwaysApply: false
+---
+
+# 📐 Phase 1: Planning & Atomic Design
+
+## 📜 Planning Mission
+- Architect the entire technical implementation before a single byte of code is written.
+- Break down the task into **Atomic Units**.
+
+## 🏛️ 1. Technical Prerequisites (Type-First Contract)
+- **Schema & Types**: Define all interfaces, props, and data structures.
+- **Contract-First**: Describe REST/GraphQL/Shared-State schemas.
+- **Edge Case Detection**: List error handling logic.
+
+## 🧱 2. Atomic Task Breakdown
+- **Unit Scale**: Maximum 20 lines of logic or 1 UI component.
+- **Independence**: Each unit (1.1, 1.2...) must be committable and reviewable on its own.
+- **Numbering**: Mandatory 1.1, 1.2, 2.1... style for easy feedback.
+
+## 🛡️ 3. The Strict Gate (Wait for 1)
+- **Approval Required**: No file-writing or command execution allowed until the human reviews the plan and replies "1".
+- **Cold Reload**: AI MUST `view_file` the plan again after "1" is received to sync offline edits.
+- **No Inferred Transition**: Even if given code in chat, DO NOT start executing without a formal "1".
+
+## ⌨️ Command: `/p`
+- **Action**: Propose and Update `implementation_plan.md`.

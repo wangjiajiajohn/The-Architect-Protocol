@@ -1,0 +1,26 @@
+---
+description: Research Phase Gating and Requirements Analysis Protocols.
+globs: research_summary.md
+alwaysApply: false
+---
+
+# 🔍 Phase 0: Research & Boundary Identification
+
+## 📜 Research Mission
+- Use **Browser/Web Search** to identify best practices.
+- Use **list_dir/view_file** to map dependencies.
+- **NO Implementation**: Research phase is **READ-ONLY** on existing codebase.
+
+## 🏛️ 1. Output Standards (research_summary.md)
+- **Problem Statement**: What is the core engineering challenge?
+- **Pattern Recommendation**: Suggest Design Patterns (Strategy, Factory, etc.).
+- **Dependency Audit**: List all affected modules and libraries.
+- **Options**: Provide 2-3 implementation paths (A, B, C) with Pros/Cons.
+
+## 🛡️ 2. The Interaction Lock
+- **Wait for Gate**: AI must stop after generating/updating this file.
+- **Inferred Completion (FORBIDDEN)**: Even with full chat data, do NOT progress to `/p` until a formal "1" or "Ready for Plan" signal is received.
+- **Silent Update**: Use chat feedback ONLY to update this summary, not to trigger the next phase.
+
+## ⌨️ Command: `/r`
+- **Action**: Init or Update `research_summary.md`. Identify patterns and risks.

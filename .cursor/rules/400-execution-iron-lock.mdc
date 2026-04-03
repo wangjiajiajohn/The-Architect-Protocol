@@ -1,0 +1,32 @@
+---
+description: Zero-Default Execution and Mandatory Atomic Audit Loop.
+globs: src/**/*, **/*.md, **/*.(ts|js|vue|css|html)
+alwaysApply: false
+---
+
+# 🔩 Phase 2: Atomic Execution Iron Lock
+
+## 📜 Execution Mission
+- Implement tasks from the approved `implementation_plan.md` in **Atomic Increments**.
+- **Human-in-the-Loop**: No commit or large change without a Review Gate.
+
+## 🛡️ 1. The Audit Loop (Atomic Guardrail)
+1.  **Read Plan**: AI MUST read the approved plan before starting Task X.X.
+2.  **Edit Code**: Implement exactly ONE atomic unit (max 20 lines).
+3.  **Review Diffs (MANDATORY)**: AI MUST display the `git diff` or use `view_file` to show the change.
+4.  **Self-Check (Verify)**: Run `tsc`, `lint`, or `npm test`. Show results.
+5.  **Wait for "1"**: DO NOT call `git commit` or start the next task until the user replies "1".
+
+## 🏗️ 2. Coding Rules (SOLID/DRY)
+- UI: Use premium aesthetics (Fuchsia, Neon, Gradients).
+- Logic: Decouple from UI via service/hook layers.
+- No Placeholders: Never use `TODO`.
+
+## 🔱 3. Commit Protocol
+- **Format**: Conventional Commits (e.g., `feat: ...`, `fix: ...`).
+- **Isolation**: One atomic unit = One commit.
+- **Conflict**: Stop immediately on Git conflict.
+
+## ⌨️ Command Set:
+- `/e` | `/v` | `/gc` | `/g` (Sync)
+- `/cp` (Checkpoint)
