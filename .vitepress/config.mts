@@ -18,6 +18,10 @@ export default defineConfig({
         ],
         sidebar: [
           {
+            text: '🎯 核心价值：可维护 / 高品质 / 无暗坑',
+            items: []
+          },
+          {
             text: '写在前面：拥抱重塑',
             items: [
               { text: '1. AI 到底改变了什么？', link: '/guide/1-crisis' },
@@ -26,7 +30,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '基础设施：架构师协议',
+            text: '🏗️ 基础设施：架构师协议',
             items: [
               { text: 'SOP 标准控制', link: '/SOP' },
               { text: '无瑕指令范式', link: '/PROMPTS' },
@@ -56,6 +60,10 @@ export default defineConfig({
         ],
         sidebar: [
           {
+            text: '🎯 Value: Maintainable / High-Quality / No Pits',
+            items: []
+          },
+          {
             text: 'Foreword: Embracing Change',
             items: [
               { text: '1. What AI Changed', link: '/en/guide/1-crisis' },
@@ -64,7 +72,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Core Infrastructure',
+            text: '🏗️ Core Infrastructure',
             items: [
               { text: 'SOP Protocol', link: '/en/SOP' },
               { text: 'Universal Prompts', link: '/en/PROMPTS' },
