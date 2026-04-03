@@ -4,77 +4,116 @@
  */
 
 /* ============================================================
-   Mobile Nav: Hide title text, keep logo only
-   Before: [logo] THE ARCHITECT'S PROTOCOL [search-icon] [☰]
-   After:  [logo] [search-input-bar........] [☰]
+   Mobile Nav: Full-width search bar
+   
+   Root cause analysis (from VitePress source VPNavBar.vue):
+   - .container: display:flex; justify-content:space-between ✅
+   - .title: flex-shrink:0 (logo stays on left) ✅
+   - .content: flex-grow:1 ✅ (already stretches)
+   - .content-body: justify-content:flex-END ❌ (everything pushes right)
+   - .VPNavBarSearch inside .content-body has no flex-grow set
+   
+   Fix: change .content-body to space between or flex-start,
+   and give the search flex:1 so it fills the space.
    ============================================================ */
+
 @media (max-width: 768px) {
-  /* 1. Hide the long site title text — keep only the logo icon */
+
+  /* 1. Hide long title text, keep logo icon only */
   .VPNavBarTitle .title {
     display: none !important;
   }
 
-  /* 2. Hide appearance toggle & lang switcher — still in hamburger menu */
+  /* 2. Change content-body from right-aligned to stretch layout */
+  .VPNavBar .content-body {
+    justify-content: flex-start !important;
+    gap: 0 !important;
+  }
+
+  /* 3. Hide low-priority icons (all accessible via hamburger menu) */
   .VPNavBarAppearance,
-  .VPNavBarTranslations {
+  .VPNavBarTranslations,
+  .VPNavBarSocialLinks,
+  .VPNavBarMenu,
+  .VPNavBarExtra {
     display: none !important;
   }
 
-  /* 3. Make the search container fill all remaining space */
+  /* 4. Search fills all available space before the hamburger */
   .VPNavBarSearch {
     flex: 1 !important;
     max-width: none !important;
-    padding: 0 8px !important;
+    min-width: 0 !important;
+    padding: 0 10px 0 4px !important;
   }
 
-  /* 4. Style the search button to look like a full input box */
+  /* 5. Style the DocSearch button to look like an input bar */
   .DocSearch-Button {
     width: 100% !important;
+    max-width: none !important;
     border-radius: 8px !important;
-    padding: 0 12px !important;
+    padding: 0 14px !important;
     height: 36px !important;
     background: rgba(255, 255, 255, 0.06) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    display: flex !important;
+    align-items: center !important;
     justify-content: flex-start !important;
-    gap: 8px !important;
+    box-sizing: border-box !important;
     transition: border-color 0.2s ease, background 0.2s ease !important;
   }
 
-  .DocSearch-Button:hover {
+  .DocSearch-Button:hover,
+  .DocSearch-Button:focus {
     background: rgba(255, 255, 255, 0.1) !important;
     border-color: rgba(80, 227, 194, 0.5) !important;
+    box-shadow: 0 0 0 2px rgba(80, 227, 194, 0.12) !important;
+    outline: none !important;
   }
 
-  /* 5. Show the "Search" placeholder text on mobile (hidden by default) */
+  /* 6. Show "Search" placeholder text (hidden on mobile by VitePress default) */
   .DocSearch-Button-Placeholder {
     display: inline !important;
     font-size: 13px !important;
-    color: rgba(255, 255, 255, 0.35) !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    flex: 1 !important;
+    text-align: left !important;
   }
 
-  /* 6. Hide the keyboard shortcut (⌘K) — irrelevant on mobile */
+  /* 7. Hide ⌘K shortcut — irrelevant on mobile */
   .DocSearch-Button-Keys {
     display: none !important;
   }
 
-  /* 7. Align the search icon to the left */
   .DocSearch-Button-Container {
-    justify-content: flex-start !important;
-    width: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex: 1 !important;
+  }
+
+  /* 8. Hamburger: stay on the right with padding */
+  .VPNavBarHamburger {
+    flex-shrink: 0 !important;
+    padding-right: 4px !important;
   }
 }
 
 /* ============================================================
-   Light mode adjustments for the search input
+   Light mode adjustments for the search bar
    ============================================================ */
-.vp-doc-theme-light .DocSearch-Button,
-html:not(.dark) .DocSearch-Button {
-  background: rgba(0, 0, 0, 0.04) !important;
-  border-color: rgba(0, 0, 0, 0.1) !important;
-}
+@media (max-width: 768px) {
+  html:not(.dark) .DocSearch-Button {
+    background: rgba(0, 0, 0, 0.04) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+  }
 
-@media (max-width: 375px) {
-  .VPNavBarSearch {
-    padding: 0 4px !important;
+  html:not(.dark) .DocSearch-Button-Placeholder {
+    color: rgba(0, 0, 0, 0.4) !important;
+  }
+
+  html:not(.dark) .DocSearch-Button:hover {
+    background: rgba(0, 0, 0, 0.07) !important;
+    border-color: rgba(80, 227, 194, 0.6) !important;
   }
 }
