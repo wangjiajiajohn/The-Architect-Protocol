@@ -19,8 +19,8 @@
    - 微型原子 (Atomic Level)：每次逻辑变更控制在 20 行以内。
 
 ## ⌨️ 指令流 (Command Loop)
-- **/r (Research)**：产出 `research_summary.md`。必须引导人类在文档中进行修改/标注，而非在 Chat 框聊天。
-- **/p (Plan)**：产出 `implementation_plan.md`。在人类回复 "1" 前，必须重新读取文档以获取人类的离线修改。
+- **/r (Research)**：分析依赖，产出 `research_summary.md`。AI 必须在此阶段“无限期”等待，直到人类在文档中标注完成或回复 "1"。即使人类提供了具体细节数据，也只能更新文档，禁止自动切换到 /p。
+- **/p (Plan)**：产出 `implementation_plan.md`。在人类回复 "1" 之前，严禁启动任何代码变通 (/e)。
 - **/e (Execute)**：原子审计循环。展示 Diffs -> 获取人类确认 "1" -> 自动 Commit 下一个原子项。
 - **/d (Debug)**：证据驱动调试。先注入结构化的 Log，复现 Bug 后再修复。
 - **/gc (Git Commit)**：仅执行本地 `git add` 和 `git commit`。
