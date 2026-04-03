@@ -1,5 +1,9 @@
 # 🚀 Quick Start
 
+<script setup>
+import { withBase } from 'vitepress'
+</script>
+
 > **Goal**: Get the protocol running in your project in under 3 minutes.
 
 ---
@@ -12,7 +16,7 @@ You're not sure if it's better or worse. You merge it anyway.
 
 **That's the problem this protocol solves.**
 
-![Protocol before & after demo](/The-Architect-Protocol/demo.gif)
+<img :src="withBase('/demo.gif')" alt="Protocol before &amp; after demo" style="width:100%;border-radius:12px;margin:1.5rem 0;display:block;" />
 
 ---
 

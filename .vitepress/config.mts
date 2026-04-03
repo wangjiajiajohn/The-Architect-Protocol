@@ -5,6 +5,10 @@ export default defineConfig({
   description: "A battle-tested SOP for Human-AI collaborative software engineering. Works with Cursor, Claude, ChatGPT, and GitHub Copilot.",
   base: '/The-Architect-Protocol/',
 
+  vite: {
+    assetsInclude: ['**/*.gif'],
+  },
+
   head: [
     ['meta', { name: 'keywords', content: 'AI engineering, SOP, Cursor, Claude, ChatGPT, Copilot, atomic commits, software architecture, AI collaboration' }],
     ['meta', { property: 'og:title', content: "The Architect's Protocol" }],

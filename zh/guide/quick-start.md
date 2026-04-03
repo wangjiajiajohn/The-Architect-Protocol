@@ -1,5 +1,9 @@
 # 🚀 快速上手
 
+<script setup>
+import { withBase } from 'vitepress'
+</script>
+
 > **目标**：3 分钟内在你的项目里跑通协议。
 
 ---
@@ -12,7 +16,7 @@
 
 **这个协议就是为了解决这个问题。**
 
-![协议使用前后对比演示](/The-Architect-Protocol/demo.gif)
+<img :src="withBase('/demo.gif')" alt="协议使用前后对比演示" style="width:100%;border-radius:12px;margin:1.5rem 0;display:block;" />
 
 ---
 

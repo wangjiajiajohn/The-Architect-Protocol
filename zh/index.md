@@ -31,6 +31,10 @@ features:
     details: Cursor 原生 MDC 支持；Claude、ChatGPT、GitHub Copilot 使用通用系统提示词。一套协议，覆盖所有工具。
 ---
 
+<script setup>
+import { withBase } from 'vitepress'
+</script>
+
 <div class="hero-install">
   <div class="hero-install-terminal">
     <span class="hero-install-prompt">$</span>
@@ -133,7 +137,7 @@ features:
 <!-- 演示 GIF -->
 <div class="section-title">🎥 看看实际效果</div>
 <div class="demo-gif-block">
-  <img src="/The-Architect-Protocol/demo.gif" alt="协议使用前后对比演示" class="demo-gif" />
+  <img :src="withBase('/demo.gif')" alt="协议使用前后对比演示" class="demo-gif" />
   <div class="demo-gif-caption">
     <span>不用协议：1,604 行代码，无人审计。</span>
     <span>用了协议：3 个原子步骤，每步都可审计。</span>

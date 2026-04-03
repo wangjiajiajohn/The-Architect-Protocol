@@ -31,6 +31,10 @@ features:
     details: Native MDC support for Cursor. Universal System Prompts for Claude, ChatGPT, and GitHub Copilot. One protocol, every tool.
 ---
 
+<script setup>
+import { withBase } from 'vitepress'
+</script>
+
 <div class="hero-install">
   <div class="hero-install-terminal">
     <span class="hero-install-prompt">$</span>
@@ -133,7 +137,7 @@ features:
 <!-- Demo GIF: Problem → Solution payoff -->
 <div class="section-title">🎥 See It in Action</div>
 <div class="demo-gif-block">
-  <img src="/The-Architect-Protocol/demo.gif" alt="Protocol before & after — terminal demo" class="demo-gif" />
+  <img :src="withBase('/demo.gif')" alt="Protocol before &amp; after — terminal demo" class="demo-gif" />
   <div class="demo-gif-caption">
     <span>Without protocol: 1,604 lines, no control.</span>
     <span>With protocol: 3 atomic steps, every one auditable.</span>
