@@ -4,33 +4,62 @@
  */
 
 /* ============================================================
+   GLOBAL: Force navbar to stay fixed at top on all mobile browsers
+   VitePress uses position:sticky which fails on some iOS/Android browsers.
+   Fix: override to position:fixed + add matching padding-top to content.
+   ============================================================ */
+.VPNav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 100 !important;
+  background: var(--vp-nav-bg-color, var(--vp-c-bg)) !important;
+}
+
+/* Compensate: push page content down so it doesn't hide under the fixed nav */
+.VPContent {
+  padding-top: var(--vp-nav-height) !important;
+}
+
+/* Also fix the hero section spacing if it exists */
+.VPHome {
+  padding-top: 0 !important;
+}
+
+/* ============================================================
    Mobile Nav: Full-width search bar
    
-   Root cause analysis (from VitePress source VPNavBar.vue):
-   - .container: display:flex; justify-content:space-between ✅
-   - .title: flex-shrink:0 (logo stays on left) ✅
-   - .content: flex-grow:1 ✅ (already stretches)
-   - .content-body: justify-content:flex-END ❌ (everything pushes right)
-   - .VPNavBarSearch inside .content-body has no flex-grow set
-   
-   Fix: change .content-body to space between or flex-start,
-   and give the search flex:1 so it fills the space.
+   Structure (VPNavBar.vue source):
+     .container (flex, space-between)
+       .title ← flex-shrink:0, takes natural width — HIDE THIS entirely
+       .content (flex-grow:1)
+         .content-body (justify:flex-END ← change to flex-START)
+           .VPNavBarSearch ← give this flex:1
+           ... other icons (hidden)
+           .VPNavBarHamburger
    ============================================================ */
-
 @media (max-width: 768px) {
 
-  /* 1. Hide long title text, keep logo icon only */
-  .VPNavBarTitle .title {
+  /* 1. Hide the entire logo+title div — frees up all its space for the search */
+  .VPNavBar .container > .title {
     display: none !important;
   }
 
-  /* 2. Change content-body from right-aligned to stretch layout */
+  /* 2. Content area fills the full container width */
+  .VPNavBar .content {
+    padding: 0 !important;
+  }
+
+  /* 3. Change from right-aligned to left-aligned, remove gaps */
   .VPNavBar .content-body {
     justify-content: flex-start !important;
     gap: 0 !important;
+    padding: 0 !important;
   }
 
-  /* 3. Hide low-priority icons (all accessible via hamburger menu) */
+  /* 4. Hide low-priority icons (all accessible via hamburger menu) */
   .VPNavBarAppearance,
   .VPNavBarTranslations,
   .VPNavBarSocialLinks,
@@ -39,15 +68,15 @@
     display: none !important;
   }
 
-  /* 4. Search fills all available space before the hamburger */
+  /* 5. Search bar fills ALL space between left edge and hamburger */
   .VPNavBarSearch {
     flex: 1 !important;
     max-width: none !important;
     min-width: 0 !important;
-    padding: 0 10px 0 4px !important;
+    padding: 0 8px 0 16px !important;
   }
 
-  /* 5. Style the DocSearch button to look like an input bar */
+  /* 6. Style as a full-width input */
   .DocSearch-Button {
     width: 100% !important;
     max-width: none !important;
@@ -71,16 +100,16 @@
     outline: none !important;
   }
 
-  /* 6. Show "Search" placeholder text (hidden on mobile by VitePress default) */
+  /* 7. Show "Search" placeholder text */
   .DocSearch-Button-Placeholder {
     display: inline !important;
-    font-size: 13px !important;
-    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.35) !important;
     flex: 1 !important;
     text-align: left !important;
   }
 
-  /* 7. Hide ⌘K shortcut — irrelevant on mobile */
+  /* 8. Hide ⌘K shortcut key indicator */
   .DocSearch-Button-Keys {
     display: none !important;
   }
@@ -92,15 +121,15 @@
     flex: 1 !important;
   }
 
-  /* 8. Hamburger: stay on the right with padding */
+  /* 9. Hamburger stays on the right */
   .VPNavBarHamburger {
     flex-shrink: 0 !important;
-    padding-right: 4px !important;
+    padding-right: 8px !important;
   }
 }
 
 /* ============================================================
-   Light mode adjustments for the search bar
+   Light mode: Adjust search bar colors
    ============================================================ */
 @media (max-width: 768px) {
   html:not(.dark) .DocSearch-Button {
