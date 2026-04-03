@@ -21,11 +21,11 @@ features:
     title: 1. 指令驱动
     details: 拒绝无目的性的闲聊。AI 仅根据预设的指令集（/r, /p, /e）执行精密逻辑。工程师不再是写作者，而是通过指令下发的指挥官。
   - icon: 🏰
-    title: 2. 规则约束
-    details: 将工程品味固化为底层纪律。通过 SOP 与 .cursorrules 锁死 SOLID/DRY 原则，让 AI 的每一行产出都带着架构师的洁癖。
+    title: 2. 模组化边界
+    details: 将工程品味固化为底层纪律。通过 V2.0 模组化规则 (.mdc) 物理锁死研究、计划与执行阶段，让每一个改动都符合架构师的洁癖。
   - icon: 🔬
-    title: 3. 人工审计
-    details: 每一个原子项都经由人类 Diff 级审核。回复“1”不仅是许可，更是对系统架构物理真实性的最高签字权。
+    title: 3. 原子级审计
+    details: 每一个原子项都经由人类 Diff 审阅。回复“1”不仅是许可，更是对系统架构物理真实性的最高签字权。
   - icon: ⚡
     title: 4. 极简交互
     details: 追求认知的极小负荷。通过高效快捷指令与原子化开发分支，让复杂的系统重构简化为“看 Diff -> 回复 1”的极致体验。
@@ -40,7 +40,7 @@ features:
 </div>
 <div class="window-body">
 <div class="type-line">> 系统: 身份验证成功 <span class="status-ok">就绪</span></div>
-<div class="type-line delay-1">> SOP协议: V2026版本已加载 <span class="status-ok">已锁定</span></div>
+<div class="type-line delay-1">> 协议 V2.0: 模组化 MDC 已加载 <span class="status-ok">已锁定</span></div>
 <div class="type-line delay-2">> 原子任务: Phase 1.1 已生成 <span class="status-warn">待审计</span></div>
 <div class="type-line delay-3">> 指令: 等待确认 '1' <span class="blink">_</span></div>
 </div>
@@ -48,8 +48,8 @@ features:
 
 <div class="status-panel">
 <div class="stat-card">
-<div class="stat-label">工程品味</div>
-<div class="stat-value">SOLID / DRY</div>
+<div class="stat-label">工程架构</div>
+<div class="stat-value">模组化 MDC</div>
 <div class="progress-bar"><div class="progress-fill fill-100"></div></div>
 </div>
 <div class="stat-card">

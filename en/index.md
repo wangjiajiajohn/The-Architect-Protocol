@@ -45,37 +45,37 @@ features:
 In the era of collapsing engineering standards, we provide a **Defense System** for your architecture:
 
 1.  **Atomic Audit Loop**: Small logic increments (<= 20 lines) to ensure you understand every byte.
-2.  **Document-First Gating**: Mandatory Research (/r) and Planning (/p) docs before execution (/e).
-3.  **Modular MDC Rules (V2.0)**: Use Cursor's native `.mdc` to physically isolate phase-permissions.
+2.  **Modular MDC Rules (V2.0)**: Use Cursor's native `.mdc` to physically isolate phase-permissions.
+3.  **Document-First Gating**: Mandatory Research (/r) and Planning (/p) docs before execution (/e).
 
 ---
 
-[Explore the Protocol](./guide/1-crisis) | [SOP Manual](./SOP) | [Usage Example](./USAGE_EXAMPLE)
+[Explore the Protocol](./guide/1-crisis) | [SOP Manual](./SOP) | [Usage Example](./USAGE_EXAMPLE) | [ADR Records](./ARCH)
 
 <div class="premium-dashboard">
 <div class="control-grid">
 <div class="control-panel terminal-window">
 <div class="window-header">
 <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-<span class="title">architect_os — audit_terminal</span>
+<span class="title">architect_os — Audit Terminal</span>
 </div>
 <div class="window-body">
-<div class="type-line">> System: Authenticated. <span class="status-ok">READY</span></div>
-<div class="type-line delay-1">> SOP: Protocol V2026 loaded. <span class="status-ok">LOCKED</span></div>
-<div class="type-line delay-2">> Atomic: Phase 1.1 generated. <span class="status-warn">AWAITING REVIEW</span></div>
-<div class="type-line delay-3">> Action: Waiting for command '1' <span class="blink">_</span></div>
+<div class="type-line">> System: Authentication successful <span class="status-ok">READY</span></div>
+<div class="type-line delay-1">> Protocol V2.0: Modular MDC Loaded <span class="status-ok">LOCKED</span></div>
+<div class="type-line delay-2">> Atomic Task: Phase 1.1 generated <span class="status-warn">PENDING</span></div>
+<div class="type-line delay-3">> Command: Waiting for confirm '1' <span class="blink">_</span></div>
 </div>
 </div>
 
 <div class="status-panel">
 <div class="stat-card">
-<div class="stat-label">Engineering Taste</div>
-<div class="stat-value">SOLID/DRY</div>
+<div class="stat-label">Architecture</div>
+<div class="stat-value">Modular MDC</div>
 <div class="progress-bar"><div class="progress-fill fill-100"></div></div>
 </div>
 <div class="stat-card">
-<div class="stat-label">Human Cognitive Load</div>
-<div class="stat-value">MINIMAL</div>
+<div class="stat-label">Cognitive Load</div>
+<div class="stat-value">Minimal</div>
 <div class="progress-bar"><div class="progress-fill fill-low"></div></div>
 </div>
 </div>

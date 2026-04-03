@@ -30,6 +30,7 @@ export default defineConfig({
             items: [
               { text: 'SOP 标准控制', link: '/SOP' },
               { text: '无瑕指令范式', link: '/PROMPTS' },
+              { text: 'ADR 历史记录', link: '/ARCH' },
               { text: '实战工作流演示', link: '/USAGE_EXAMPLE' }
             ]
           },
@@ -67,6 +68,7 @@ export default defineConfig({
             items: [
               { text: 'SOP Protocol', link: '/en/SOP' },
               { text: 'Universal Prompts', link: '/en/PROMPTS' },
+              { text: 'ADR Records', link: '/en/ARCH' },
               { text: 'Usage Example', link: '/en/USAGE_EXAMPLE' }
             ]
           },
