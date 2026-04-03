@@ -1,0 +1,44 @@
+/**
+ * Custom CSS overrides for The Architect's Protocol
+ * Mobile-first fixes and layout improvements
+ */
+
+/* ============================================================
+   Mobile Nav: Hide search button from top navbar on small screens
+   Reason: navbar overflows with search + lang switcher + github + hamburger
+   Search is still accessible via the sidebar (hamburger) overlay
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Hide the search button from the top navbar on mobile */
+  .VPNavBarSearch {
+    display: none !important;
+  }
+
+  /* Show a search shortcut inside the mobile sidebar instead */
+  .VPNavScreen .search-shortcut {
+    display: flex;
+  }
+}
+
+/* ============================================================
+   Mobile Nav: Prevent navbar icon overflow on very narrow screens
+   ============================================================ */
+@media (max-width: 420px) {
+  /* Tighten up the right-side navbar icons */
+  .VPNavBarExtra {
+    gap: 4px !important;
+  }
+
+  /* Slightly shrink appearance toggle on very narrow phones */
+  .VPNavBarAppearance {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   Mobile sidebar: Add a visible search entry point
+   This appears inside the hamburger drawer as the first item
+   ============================================================ */
+.VPNavScreen .VPNavScreenMenu {
+  padding-top: 16px;
+}
