@@ -50,6 +50,36 @@ features:
 
 ---
 
+## 💎 为什么你必须构建“架构师协议”？
+### 从“混沌对话”到“工艺流水线”
+
+| 维度 | 普通 AI 闲聊 (Chaos) | 架构师协议 V2.0 (Order) |
+| :--- | :--- | :--- |
+| **执行模型** | 概率性生成 (走着瞧) | 确定性流水线 (文档闸门) |
+| **认知负载** | 瀑布式刷屏 (读不动) | 原子化审计 (20/100 瞬秒) |
+| **质量控制** | 靠运气、无物理约束 | MDC 物理铁锁、硬核强制 |
+| **知识资产** | 随聊随散、无可维护性 | ADR 存证、SOP 长效复用 |
+
+<div class="value-grid">
+  <div class="value-card">
+    <div class="value-icon">🎯</div>
+    <h4>确定性工程</h4>
+    <p>将 AI 从“掷骰子的代码生成器”转变为“按图纸施工的工程官”。</p>
+  </div>
+  <div class="value-card">
+    <div class="value-icon">🧠</div>
+    <h4>认知负载管理</h4>
+    <p>通过 20/100 审计法则，确保你永远能看懂并掌控系统的每一行变更。</p>
+  </div>
+  <div class="value-card">
+    <div class="value-icon">🏗️</div>
+    <h4>物理级防腐</h4>
+    <p>利用 MDC 物理隔离规则，彻底根除 AI 在复杂项目中的“幻觉漂移”。</p>
+  </div>
+</div>
+
+---
+
 [探索协议](./guide/1-crisis) | [SOP 手册](./SOP) | [实战演练](./USAGE_EXAMPLE) | [ADR 记录](./ARCH)
 
 <div class="premium-dashboard">
@@ -148,6 +178,49 @@ features:
   grid-template-columns: 1.6fr 1fr;
   gap: 32px;
 }
+
+/* Value Grid & Cards */
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 3rem 0;
+}
+
+.value-card {
+  padding: 24px;
+  background: rgba(var(--vp-c-bg-soft-rgb), 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  border-color: #50e3c2;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.value-icon { font-size: 2rem; margin-bottom: 16px; }
+.value-card h4 { margin: 0 0 12px 0; color: #50e3c2; }
+.value-card p { margin: 0; font-size: 0.95rem; line-height: 1.6; color: #86868b; }
+
+/* Table Reset */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2rem 0;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+th { background: rgba(80, 227, 194, 0.1); color: #50e3c2; font-weight: 600; text-align: left; padding: 16px; }
+td { padding: 16px; border-top: 1px solid rgba(255,255,255,0.05); }
+tr:hover { background: rgba(255, 255, 255, 0.03); }
 
 @media (max-width: 860px) {
   .control-grid { grid-template-columns: 1fr; }

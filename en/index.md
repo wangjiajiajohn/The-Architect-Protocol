@@ -50,6 +50,36 @@ In the era of collapsing engineering standards, we provide a **Defense System** 
 
 ---
 
+## 💎 Why you MUST build the "Architect's Protocol"?
+### From "Chaos Conversation" to "Engineered Pipeline"
+
+| Dimension | Standard AI Chat (Chaos) | Architect Protocol V2.0 (Order) |
+| :--- | :--- | :--- |
+| **Execution Model** | Probabilistic (Cross your fingers) | Deterministic Pipeline (Gated Docs) |
+| **Cognitive Load** | Waterfall Screen Spams (Unreadable) | Atomic Audits (20/100 Rule) |
+| **Quality Control** | Relies on Luck / No Physical Locks | MDC Iron Lock / Forced Discipline |
+| **Knowledge Assets** | Ephemeral Chats / Unmaintainable | ADR Records / Long-term SOPs |
+
+<div class="value-grid">
+  <div class="value-card">
+    <div class="value-icon">🎯</div>
+    <h4>Deterministic Engineering</h4>
+    <p>Transforming AI from a "probabilistic dice roller" into a "blueprint-driven engineer."</p>
+  </div>
+  <div class="value-card">
+    <div class="value-icon">🧠</div>
+    <h4>Cognitive Freedom</h4>
+    <p>Controlled auditing ensures you always understand and master every line of change.</p>
+  </div>
+  <div class="value-card">
+    <div class="value-icon">🏗️</div>
+    <h4>Physical-Level Defense</h4>
+    <p>Using MDC rules to completely eradicate "hallucination drift" in complex projects.</p>
+  </div>
+</div>
+
+---
+
 [Explore the Protocol](./guide/1-crisis) | [SOP Manual](./SOP) | [Usage Example](./USAGE_EXAMPLE) | [ADR Records](./ARCH)
 
 <div class="premium-dashboard">
@@ -148,6 +178,49 @@ In the era of collapsing engineering standards, we provide a **Defense System** 
   grid-template-columns: 1.6fr 1fr;
   gap: 32px;
 }
+
+/* Value Grid & Cards */
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 3rem 0;
+}
+
+.value-card {
+  padding: 24px;
+  background: rgba(var(--vp-c-bg-soft-rgb), 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  border-color: #50e3c2;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.value-icon { font-size: 2rem; margin-bottom: 16px; }
+.value-card h4 { margin: 0 0 12px 0; color: #50e3c2; }
+.value-card p { margin: 0; font-size: 0.95rem; line-height: 1.6; color: #86868b; }
+
+/* Table Reset */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2rem 0;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+th { background: rgba(80, 227, 194, 0.1); color: #50e3c2; font-weight: 600; text-align: left; padding: 16px; }
+td { padding: 16px; border-top: 1px solid rgba(255,255,255,0.05); }
+tr:hover { background: rgba(255, 255, 255, 0.03); }
 
 @media (max-width: 860px) {
   .control-grid { grid-template-columns: 1fr; }
