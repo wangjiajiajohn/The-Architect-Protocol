@@ -2,9 +2,16 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: "The Architect's Protocol",
-  description: "AI-Human Collaborative Engineering — 2026 Master Edition",
+  description: "A battle-tested SOP for Human-AI collaborative software engineering. Works with Cursor, Claude, ChatGPT, and GitHub Copilot.",
   base: '/The-Architect-Protocol/',
-  
+
+  head: [
+    ['meta', { name: 'keywords', content: 'AI engineering, SOP, Cursor, Claude, ChatGPT, Copilot, atomic commits, software architecture, AI collaboration' }],
+    ['meta', { property: 'og:title', content: "The Architect's Protocol" }],
+    ['meta', { property: 'og:description', content: 'Transform AI from an impulsive code generator into a precision engineering officer.' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+  ],
+
   locales: {
     root: {
       label: 'English',
@@ -12,39 +19,55 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Home', link: '/' },
-          { text: 'Guide', link: '/guide/1-crisis' },
+          { text: 'Quick Start', link: '/guide/quick-start' },
           { text: 'Protocol', link: '/SOP' },
-          { text: 'Usage', link: '/USAGE_EXAMPLE' }
+          { text: 'Real-World Cases', link: '/guide/4-real-world-cases' },
+          { text: 'AI Tool Setup', link: '/guide/6-ai-tool-setup' },
         ],
         sidebar: [
           {
-            text: 'Foreword: Embracing Change',
+            text: '📖 Why This Exists',
             items: [
               { text: '1. What AI Changed', link: '/guide/1-crisis' },
               { text: '2. The Super Individual', link: '/guide/2-breakthrough' },
-              { text: '3. Constraint & Synergy', link: '/guide/3-collaboration' }
+              { text: '3. Constraint & Synergy', link: '/guide/3-collaboration' },
+              { text: '💎 Core Value', link: '/guide/why-protocol' },
             ]
           },
           {
-            text: '💡 Standards: Why use this?',
+            text: '🚀 Get Started',
             items: [
-              { text: '💎 Core Business Value', link: '/guide/why-protocol' },
-              { text: '🚀 Quick Start: 3 Steps', link: '/guide/quick-start' }
+              { text: '3-Step Quick Start', link: '/guide/quick-start' },
+              { text: '🤖 AI Tool Setup', link: '/guide/6-ai-tool-setup' },
             ]
           },
           {
-            text: '🏗️ Core Infrastructure',
+            text: '📐 The Protocol',
             items: [
-              { text: 'SOP Protocol', link: '/SOP' },
+              { text: 'SOP (Full Pipeline)', link: '/SOP' },
               { text: 'Universal Prompts', link: '/PROMPTS' },
               { text: 'ADR Records', link: '/ARCH' },
-              { text: 'Usage Example', link: '/USAGE_EXAMPLE' }
             ]
           },
           {
-            text: 'Community',
+            text: '🎯 Learn by Example',
             items: [
-              { text: 'Contributing', link: '/CONTRIBUTING' }
+              { text: 'Real-World Cases', link: '/guide/4-real-world-cases' },
+              { text: '🚫 Anti-Patterns', link: '/guide/5-anti-patterns' },
+            ]
+          },
+          {
+            text: '📁 Templates',
+            items: [
+              { text: 'Research Summary', link: '/templates/research_summary_template' },
+              { text: 'Implementation Plan', link: '/templates/implementation_plan_template' },
+              { text: 'ADR Template', link: '/templates/adr_template' },
+            ]
+          },
+          {
+            text: '🤝 Community',
+            items: [
+              { text: 'Contributing', link: '/CONTRIBUTING' },
             ]
           }
         ]
@@ -57,39 +80,55 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '首页', link: '/zh/' },
-          { text: '演进向导', link: '/zh/guide/1-crisis' },
+          { text: '快速上手', link: '/zh/guide/quick-start' },
           { text: 'SOP 协议', link: '/zh/SOP' },
-          { text: '实战演示', link: '/zh/USAGE_EXAMPLE' }
+          { text: '实战案例', link: '/zh/guide/4-real-world-cases' },
+          { text: 'AI 工具配置', link: '/zh/guide/6-ai-tool-setup' },
         ],
         sidebar: [
           {
-            text: '写在前面：拥抱重塑',
+            text: '📖 为什么需要它',
             items: [
               { text: '1. AI 到底改变了什么？', link: '/zh/guide/1-crisis' },
               { text: '2. 升维：超级个体的诞生', link: '/zh/guide/2-breakthrough' },
-              { text: '3. 协作：如何约束与驾驭', link: '/zh/guide/3-collaboration' }
-            ]
-          },
-          {
-            text: '💡 工程标准：为什么用它？',
-            items: [
+              { text: '3. 协作：如何约束与驾驭', link: '/zh/guide/3-collaboration' },
               { text: '💎 核心业务价值', link: '/zh/guide/why-protocol' },
-              { text: '🚀 快速上手：3 步开启', link: '/zh/guide/quick-start' }
             ]
           },
           {
-            text: '🏗️ 基础设施：架构师协议',
+            text: '🚀 快速上手',
             items: [
-              { text: 'SOP 标准控制', link: '/zh/SOP' },
+              { text: '3 步开启', link: '/zh/guide/quick-start' },
+              { text: '🤖 AI 工具配置', link: '/zh/guide/6-ai-tool-setup' },
+            ]
+          },
+          {
+            text: '📐 协议文档',
+            items: [
+              { text: 'SOP 标准流程', link: '/zh/SOP' },
               { text: '无瑕指令范式', link: '/zh/PROMPTS' },
               { text: 'ADR 历史记录', link: '/zh/ARCH' },
-              { text: '实战工作流演示', link: '/zh/USAGE_EXAMPLE' }
             ]
           },
           {
-            text: '社区与贡献',
+            text: '🎯 案例学习',
             items: [
-              { text: '贡献指南', link: '/zh/CONTRIBUTING' }
+              { text: '真实案例', link: '/zh/guide/4-real-world-cases' },
+              { text: '🚫 反模式图鉴', link: '/zh/guide/5-anti-patterns' },
+            ]
+          },
+          {
+            text: '📁 标准模板',
+            items: [
+              { text: '研究摘要模板', link: '/templates/research_summary_template' },
+              { text: '实施计划模板', link: '/templates/implementation_plan_template' },
+              { text: 'ADR 模板', link: '/templates/adr_template' },
+            ]
+          },
+          {
+            text: '🤝 社区与贡献',
+            items: [
+              { text: '贡献指南', link: '/zh/CONTRIBUTING' },
             ]
           }
         ]
@@ -105,6 +144,13 @@ export default defineConfig({
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2026 Jiajia Wang'
+    },
+    search: {
+      provider: 'local'
+    },
+    editLink: {
+      pattern: 'https://github.com/wangjiajiajohn/The-Architect-Protocol/edit/main/:path',
+      text: 'Edit this page on GitHub'
     }
   }
 })

@@ -1,24 +1,39 @@
 ---
-name: Bug Report
-about: Create a report to help us improve.
-labels: bug
+name: 🐛 Bug Report
+about: Report a broken rule, incorrect protocol step, or documentation error
+title: '[BUG] '
+labels: 'bug'
 assignees: ''
-
 ---
 
-## 🐛 Bug 描述 (Bug Description)
-简要描述您在使用 SOP 时遇到的 AI 偏差或工程路径错误。
+## 🐛 What's broken?
 
-## 🎬 复现步骤 (Steps to Reproduce)
-1. 发起需求 '...'
-2. 执行指令 '/...'
-3. AI 输出内容 '...'
-4. 结果与预期差异 '...'
+**Describe the bug clearly:**
+A clear description of what the problem is.
 
-## 📑 SOP 状态 (SOP State)
-- **协议版本**: 2026 Master Edition
-- **IDE**: (Cursor / Windsurf / Other)
-- **使用的模板**: (research_summary.md / implementation_plan.md / etc.)
+## 📍 Where is it?
 
-## 📸 截图/日志 (Screenshots/Logs)
-如果可能，请提供 AI 的错误输出截图。
+- [ ] MDC Rule file (specify: `___`)
+- [ ] SOP documentation
+- [ ] Guide / Tutorial page
+- [ ] PROMPTS templates
+- [ ] VitePress site layout
+
+## 🔬 Steps to Reproduce
+
+1. Using AI tool: `[Cursor / Claude / ChatGPT / Copilot]`
+2. Followed step: `[/r / /p / /e / ...]`
+3. Expected behavior: `...`
+4. Actual behavior: `...`
+
+## 🤖 Which AI Tool?
+
+- [ ] Cursor (MDC Rules)
+- [ ] Claude (System Prompt)
+- [ ] ChatGPT (Custom Instructions)
+- [ ] GitHub Copilot (`copilot-instructions.md`)
+- [ ] Other: ______
+
+## 📎 Additional Context
+
+Paste any relevant AI chat logs, error messages, or screenshots here.

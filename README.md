@@ -1,59 +1,181 @@
 ![The Architect's Protocol](./public/hero-banner.png)
 
-# The Architect's Protocol — V2.0 Modular MDC
+<div align="center">
 
-> **Don't let AI become your master, and don't let your projects become AI's "Poop-Mountains".**
+# The Architect's Protocol
 
-**The Architect's Protocol** is an **AI-Human industrial standard** designed to transform AI from an "impulsive generator" into a "precision engineering officer." Through physical-level gating and atomic audit loops, we ensure every line of code written by AI is: **Maintainable, Iterable, High-Quality**.
+**A battle-tested SOP for Human-AI collaborative software engineering.**
 
----
+Transform AI from an impulsive code generator into a precision engineering officer.
 
-## 💎 Why do you NEED it?
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/wangjiajiajohn/The-Architect-Protocol/blob/main/LICENSE)
+[![Version](https://img.shields.io/badge/version-v2.0--Modular--MDC-blue)](./ARCH.md)
+[![VitePress Docs](https://img.shields.io/badge/docs-VitePress-brightgreen)](https://wangjiajiajohn.github.io/The-Architect-Protocol/)
 
-1.  **From "Dice-Rolling" to "Pipeline"**: Refuse luck-based code generation. Enforce **Research (/r) -> Plan (/p) -> Execute (/e)**, ensuring architectural alignment.
-2.  **The "Handbrake" against AI Entropy**: AI can vomit 500 lines of junk in a second. Our **20/100 Atomic Audit** forces it to evolve at a speed your brain can "instantly grasp."
-3.  **Digital Assets, Not Just Chat History**: Every task leaves behind **ADRs (Arch Decisions)** and **SOPs**, turning conversations into permanent, maintainable assets.
+**Works with:** Cursor · Claude · ChatGPT · GitHub Copilot
 
-### Now: The High-Speed Rail Era
-With AI, we have hired a "tireless, knowledgeable, but extremely impulsive" **intern engineering team**.
-They can lay 10km of track in a second, but they:
-- **Are Irresponsible**: Leaving `// TODO` behind and vanishing.
-- **Over-Confident**: Stuffing 100 features into one file as long as it "runs."
-- **Dig Holes without Filling**: Sacrificing your next three years of maintenance for today's quick delivery.
+</div>
 
 ---
 
-## 🛡️ 2. Our Solution: Establishing a "Collaborative Contract"
+## 🩺 The Problem
 
-**The Architect's Protocol** forces both you and the AI to follow these four laws:
+AI coding tools are powerful. They are also dangerously impulsive.
 
-### 🧱 Law 1: Atomic Audit (Don't change too much at once!)
-*   **Rule**: Logic <= **20 lines**; UI/Markup/Config <= **100 lines**.
-*   **Logic**: 20 lines is the human brain's limit for instant logic understanding; 100 lines is the aesthetic limit for pure UI changes. Ensure you understand every byte.
+Without discipline, your AI assistant will:
 
-### 🔌 Law 2: Contract Locking (Draw the blueprint before building!)
-*   **Rule**: No implementation without clear **Interfaces/Types**.
-*   **Logic**: Rules first, work second. This prevents messy entanglement of business logic and UI.
+- ❌ Rewrite 300 lines when you asked for 10
+- ❌ Mix business logic with UI in the same commit
+- ❌ Confidently introduce bugs while "fixing" a different bug
+- ❌ Leave `// TODO` landmines and ghost you
+- ❌ Lose context after 3 messages and contradict itself
 
-### 🏗️ Law 3: Three-Layer Pyramid (Keep skin and bone separate!)
-*   **Rule**: Logic belongs to the Logic layer; presentation belongs to the UI layer.
-*   **Logic**: Keep business logic "pure" so you can swap UI flavors without touching a single line of core logic.
+The result? A codebase that becomes unmaintainable in weeks.
 
-### 🧹 Law 4: Context GC (Clean up to stay smart!)
-*   **Rule**: Delete obsolete research and plans immediately after a task is finished via `/c`.
-*   **Logic**: **"Clear the whiteboard."** AI memory (Context) is finite. Clutter makes it stupid. Regular cleaning keeps the AI in its smartest state.
+**The Architect's Protocol is the handbrake.**
 
 ---
 
-## 🧱 3. Protocol V2.0: Modular MDC Architecture
+## ⚡ The Solution: A 3-Phase Engineering Pipeline
 
-To solve the "Phase-Drift" issue in long-chain development, the protocol has been upgraded to V2.0 Modular Architecture. We use Cursor's `.mdc` system to implement physical permission isolation:
+Instead of free-form chat, you enforce a structured loop:
 
-- **[100-Core]**: Defines global Identity and Language protocols.
-- **[200-Research Gate]**: Locked to `research_summary.md`. AI is in **Read-Only** mode for code during this phase.
-- **[300-Planning Gate]**: Locked to `implementation_plan.md`. Mandates contract/schema auditing.
-- **[400-Execution Iron Lock]**: Locked to source code. Forces "Atomic Audit Loops" and "Diff Checks."
+```
+┌──────────────────────────────────────────────────┐
+│              THE ENGINEERING PIPELINE             │
+│                                                  │
+│   /r (Research)  →  /p (Plan)  →  /e (Execute)  │
+│                                                  │
+│   [Read-Only]       [Contract      [Atomic       │
+│   Analyze deps,      Lock]          Audit Loop]  │
+│   map risks,        Lock types,    ≤20 lines/    │
+│   compare paths     define schema  commit        │
+│                          ↑                ↑      │
+│                   Human replies "1"  after diff  │
+└──────────────────────────────────────────────────┘
+```
+
+**The human never disappears from the loop. They just stop doing the grunt work.**
 
 ---
 
-"AI won't destroy software engineering; only **thoughtless** usage of AI will. This protocol is the pen with which you reclaim engineering control."
+## 🏗️ Four Core Laws
+
+### ⚛️ Law 1: Atomic Audit — Never merge more than you can read in 60 seconds
+- **Logic changes**: ≤ **20 lines** per commit (human brain's instant-verification limit)
+- **UI / Markup changes**: ≤ **100 lines** or 1 functional block (e.g., a Modal, a Table)
+- **Two-Strike Rule**: Fail twice → `git reset --hard` → Return to `/r`
+
+### 📋 Law 2: Contract-First — Draw the blueprint before laying bricks
+No implementation without locked `Interface / Types / Schema`. Rules first, code second.
+
+### 🏛️ Law 3: Three-Layer Pyramid — Keep skin and bone separate
+```
+┌─────────────────────────────┐
+│       UI / Markup Layer      │  ← swap freely
+├─────────────────────────────┤
+│      Business Logic Layer    │  ← pure, testable
+├─────────────────────────────┤
+│     Data / Schema Layer      │  ← the source of truth
+└─────────────────────────────┘
+```
+
+### 🧹 Law 4: Context GC — Clear the whiteboard after every task
+Delete `research_summary.md`, `implementation_plan.md`, `task.md` via `/c` when done.
+AI memory is finite. Clutter makes it stupid.
+
+---
+
+## 🚀 Quick Start (5 minutes)
+
+### For Cursor Users (Recommended)
+
+```bash
+# 1. Copy the MDC rule files to your project
+cp -r .cursor/rules/ /path/to/your-project/.cursor/rules/
+
+# 2. The rules activate automatically based on which file you're editing.
+#    No setup required.
+```
+
+Then in Cursor chat:
+```
+/r [describe your requirement]
+```
+Wait for AI to produce `research_summary.md`. Review it. Reply `1`.
+
+```
+/p
+```
+Wait for `implementation_plan.md`. Check the contracts and types. Reply `1`.
+
+```
+/e 1.1
+```
+AI executes one atomic step, shows you the diff. Reply `1` to commit.
+
+---
+
+### For Claude / ChatGPT / Copilot Users
+
+Copy the **Universal System Prompt** from [`PROMPTS.md`](./PROMPTS.md) into:
+- Claude → System Prompt field
+- ChatGPT → Custom Instructions
+- Copilot → `.github/copilot-instructions.md`
+
+---
+
+## 📊 Before vs. After
+
+| Scenario | Without Protocol | With Protocol |
+|----------|-----------------|---------------|
+| Requirement: "Add login rate limiting" | AI rewrites auth module (450 lines), breaks 3 tests | 3 atomic commits: Interface → Logic → Route injection |
+| Bug appears after AI fix | Unknown which commit caused it | `git bisect` finds it in 30 seconds (atomic commits) |
+| New dev joins mid-project | Reads 2000 lines to understand context | Reads `ARCH.md` and ADR trail |
+| AI loses context after long session | Starts contradicting itself | `/r` re-anchors from physical documents |
+
+---
+
+## 📐 Protocol V2.0: Modular MDC Architecture
+
+```
+.cursor/rules/
+├── 100-core-instructions.mdc    ← Global identity, language lock
+├── 200-research-gate.mdc        ← Read-only mode, research output only
+├── 300-planning-gate.mdc        ← Contract audit, atomic task list
+└── 400-execution-iron-lock.mdc  ← Atomic commits, mandatory diff review
+```
+
+Each gate **physically isolates** what the AI is allowed to do. During research, the AI cannot touch source code — the rule file makes it structurally impossible.
+
+---
+
+## 📁 Repository Structure
+
+```
+The-Architect-Protocol/
+├── .cursor/rules/          ← Cursor MDC rule files (the physical locks)
+├── templates/              ← Standard output templates (research, plan, ADR)
+├── guide/                  ← Onboarding guides and real-world case studies
+├── SOP.md                  ← The full Standard Operating Procedure
+├── PROMPTS.md              ← Universal system prompts for all AI tools
+├── ARCH.md                 ← Architecture Decision Records
+└── USAGE_EXAMPLE.md        ← Full worked example (login rate limiting)
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions that strengthen the protocol. Please read [`CONTRIBUTING.md`](./CONTRIBUTING.md) first.
+
+The key contribution areas are:
+1. **New real-world case studies** — `guide/4-real-world-cases.md`
+2. **Anti-pattern documentation** — `guide/5-anti-patterns.md`
+3. **AI tool-specific configurations** — `guide/6-ai-tool-setup.md`
+4. **Language translations** — `/zh/` directory
+
+---
+
+> *"AI won't destroy software engineering. Only **thoughtless** use of AI will.*
+> *This protocol is the pen with which you reclaim engineering control."*
