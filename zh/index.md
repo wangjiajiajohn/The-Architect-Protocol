@@ -76,38 +76,6 @@ import { withBase } from 'vitepress'
   </div>
 </div>
 
-<div class="control-grid">
-<div class="control-panel terminal-window">
-<div class="window-header">
-<span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-<span class="title">architect_os — 审计终端</span>
-</div>
-<div class="window-body">
-<div class="type-line">> 系统: 协议 V2.0 已加载 <span class="status-ok">就绪</span></div>
-<div class="type-line delay-1">> 闸门 200: 研究锁已激活 <span class="status-ok">已锁定</span></div>
-<div class="type-line delay-2">> 原子任务 1.1: 接口已定义 <span class="status-ok">通过</span></div>
-<div class="type-line delay-3">> 闸门 400: 等待审计 "1" <span class="blink">_</span></div>
-</div>
-</div>
-
-<div class="status-panel">
-<div class="stat-card">
-  <div class="stat-label">闸门架构</div>
-  <div class="stat-value">模组化 MDC</div>
-  <div class="progress-bar"><div class="progress-fill fill-100"></div></div>
-</div>
-<div class="stat-card">
-  <div class="stat-label">人类认知负载</div>
-  <div class="stat-value">极低</div>
-  <div class="progress-bar"><div class="progress-fill fill-low"></div></div>
-</div>
-<div class="stat-card">
-  <div class="stat-label">人类掌控度</div>
-  <div class="stat-value">100%</div>
-  <div class="progress-bar"><div class="progress-fill fill-100"></div></div>
-</div>
-</div>
-</div>
 
 <!-- 反模式预览 -->
 <div class="section-title">🚫 协议阻止了哪些问题</div>

@@ -76,38 +76,6 @@ import { withBase } from 'vitepress'
   </div>
 </div>
 
-<div class="control-grid">
-<div class="control-panel terminal-window">
-<div class="window-header">
-<span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-<span class="title">architect_os — Audit Terminal</span>
-</div>
-<div class="window-body">
-<div class="type-line">> System: Protocol V2.0 loaded <span class="status-ok">READY</span></div>
-<div class="type-line delay-1">> Gate 200: Research lock active <span class="status-ok">LOCKED</span></div>
-<div class="type-line delay-2">> Atomic Task 1.1: Interface defined <span class="status-ok">PASS</span></div>
-<div class="type-line delay-3">> Gate 400: Awaiting audit "1" <span class="blink">_</span></div>
-</div>
-</div>
-
-<div class="status-panel">
-<div class="stat-card">
-  <div class="stat-label">Gate Architecture</div>
-  <div class="stat-value">Modular MDC</div>
-  <div class="progress-bar"><div class="progress-fill fill-100"></div></div>
-</div>
-<div class="stat-card">
-  <div class="stat-label">Cognitive Load</div>
-  <div class="stat-value">Minimal</div>
-  <div class="progress-bar"><div class="progress-fill fill-low"></div></div>
-</div>
-<div class="stat-card">
-  <div class="stat-label">Human Control</div>
-  <div class="stat-value">100%</div>
-  <div class="progress-bar"><div class="progress-fill fill-100"></div></div>
-</div>
-</div>
-</div>
 
 <!-- Anti-Pattern Preview -->
 <div class="section-title">🚫 What This Protocol Prevents</div>
