@@ -97,12 +97,7 @@ features:
 
 /* Feature Grid (Apple Style Card) */
 .VPFeature {
-  text-align: center !important;
-  display: flex !important;
-  flex-direction: column;
-  align-items: center !important;
-  justify-content: center;
-  padding: 40px 24px !important;
+  padding: 32px !important;
   background: rgba(var(--vp-c-bg-soft-rgb), 0.4) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -111,12 +106,21 @@ features:
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
-.VPFeature .icon {
-  display: flex !important;
+/* Horizontal Grid: Icon | Title */
+.VPFeature article {
+  display: grid !important;
+  grid-template-columns: auto 1fr !important;
+  grid-template-areas: "icon title" "icon details";
+  column-gap: 20px !important;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.5rem !important;
 }
+.VPFeature .icon { 
+  grid-area: icon; margin: 0 !important; width: 48px; height: 48px;
+  display: flex !important; align-items: center; justify-content: center;
+}
+.VPFeature .title { grid-area: title; margin: 0 !important; text-align: left !important; font-size: 1.25rem !important; }
+.VPFeature .details { grid-area: details; margin: 8px 0 0 0 !important; text-align: left !important; line-height: 1.5 !important; }
+
 .VPFeature:hover {
   transform: translateY(-8px) scale(1.02);
   background: rgba(var(--vp-c-bg-soft-rgb), 0.6) !important;
