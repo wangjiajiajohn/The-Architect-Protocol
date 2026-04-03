@@ -13,7 +13,8 @@ export default defineConfig({
         nav: [
           { text: '首页', link: '/' },
           { text: 'SOP 协议', link: '/SOP' },
-          { text: '实战演示', link: '/USAGE_EXAMPLE' }
+          { text: '实战演示', link: '/USAGE_EXAMPLE' },
+          { text: '研发演进', link: '/PHILOSOPHY' }
         ],
         sidebar: [
           {
@@ -22,6 +23,12 @@ export default defineConfig({
               { text: 'SOP 核心协议', link: '/SOP' },
               { text: '实战演示', link: '/USAGE_EXAMPLE' },
               { text: '全平台提示词', link: '/PROMPTS' }
+            ]
+          },
+          {
+            text: '深度思考',
+            items: [
+              { text: 'AI时代的工程师', link: '/PHILOSOPHY' }
             ]
           },
           {

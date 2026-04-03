@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: 什么是 SOP？
       link: /USAGE_EXAMPLE
+    - theme: alt
+      text: 思考：AI与工程师
+      link: /PHILOSOPHY
 
 features:
   - icon: 🛡️
