@@ -10,8 +10,8 @@ hero:
     alt: The Architect's Protocol
   actions:
     - theme: brand
-      text: Start High-Efficiency Paradigm
-      link: /en/guide/1-crisis
+      text: 🚀 Quick Start
+      link: /en/guide/quick-start
     - theme: alt
       text: View SOP Protocol
       link: /en/SOP

@@ -28,7 +28,8 @@ export default defineConfig({
           {
             text: '💡 工程标准：为什么用它？',
             items: [
-              { text: '💎 核心业务价值', link: '/guide/why-protocol' }
+              { text: '💎 核心业务价值', link: '/guide/why-protocol' },
+              { text: '🚀 快速上手：3 步开启', link: '/guide/quick-start' }
             ]
           },
           {
@@ -72,7 +73,8 @@ export default defineConfig({
           {
             text: '💡 Standards: Why use this?',
             items: [
-              { text: '💎 Core Business Value', link: '/en/guide/why-protocol' }
+              { text: '💎 Core Business Value', link: '/en/guide/why-protocol' },
+              { text: '🚀 Quick Start: 3 Steps', link: '/en/guide/quick-start' }
             ]
           },
           {

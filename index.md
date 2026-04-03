@@ -10,8 +10,8 @@ hero:
     alt: The Architect's Protocol
   actions:
     - theme: brand
-      text: 开启高效范式
-      link: /guide/1-crisis
+      text: 🚀 快速上手
+      link: /guide/quick-start
     - theme: alt
       text: 查阅 SOP 协议
       link: /SOP
