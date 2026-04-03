@@ -25,11 +25,12 @@
 ## 📐 3. 工程执行金字塔 (The Hierarchy of Execution)
 1.  **横向：模块解耦 (Module Level)**：强制执行 **Phase 0 契约锁**（先写 Stub 接口定义，全量类型通过后再编码）。
 2.  **纵向：分层迭进 (Layer Level)**：严格遵循 **Schema -> Logic -> Store -> UI** 顺序。
-3.  **末端：微型原子 (Atomic Level)**：
-    - **Atomic Units**:
-    - **Logic Change**: Atomic logic units must be <= **20 lines**.
-    - **UI/Markup Change**: Atomic UI units (HTML/CSS) are allowed up to **100 lines** or one functional block (e.g., a Modal/Table).
-    - **Two-Strike Rule**: If an atomic task fails twice -> `git reset --hard` -> Return to `/r` phase.
+3.  **末端：微型原子 (Atomic Level)** — 双轨制：
+    - **逻辑变更：** ≤ **20 行**；**或**一个完整的语义单元（需在 diff 前说明理由）。
+    - **UI/模板变更：** ≤ **100 行** **且** ≤ 1 个功能块（如一个 Modal、一个表单），两个条件须同时满足。
+    - **纯重构**（无行为改变）：逻辑毛放宽至 ≤ **50 行**，需使用 `refactor:` 提交前缀。
+    - **类型定义 / 接口 / 配置文件：** 不计入行数限制，但必须独立提交，不得与实现代码混提。
+    - **二连败规则：** 原子任务失败两次 → `git reset --hard` → 返回 `/r` 阶段并内置根因分析。
 
 ---
 

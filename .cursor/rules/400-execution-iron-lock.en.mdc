@@ -15,9 +15,11 @@ alwaysApply: false
 For every atomic step:
 
 1. **Read Plan**: `view_file implementation_plan.md` to confirm current step before starting.
-2. **Atomic Increment**:
-   - **Logic changes (JS/TS/Logic)**: Strictly ≤ **20 lines** per step.
-   - **UI/Template/Config (HTML/CSS/Config)**: Up to **100 lines** or **1 complete UI functional unit**.
+2. **Atomic Increment** — Dual-Track Model:
+   - **Logic changes (JS/TS/Logic)**: Strictly ≤ **20 lines**; **OR** one complete semantic unit (must state the rationale in a comment before the diff).
+   - **UI/Template (HTML/JSX/Vue)**: ≤ **100 lines** **AND** ≤ 1 functional block (both conditions must be met).
+   - **Pure refactor** (no behavior change): Logic may be relaxed to ≤ **50 lines**; must use `refactor:` commit prefix.
+   - **Type definitions / Interfaces / Config files**: Exempt from line count limits, but **must be committed separately** — never mixed with implementation code.
 3. **Show Diffs (Review)**: Proactively display `git diff` or code snapshot for human review.
 4. **Atomic Verification**: Run `tsc`, `lint`, or `npm test`. Show pass result.
 5. **Wait for `1`**: **Never** call `git commit` or advance to the next atomic step without receiving `1`.

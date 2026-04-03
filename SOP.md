@@ -39,10 +39,11 @@ flowchart TD
 
 1. **Horizontal: Module Decoupling** — Phase 0 Contract Lock (write Stub interfaces first, verify via TSC, then implement logic).
 2. **Vertical: Layer-by-Layer Progression** — Schema → Logic → Store → UI layers.
-3. **Atomic Units**:
-   - **Logic Change**: ≤ **20 lines**. This is the human brain's instant-verification limit.
-   - **UI/Markup Change**: ≤ **100 lines** or one functional block (e.g., a Modal/Table).
-   - **Config Change**: JSON/YAML ≤ **100 lines**.
+3. **Atomic Units** — Dual-Track Model:
+   - **Logic Change**: ≤ **20 lines**; **OR** one complete semantic unit (rationale must be stated before the diff).
+   - **UI/Markup Change**: ≤ **100 lines** **AND** ≤ 1 functional block (e.g., one Modal, one Form — both conditions required).
+   - **Pure Refactor** (no behavior change): Logic relaxed to ≤ **50 lines**; requires `refactor:` commit prefix.
+   - **Type definitions / Interfaces / Config files**: Exempt from line count limits, but must be committed separately — never mixed with implementation.
    - **Two-Strike Rule**: Fail verification twice → `git reset --hard` → Return to `/r` phase with root cause analysis.
 
 ---
