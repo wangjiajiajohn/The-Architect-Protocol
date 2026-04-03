@@ -18,6 +18,21 @@ Transform AI from an impulsive code generator into a precision engineering offic
 
 ---
 
+## 🚀 One-Line Install
+
+Run this in any project to instantly get all protocol files:
+
+```bash
+npx github:wangjiajiajohn/The-Architect-Protocol
+```
+
+This installs:
+- 📐 `5 × MDC gate rules` → `.cursor/rules/` (Chinese + English)
+- 📋 `3 × templates` → `templates/` (Research / Plan / ADR)
+- 💬 `PROMPTS.md` → system prompts for Claude / ChatGPT / Copilot
+
+---
+
 ## 🩺 The Problem
 
 AI coding tools are powerful. They are also dangerously impulsive.
