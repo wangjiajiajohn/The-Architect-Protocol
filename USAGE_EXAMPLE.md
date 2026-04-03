@@ -12,7 +12,7 @@
 
 **User**: `/r 帮我在 Next.js 登录 API 中实现每分钟 5 次的限流功能。`
 
-**AI**: *分析工程结构并产出 [research_summary.md](./research_summary.md)...*
+**AI**: *分析工程结构并产出 **研究摘要 (research_summary.md)**...*
 1. **核心发现**：已有路由缺乏中间件，建议使用 Redis 或 Memory Map。
 2. **停顿**：`请直接在文档中修正方案。完成后在此回复 1。`
 
@@ -23,7 +23,7 @@
 
 ## 🎯 Step 2: 方案确认与锁定 (/p)
 
-**AI**: *[重新加载研究摘要] -> 生成 [implementation_plan.md](./implementation_plan.md)...*
+**AI**: *[重新加载研究摘要] -> 生成 **实施计划 (implementation_plan.md)**...*
 - **1.1 定义契约**：在 `types/auth.ts` 中加入 `RateLimitResponse`。
 - **1.2 实现逻辑**...
 
