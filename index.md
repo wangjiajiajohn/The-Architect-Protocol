@@ -32,33 +32,33 @@ features:
 ---
 
 <div class="premium-dashboard">
-  <div class="control-grid">
-    <div class="control-panel terminal-window">
-      <div class="window-header">
-        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-        <span class="title">architect_os — audit_terminal</span>
-      </div>
-      <div class="window-body">
-        <div class="type-line">> System: Authenticated. <span class="status-ok">READY</span></div>
-        <div class="type-line delay-1">> SOP: Protocol V2026 loaded. <span class="status-ok">LOCKED</span></div>
-        <div class="type-line delay-2">> Atomic: Phase 1.1 generated. <span class="status-warn">AWAITING REVIEW</span></div>
-        <div class="type-line delay-3">> Action: Waiting for command '1' <span class="blink">_</span></div>
-      </div>
-    </div>
-    
-    <div class="status-panel">
-      <div class="stat-card">
-        <div class="stat-label">Engineering Taste</div>
-        <div class="stat-value">SOLID/DRY</div>
-        <div class="progress-bar"><div class="progress-fill fill-100"></div></div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Human Cognitive Load</div>
-        <div class="stat-value">MINIMAL</div>
-        <div class="progress-bar"><div class="progress-fill fill-low"></div></div>
-      </div>
-    </div>
-  </div>
+<div class="control-grid">
+<div class="control-panel terminal-window">
+<div class="window-header">
+<span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+<span class="title">architect_os — audit_terminal</span>
+</div>
+<div class="window-body">
+<div class="type-line">> System: Authenticated. <span class="status-ok">READY</span></div>
+<div class="type-line delay-1">> SOP: Protocol V2026 loaded. <span class="status-ok">LOCKED</span></div>
+<div class="type-line delay-2">> Atomic: Phase 1.1 generated. <span class="status-warn">AWAITING REVIEW</span></div>
+<div class="type-line delay-3">> Action: Waiting for command '1' <span class="blink">_</span></div>
+</div>
+</div>
+
+<div class="status-panel">
+<div class="stat-card">
+<div class="stat-label">Engineering Taste</div>
+<div class="stat-value">SOLID/DRY</div>
+<div class="progress-bar"><div class="progress-fill fill-100"></div></div>
+</div>
+<div class="stat-card">
+<div class="stat-label">Human Cognitive Load</div>
+<div class="stat-value">MINIMAL</div>
+<div class="progress-bar"><div class="progress-fill fill-low"></div></div>
+</div>
+</div>
+</div>
 </div>
 
 <style>
