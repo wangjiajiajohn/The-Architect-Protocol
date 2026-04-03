@@ -2,7 +2,16 @@
   "name": "the-architects-protocol",
   "version": "2.0.0",
   "description": "A battle-tested AI-Human collaborative engineering SOP. Transform AI from an impulsive code generator into a precision engineering officer.",
-  "main": "index.js",
+  "bin": {
+    "create-architect-protocol": "./bin/init.js"
+  },
+  "files": [
+    "bin/",
+    ".cursor/",
+    "templates/",
+    "PROMPTS.md",
+    "SOP.md"
+  ],
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
