@@ -1,86 +1,59 @@
-# 🏆 AI-Human 协同开发：高效 SOP 模型 (2026 Master Edition)
+# 🏆 AI-Human Collaborative SOP: High-Efficiency Protocol (2026 Master Edition)
 
 > [!IMPORTANT]
-> **本协议的核心：** 让 AI 负责 90% 的体力活（设计、实现、自检、原子 Commit），让人类仅负责 10% 的核心决策（架构对齐、方案审核、Diff 审计）。
+> **Core Principle**: Let AI handle 90% of the labor (design, implementation, self-check, atomic commit), while the human handles 10% of the strategic decision-making (architectural alignment, plan approval, Diff audit).
 
 ---
 
-## 👥 1. 协同权责表 (Operational Ownership)
-| 责任项 | AI 的职责 (自动化执行) | 人类的职责 (战略审计) |
-| :--- | :--- | :--- |
-| **方案设计** | 自动识别模式、产出分阶段 Plan | 审核计划逻辑编号 (**Gate 2**) |
-| **原子实现** | 单一逻辑变更 (10-20行)、自动纠错 | 阅读 Diffs 确认并回复 **"1"** |
-| **故障排查** | **证据驱动**：注入 Log 取证 + 编写测试复现 | 提供运行日志与报错现场 (**Gate 3**) |
-| **版本管理** | 自动建分支、**审计通过后自动 Commit** | **Push 远程、由人类发起并合并 PR** |
+## 🏛️ 1. Engineering Execution Pyramid
 
----
-
-## 🏛️ 2. 工程架构深度对齐 (Engineering Excellence & Aesthetics)
-*   **SOLID/DRY 原则**：强制执行单一职责（SRP）与开闭原则（OCP）。严禁逻辑堆叠。
-*   **解耦协议**：UI 仅负责渲染，所有业务算法、数据变换必须抽离至 `Hooks` 或 `Services`。
-*   **模式发现权**：在 `/r` (研究阶段)，AI **必须**主动分析并建议设计模式（策略、工厂、单例等）。
-
----
-
-## 📐 3. 工程执行金字塔 (The Hierarchy of Execution)
-1.  **横向：模块解耦 (Module Level)**：强制执行 **Phase 0 契约锁**（先写 Stub 接口定义，全量类型通过后再编码）。
-2.  **纵向：分层迭进 (Layer Level)**：严格遵循 **Schema -> Logic -> Store -> UI** 顺序。
-3.  **末端：微型原子 (Atomic Level)**：
-    - **Atomic Units**:
-    - **Logic Change**: Atomic logic units must be <= **20 lines**.
+1.  **Horizontal: Module Decoupling**: Phase 0 Contract Lock (write Stub interfaces first, verify via TSC, then implement logic).
+2.  **Vertical: Layer-by-Layer Progression**: Schema -> Logic -> Store -> UI layers.
+3. - **Atomic Units**:
+    - **Logic Change**: Atomic logic units must be <= **20 lines**. This is the limit for instant human verification.
     - **UI/Markup Change**: Atomic UI units (HTML/CSS) are allowed up to **100 lines** or one functional block (e.g., a Modal/Table).
+    - **Config Change**: Config files (JSON/YAML) are allowed up to **100 lines**.
     - **Two-Strike Rule**: If an atomic task fails twice -> `git reset --hard` -> Return to `/r` phase.
 
 ---
 
-## 🧱 4. 文档先行与模组化物理锁 (Document-First & MDC Iron Lock)
-**核心哲学**：Chat 仅用于触发与确认，**文档与模块规则才是真正的思考与协作界面**。
+## 🧱 2. Document-First & MDC Iron Lock
 
-*   **`/r` (Research)**：**[闸门 0]**。触发 `.cursor/rules/200-research-gate.mdc`。AI 进入**只读模式**，仅允许产出 `research_summary.md`。
-*   **`/p` (Plan)**：**[闸门 1]**。触发 `.cursor/rules/300-planning-gate.mdc`。AI 必须产出接口契约、类型定义及原子任务列表。
-*   **交互锁 (Gating Lock)**：
-    1. 人类在 `.md` 文件中进行**批注**或回复 `1`。
-    2. AI 必须**重新读取文件 (Cold Reload)** 以同步最新意志。
-    3. 在获得 `1` 之前，执行层规则 (`400-execution`) 处于物理失活状态。
-*   **`/e` (Execute)**：**[原子操作]**。触发 `.cursor/rules/400-execution-iron-lock.mdc`。
-*   **动作循环**：
-    1. 改动源码。
-    2. **主动展示 Diffs (Review)**。
-    3. 展示自检结果 (TSC/Test) -> **回复 "1" 后执行物理 Commit**。
-*   **`/g` (Git Sync)**：一键 add, commit, push 同步全量进度。
-*   **`/cp` (Checkpoint)**：汇总当前协议执行状态。
+**Core Philosophy**: Chat is only for triggers and confirmation; **Documents and Module Rules are the real thinking and collaboration interface.**
 
----
-
-## 🔱 5. 专业 Git 协议与防御性机制 (Git & Safeguards)
-1.  **原子提交**：每一个 [原子项] 经人类审核后，AI 必须自动执行 Angular 规范语义 Commit。
-2.  **变更隔离**：严禁在同一个原子提交中混入两个不同的子项逻辑。
-3.  **冲突熔断 (Conflict)**：**[死命令]** 遇 Git 冲突必须停止执行，禁止 AI 擅自胡乱合并。AI 必须标记现场并移交人类。
+*   **`/r` (Research)**: **[Gate 0]**. Triggers `.cursor/rules/200-research-gate.mdc`. AI enters **Read-Only Mode** for code, only allowing `research_summary.md` output.
+*   **`/p` (Plan)**: **[Gate 1]**. Triggers `.cursor/rules/300-planning-gate.mdc`. AI must produce interface contracts, type definitions, and atomic task lists.
+*   **Interaction Lock (Gating Lock)**:
+    1. Human reviews doc and replies "1".
+    2. AI must **Cold Reload** the file via `view_file` to sync offline edits.
+    3. Before receiving "1", Execution Rules (`400-execution`) are physically deactivated.
+*   **`/e` (Execute)**: **[Atomic Step]**. Triggers `.cursor/rules/400-execution-iron-lock.mdc`. 
+*   **Action Loop**:
+    1. Update Source Code.
+    2. **Show Diffs (Review)**.
+    3. Show Self-Check Results (TSC/Test) -> **Reply "1" to physical Git Commit**.
 
 ---
 
-## 🧹 6. 标准清理协议 (Cleanup Protocol)
-*   **时机**：需求分支验证通过，**合并至 dev 之前**。
-*   **命令**：
-    ```bash
-    rm research_summary.md implementation_plan.md task.md walkthrough.md
-    ```
+## 🔱 3. Git Protocol & Safeguards
+
+1.  **Atomic Commitment**: For every [Atomic Unit] passed by human audit, AI automatically executes a semantic commit (Angular spec).
+2.  **Change Isolation**: Do not mix logic changes with UI changes in the same commit.
+3.  **Conflict Bailout**: If a Git conflict is detected, AI must STOP and hand over to humans.
 
 ---
 
-## 🌐 7. 沟通语言规范 (Communication Protocol)
-*   **遵从用户语言**：为确保需求对齐的零偏差，AI 与人类的所有互动（包含方案设计、审计反馈、报错分析）**必须遵从用户在需求启动时使用的语言**。
-*   **术语对齐**：在处理跨语言架构设计时，确保关键技术术语在上下文中保持对齐，避免语义偏移。
+## 🧹 4. Cleanup Protocol
+
+*   **Timing**: After requirement branch verification and BEFORE merging to dev.
+*   **Action**: `rm research_summary.md implementation_plan.md task.md walkthrough.md`.
 
 ---
 
-## 🧠 8. 知识沉淀协议 (Knowledge Accumulation Protocol)
-*   **交付即存证**：每一个主要需求 (Major Feature) 的最后一次提交，AI 必须自检并同步更新下述“长效资产”：
-    *   **关键注释 (Code Comments)**：重要逻辑、反直觉设计、业务规约必须在源码中就位。
-    *   **正式文档 (README.md)**：包含新功能的快速启动、API 定义变更。
-    *   **架构决策 (ARCH.md)**：记录核心设计模式选择与其背后的 Rationale (动机)。
-*   **主动提议**：当任务快结束时，AI 必须主动询问人类：“当前功能涉及架构演进，是否需要为您更新 ARCH.md 记录？”
+## 🌐 5. Communication Protocol
+
+*   **Language Synchronization**: All interactions (design, audit feedback, error analysis) must match the user's current context (e.g., English for English users).
 
 ---
 
-> [🔑 核心口令]：/r 研究 | 编号审核 | /p 计划 | /e 执行 | /f 闪击 | /d 调试 | /c 清理 | /gc 提交 | /gp 推送 | /g 同步
+> [🔑 Key Commands]: /r Research | /p Plan | /e Execute | /f Flash | /d Debug | /c Clean | /gc Commit | /gp Push | /g Sync

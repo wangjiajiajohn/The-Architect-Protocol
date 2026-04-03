@@ -1,15 +1,15 @@
-# 第二章：有了 AI，现代软件工程能做到什么？
+# Chapter 2: What can modern software engineering achieve with AI?
 
-## 升维与破局
+## Elevation & Breakthrough
 
-当“敲打基础代码”的边际成本趋近于零时，整个软件工程体系爆发出了前所未有的工业势能：
+When the marginal cost of "typing basic code" approaches zero, the entire software engineering ecosystem explodes with unprecedented industrial momentum:
 
-### 超级个体的诞生
-过去，一个需要前端、后端、测试等几人团队花上数周才能完成的复杂系统迭代，现在可以被一个懂业务、懂架构的**“全栈总工程师”**在几天内独立完成并安全上线。
+### Birth of the Super Individual
+Previously, a team consisting of frontend, backend, testing, and devops engineers would spend weeks iterating on a complex system. Now, an engineer who understands business logic and architectural boundaries—a **"Full-Stack Chief Architect"**—can prototype and safely deploy the same system independently in mere days.
 
-### 重构自由
-以前由于重写成本过高而常年不敢触碰的“屎山代码”，现在可以毫无压力地借助 AI 在绝短的时间内完成底层逻辑链路的安全翻新。
+### Freedom to Refactor
+In the past, massive legacy applications and "spaghetti code" were rarely touched because the rewriting cost evaluation was prohibitively high. Today, you can seamlessly leverage AI to safely renovate the underlying layers of an app in a single afternoon.
 
-### 返回技术本质
-未来的软件工程，比拼的不再是“产出代码的速度与排版熟练度”，而是**“控制系统复杂度的能力”**。
-工程师终于可以将 80% 的精力从技术泥沼中抽离，去全心思考真正的工程核心：产品交互体验、商业边界划定、极致的高内聚与低耦合设计。
+### Returning to True Engineering
+The future battlefield of software engineering no longer revolves around code typing speed or daily line output—it revolves purely around the **"Ability to control system complexity"**.
+Developers can finally withdraw 80% of their energy from localized technical bogs, focusing instead on the true core of engineering: product experience, business boundary delimitation, and extremely cohesive architecture design.

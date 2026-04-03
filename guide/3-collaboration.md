@@ -1,23 +1,24 @@
-# 第三章：怎样配合 AI 才能写出高质量代码并排查修复问题？
+# Chapter 3: How to collaborate with AI to write high-quality code and debug?
 
-## 纪律大于智慧的法则
+## The Law of Discipline Over Intelligence
 
-许多人在首次借助 AI 编程后会大呼失望，因为他们最终往往收获了一座难以维护的“逻辑屎山”，甚至充满了奇怪的上下文幻觉。
-造成这点的根本原因在于：**他们把 AI 当成了一个全能的许愿池，而不是一部严密的执行机器。**
+Many engineers are heavily disappointed after their first attempt at AI collaborative programming, often feeling that they received an unmaintainable "spaghetti heap" filled with context hallucinations.
+The primary reason for this failure is simple: **They treat the AI as an omniscient wishing well, rather than an execution machine.**
 
-想要让 AI 稳定、持续地输出工业级高质量代码，以下两条底层人机协作原则不可违背：
+To let AI consistently and reliably output industrial-grade high-quality code, the following two baseline collaboration principles are non-negotiable:
 
-### 1. 架构先行 (Module-First)
-人工智能虽然极其聪明，但它极为缺乏“全局观”与“审美约束”。
-在人机协作中，**人类必须划定系统边界、定义核心数据流向**（例如业务模块该怎么拆分，文件目录层级怎么设计）。AI 只是那个在这个“受限制的框架内”做具体填空题的流水线执行者。人类绝不能放权让 AI 自由散漫地发挥架构。
+### 1. Architecture First (Module-First)
+Although AI is incredibly smart, it severely lacks "global vision" and "engineering taste".
+In human-AI synergy, **Humans must draw the system boundaries and define the core data flow** (e.g., how business modules are decoupled, how folders are structured). AI is merely the assembly-line worker filling in specific logic within this strictly "constrained framework". You must absolutely not let AI freely architect your system logic layer.
 
-### 2. 隔离调试法 (Debug)
-当代码运行脱轨，遇到玄学报错或者死锁时，**千万不要把成百上千行的报错日志甚至满屏幕的代码直接丢给 AI，让其“瞎猜”式修复！**这只会让系统结构越改越烂，最终积重难返。
+### 2. Isolation Debugging
+When execution goes off the rails and you encounter deadlocks or obscure errors, **Never throw hundreds of lines of error logs or full screen file contents blindly at the AI to "guess" a fix!** This guarantees that your structural integrity will decay exponentially.
 
-人类不可替代的核心优势，在于物理排查直觉与**绝对的隔离思维**。出了问题，你要做的是通过查阅日志，逐步缩小排查圈，直到将问题死死锁定在一个只包含十来行代码的最小文件切片中。
-只有将这个**最精确的切片段**下发给 AI，AI 的运算与重构能力才能得到百分之百完美的应用。
+The irreplaceable core strength of human engineers lies in physical diagnostic intuition and **Absolute isolation thinking**.
+When a bug occurs, your job is to read the logs and continually shrink the circle of suspicion until you've locked the error down to a precise file slice containing merely a dozen lines.
+Only when you feed this **absolutely precise snippet** down to the AI can its computation and refactoring capabilities be utilized flawlessly.
 
 ---
 
-> **下一步：** 既然纪律如此重要，我们究竟需要一套怎样的工程墙来限制它？
-> 这正是您下一步应该查阅的核心阵地：**[SOP 核心协议](/SOP)**。
+> **Next Step:** Since discipline is paramount, what kind of engineering wall do we need to constrain it?
+> This leads you straight into the core of your architectural foundation: **[The SOP Protocol](/SOP)**.

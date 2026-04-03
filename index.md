@@ -3,57 +3,57 @@ layout: home
 
 hero:
   name: The Architect's Protocol
-  text: 人机协同高效范式
-  tagline: 指令驱动 ・ 规则约束 ・ 人工审计 ・ 极简交互
+  text: High-Efficiency Synergy
+  tagline: Instruction-Driven ・ Rule-Constraint ・ Human-Audit ・ Minimal-Interaction
   image:
     src: /hero-banner.png
     alt: The Architect's Protocol
   actions:
     - theme: brand
-      text: 🚀 快速上手
+      text: 🚀 Quick Start
       link: /guide/quick-start
     - theme: alt
-      text: 查阅 SOP 协议
+      text: View SOP Protocol
       link: /SOP
 
 features:
   - icon: 🎯
-    title: 确定性工程流水线
-    details: 拒绝概率性“抽奖”。通过指令集 (/r, /p, /e) 强制执行研发调研与计划锁定，将 AI 转化为按图纸施工的精密机器。
+    title: Deterministic Pipeline
+    details: Refuse probabilistic "lottery." Enforce context-alignment through instruction sets (/r, /p, /e), transforming AI into a blueprint-driven precision machine.
   - icon: 🛡️
-    title: 物理抗熵增防御
-    details: AI 一秒吐 500 行垃圾，协议是物理断电。通过 V2.0 规则 (.mdc) 与 20/100 审计法则，永久锁定工程味觉与边界。
+    title: Physical Anti-Entropy Defense
+    details: AI vomits 500 lines of junk, Protocol is the handbrake. Use V2.0 rules (.mdc) and 20/100 audit loops to physically lock in architectural integrity.
   - icon: 🏛️
-    title: 原子级资产审计
-    details: 把每一行变更转化为数字资产。通过原子审核将对话沉淀为 ADR (架构决策) 与可复用 SOP，构建长久的工程遗产。
+    title: Atomic Asset Audit
+    details: Master every line of change. Turn ephemeral chats into permanent digital assets (ADR/SOP), ensuring maintainable, iterable, and high-quality code.
 ---
 
-[为什么用它？](./guide/why-protocol) | [SOP 协议](./SOP) | [ADR 记录](./ARCH) | [演进向导](./guide/1-crisis)
+[Why use this?](./guide/why-protocol) | [SOP Protocol](./SOP) | [ADR Records](./ARCH) | [Guide](./guide/1-crisis)
 
 <div class="premium-dashboard">
 <div class="control-grid">
 <div class="control-panel terminal-window">
 <div class="window-header">
 <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-<span class="title">architect_os — 审计终端</span>
+<span class="title">architect_os — Audit Terminal</span>
 </div>
 <div class="window-body">
-<div class="type-line">> 系统: 身份验证成功 <span class="status-ok">就绪</span></div>
-<div class="type-line delay-1">> 协议 V2.0: 模组化 MDC 已加载 <span class="status-ok">已锁定</span></div>
-<div class="type-line delay-2">> 原子任务: Phase 1.1 已生成 <span class="status-warn">待审计</span></div>
-<div class="type-line delay-3">> 指令: 等待确认 '1' <span class="blink">_</span></div>
+<div class="type-line">> System: Authentication successful <span class="status-ok">READY</span></div>
+<div class="type-line delay-1">> Protocol V2.0: Modular MDC Loaded <span class="status-ok">LOCKED</span></div>
+<div class="type-line delay-2">> Atomic Task: Phase 1.1 generated <span class="status-warn">PENDING</span></div>
+<div class="type-line delay-3">> Command: Waiting for confirm '1' <span class="blink">_</span></div>
 </div>
 </div>
 
 <div class="status-panel">
 <div class="stat-card">
-<div class="stat-label">工程架构</div>
-<div class="stat-value">模组化 MDC</div>
+<div class="stat-label">Architecture</div>
+<div class="stat-value">Modular MDC</div>
 <div class="progress-bar"><div class="progress-fill fill-100"></div></div>
 </div>
 <div class="stat-card">
-<div class="stat-label">人类认知负载</div>
-<div class="stat-value">极低 (Minimal)</div>
+<div class="stat-label">Cognitive Load</div>
+<div class="stat-value">Minimal</div>
 <div class="progress-bar"><div class="progress-fill fill-low"></div></div>
 </div>
 </div>

@@ -1,43 +1,43 @@
-# 🚀 快速上手：3 步开启“架构师模式”
+# 🚀 Quick Start: 3 Steps to "Architect Mode"
 
-不需要复杂的配置，只需 3 步，即可在您的项目中部署这套人机协作工业标准。
+No complex configuration needed. Just 3 steps to deploy this AI-Human collaborative industrial standard in your project.
 
 ---
 
-### Step 1. 部署“物理闸门” (MDC 规则)
+### Step 1. Deploy "Physical Gating" (MDC Rules)
 
-将本项目中 `.cursor/rules/` 目录下的所有 `.mdc` 文件复制到您项目的对应目录下：
+Copy all `.mdc` files from the `.cursor/rules/` directory of this project to the corresponding directory of your project:
 
-*   **100-core-instructions.mdc**：核心指令库。
-*   **200-research-gate.mdc**：研发调研闸门。
-*   **300-planning-gate.mdc**：计划设计闸门。
-*   **400-execution-iron-lock.mdc**：执行原子性审计。
+*   **100-core-instructions.mdc**: Core instruction library.
+*   **200-research-gate.mdc**: Research & analysis gate.
+*   **300-planning-gate.mdc**: Design & planning gate.
+*   **400-execution-iron-lock.mdc**: Execution atomic audit.
 
 > [!TIP]
-> **为什么要这么做？**
-> 这些文件是 Cursor 的“原生物理锁”，它们能确保 AI 必须先做完调研和计划，才能动手改代码。
+> **Why do this?**
+> These files are Cursor's "native physical locks," ensuring AI must finish research and planning before touching any code.
 
 ---
 
-### Step 2. 唤醒“指令系统” (/r, /p, /e)
+### Step 2. Wake Up "Instruction System" (/r, /p, /e)
 
-在 Cursor 聊天框中，不要直接提问，而是使用内置指令集开始您的工程循环：
+In the Cursor chat box, don't ask questions directly. Use the built-in instruction sets to start your engineering loop:
 
-1.  输入 **`/r`**：让 AI 深度调研上下文、分析逻辑坑点、寻找最佳重构路径。
-2.  输入 **`/p`**：锁定接口契约、定义数据结构、同步实施计划。
-3.  输入 **`/e`**：按计划进行编码工作。
+1.  Type **`/r`**: Let AI perform deep context research, analyze logical pits, and find the best refactor path.
+2.  Type **`/p`**: Lock the interface contract, define data structures, and align the implementation plan.
+3.  Type **`/e`**: Perform coding work according to the plan.
 
 ---
 
-### Step 3. 签发“原子性审计” (回复 1)
+### Step 3. Issue "Atomic Audit" (Reply 1)
 
-AI 在执行任何代码变更或运行指令前，都会停止并等待您的许可。
+AI will stop and wait for your permission before any code change or command execution.
 
-*   **审阅 (Audit)**：仔细查看 AI 的调研成果或代码 Diff。
-*   **确认 (Sign)**：在聊天框回复 **`1`**，赋予其物理执行权。
-*   **纠偏 (Correction)**：如果发现逻辑不对，直接指出（如 `不，这里应该用递归`），重新进行 `/p`。
+*   **Audit**: Carefully review AI's research results or code Diff.
+*   **Sign**: Reply **`1`** in the chat box to grant physical execution rights.
+*   **Correction**: If the logic is wrong, point it out directly (e.g., `No, recursion should be used here`), and re-run `/p`.
 
 ---
 
 > [!SUCCESS]
-> **恭喜！您已经从一个“代码校对员”进化为了一名手握“快门权重”的数字总建筑师。**
+> **Congratulations! You have evolved from a "code proofreader" into a Digital Chief Architect holding the "shutter weight."**

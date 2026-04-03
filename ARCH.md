@@ -1,105 +1,108 @@
 # 🏛️ Architecture Decision Records (ADR)
 
-本文记录了《The Architect's Protocol》的核心架构决策与设计哲学。它反映了项目在不同阶段的“工程现状”。
+This document records the core design philosophy and architectural decisions for "The Architect's Protocol." It reflects the "Engineering Status Quo" at different stages of the project.
 
 ---
 
-## [ADR-001]：AI-Human 协同 SOP 协议 (2026 高效协同版)
+## [ADR-001]: AI-Human Collaborative SOP (2026 Master Edition)
 
-### 状态 (Status)
+### Status
 **Accepted** (2026-04-03)
 
-### 背景 (Context)
-在没有协议约束的情况下，AI 倾向于“盲目打补丁”和“重复性改错”。对于长链路的业务重构（如总量与增量反算），AI 容易在上下文丢失后进入无效循环。
+### Context
+Without protocol constraints, AI tends to "blindly patch" and enter "repetitive cycles of error." For long-chain business refactoring (e.g., incremental vs. total quantity calculation), AI easily enters an invalid loop after context loss.
 
-### 决策 (Decision)
-引入 **“审计优先 (Audit-First)”** 的 SOP 模型：
-1. **强制原子提交 (Atomic Commits)**：将一个大需求拆解为 10-20 行逻辑或单一 UI 功能块的原子项。
-2. **三阶段门控 (Three Gating)**：
-   - `/r` (Research) 锁：同步研究结论。
-   - `/p` (Plan) 锁：同步执行方案与逻辑公式。
-   - `/e` (Execution) 锁：人工 Diff 审计后方能物理提交。
-3. **知识沉淀自动化**：规定 AI 必须在交付代码的同时，同步维护 `ARCH.md` 和关键注释。
+### Decision
+Introduce the **"Audit-First"** SOP model:
+1. **Mandatory Atomic Commits**: Break large requirements into atomic units of 10-20 lines of logic or single UI functional blocks.
+2. **Three-Phase Gating**:
+   - `/r` (Research) Lock: Sync research conclusions.
+   - `/p` (Plan) Lock: Sync implementation plans and logic formulas.
+   - `/e` (Execution) Lock: Only physical commit after human Diff audit.
+3. **Automated Knowledge Accumulation**: AI must maintain `ARCH.md` and key comments while delivering code.
 
-### 后果 (Consequences)
-- **正面**：极大降低了 AI 的逻辑幻觉风险；确保了复杂需求在长链路下的执行稳定性。
-- **负面**：增加了初期的沟通频率（需要频繁回复 "1"）。
+### Consequences
+- **Pros**: Significantly reduced AI hallucination risks; ensures stable execution for complex requirements.
+- **Cons**: Increased initial communication frequency (needs frequent "1" replies).
 
 ---
 
-## [ADR-002]：首页叙事驱动设计 (Progressive Narrative)
+## [ADR-002]: Narrative-Driven Home Page Design
 
-### 状态 (Status)
+### Status
 **Accepted** (2026-04-03)
 
-### 背景 (Context)
-项目致力于引领开发者从 Coder 升维至 Architect。首页如果是简单的功能陈列，无法传递这种深层的职业危机感与机遇感。
+### Context
+The project aims to lead developers from "Coder" to "Architect." A simple list of features on the home page cannot convey the deep professional crisis and opportunity.
 
-### 决策 (Decision)
-采用**叙事驱动**的现代化技术文档布局：
-1. **危机 (Crisis)** -> **升维 (Elevation)** -> **约束 (Constraint)** -> **防线 (Defense)** 的四部曲逻辑。
-2. **便当盒布局 (Bento Grid)**：呈现高密度的工业感与高级感。
-3. **纯 CSS 仿真终端**：视觉化呈现“审计优先”的执行逻辑。
+### Decision
+Adopt a **Narrative-Driven** modern technical doc layout:
+1. **Crisis** -> **Elevation** -> **Constraint** -> **Defense** four-step logic.
+2. **Bento Grid Layout**: Presents high-density industrial and premium feel.
+3. **CSS Terminal Simulation**: Visualizes the "Audit-First" execution logic.
 
-### 后果 (Consequences)
-- 提高了读者的认知门槛（需要阅读较多文字），但显著提升了协议的专业地位与说服力。
+### Consequences
+- Higher cognitive entry barrier, but significantly improved professional authority.
 
 ---
 
-## [ADR-003]：强制审计与 Git 快链协议 (2026 高效版)
+## [ADR-003]: Mandatory Audit and Git Quick-Link Protocol
 
-### 状态 (Status)
+### Status
 **Accepted** (2026-04-03)
 
-### 背景 (Context)
-在人力缩减、个体工作量爆炸的背景下，人类工程师需要一种能够“极小负载”但“极大控制”的交互方式。传统的 Git 命令行操作和非结构化的 AI 对话会严重分散大脑带宽。
+### Context
+In the era of shrinking workforces and exploding individual workloads, human engineers need a "low-load" but "high-control" interaction. Traditional Git CLI and unstructured AI chat scatter mental bandwidth.
 
-### 决策 (Decision)
-1. **强制 Diff 展示级审计**：在 `/e` (原子执行) 阶段，AI 必须主动且清晰地展示 `git diff`。严禁在人类看到代码改动前执行物理提交。
-2. **基于 "1" 的非对称确认**：人类只需输入单个字符 `1` 即可通过预审的逻辑或 Diffs。
-3. **指令级快链映射**：将复杂的 Git 连招封装为 `/gc` (Commit), `/gp` (Push), `/g` (Sync) 语义化指令。
+### Decision
+1. **Mandatory Diff Display Audit**: In `/e` phase, AI must clearly display `git diff`. No physical commit without human review.
+2. **"1"-Based Asymmetric Confirmation**: Human only needs to input a single `1` to pass pre-reviewed logic or Diffs.
+3. **Instruction-Level Quick-Link**: Map complex Git sequences to `/gc` (Commit), `/gp` (Push), and `/g` (Sync).
 
-### 后果 (Consequences)
-- **正面**：极大减少了打字量和心智负担；确保了“总工程师”对每一行入库代码的物理掌控感。
-- **负面**：对 AI 的指令执行严谨性要求极高。
+### Consequences
+- **Pros**: Greatly reduced typing and mental burden; ensures the "Chief Engineer" has physical control over every line of code.
+- **Cons**: High requirement for AI command execution rigor.
 
 ---
 
-## [ADR-004]：“文档先行”交互模型 (Document-First Interaction Model)
+## [ADR-004]: "Document-First" Interaction Model
 
-### 状态 (Status)
+### Status
 **Accepted** (2026-04-03)
 
-### 背景 (Context)
-IDE 的 Chat 窗口信息密度低、易产生上下文丢失且缺乏持久记录。长期讨论会导致对话历史冗长，增加 AI 的认知压力和幻觉概率。
+### Context
+The IDE's Chat window has low information density, is prone to context loss, and lacks persistent records. Long discussions increase AI's cognitive load and hallucination probability.
 
-### 决策 (Decision)
-1. **去对话化协作**：AI 必须为 `/r` (研究) 和 `/p` (计划) 产出独立的 `.md` 文档。
-2. **异步批注机制**：人类通过直接编辑、标注文档来下达细节指令，而非通过对话框“指挥”。
-3. **强制冷启动 (Cold Reload)**：AI 必须在接收到 GATE 确认指令 (`1`) 时，首先 `view_file` 读取上述文件，确保同步了人类的离线改动。
-4. **状态机硬锁 (Strict Gating Lock)** [新增]：禁止推测性完成。即使人类在聊天中提供了具体的配置或代码细节，AI 也绝对不能自动步进到下一阶段。聊天细节仅作为当前文档的 Update 输入，而非 Step 触发器。
+### Decision
+1. **De-Chatting Collaboration**: AI must produce independent `.md` documents for `/r` (Research) and `/p` (Plan).
+2. **Asynchronous Markup**: Humans specify detailed instructions through direct document edits or comments, not chat commands.
+3. **Mandatory Cold Reload**: AI MUST `view_file` these documents upon receiving the GATE confirmation (`1`) to sync offline edits.
+4. **Strict Gating Lock [NEW]**: Forbids inferred completion. Even if given code in chat, AI MUST NOT proceed to the next phase without a formal "1".
 
-### 后果 (Consequences)
-- **正面**：聊天记录保持极简，Context 绝对精确且具有持久物理证据；消除了 AI 抢跑导致的认知断层。
-- **负面**：增加了人类的显式确认成本（必须明确回复 1）。
+### Consequences
+- **Pros**: Clean chat history, 100% precise context with persistent physical evidence; eliminated phase-drift.
+- **Cons**: Increased explicit human confirmation cost.
 
 ---
 
-## ADR-005: 协议 V2.0 —— 模组化 MDC 治理 (Modular MDC Governance)
+## [ADR-005]: Protocol V2.0 — Modular MDC Governance
 
-### 上下文 (Context)
-单文件 `.cursorrules` 在项目复杂度增加时，会导致 AI 认知负荷过重，产生“阶段漂移”和“规则绕过”倾向。为了实现真正的“工业级受控”，需要将协议物理化、模组化。
+### Status
+**Accepted** (2026-04-03)
 
-### 决策 (Decision)
-1. **模组化拆解**：废弃单体 `.cursorrules`，迁移至 `.cursor/rules/` 目录下的多个 `.mdc` 文件。
-2. **上下文隔离 (Context Isolation)**：
-    - `100-core`: 全局身份与语言策略。
-    - `200-research`: 仅在处理 `research_summary.md` 时激活，封锁写权限。
-    - `300-planning`: 仅在处理 `implementation_plan.md` 时激活，强制契约审计。
-    - `400-execution`: 仅在处理源码时激活，强制原子审计锁。
-3. **物理限权**：通过 `globs` 字段，实现 AI 在特定阶段的“写保护”或“特定行为注入”。
+### Context
+A monolithic `.cursorrules` file becomes overloaded as project complexity grows, leading to "Phase-Drift" and "Rule Bypass." To achieve true "Industrial Control," the protocol must be modularized.
 
-### 后果 (Consequences)
-- **正面**：AI 表现更专注，彻底杜绝非预期抢跑；Context 载荷降低 70%。
-- **负面**：协议维护成本增加，需确保各模块间的逻辑自洽。
+### Decision
+1. **Modular Dismantling**: Deprecate monolithic `.cursorrules` in favor of multiple `.mdc` files in `.cursor/rules/`.
+2. **Context Isolation**:
+    - `100-core`: Global Identity and Language.
+    - `200-research`: Gated to `research_summary.md`, Locks write permissions.
+    - `300-planning`: Gated to `implementation_plan.md`, Mandates contract audit.
+    - `400-execution`: Gated to source code, Mandates Atomic Audit loops.
+3. **Physical Permission Masking**: Use `globs` to implement "Write-Protection" or "Specific Behavior Injection" at specific phases.
+
+### Consequences
+- **Pros**: AI is more focused, 70% reduction in context load, zero premature drift.
+- **Cons**: Increased protocol maintenance cost.
 ---

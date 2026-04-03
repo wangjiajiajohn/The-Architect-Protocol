@@ -1,18 +1,18 @@
-# 第一章：AI 能干什么？对软件工程师的影响是什么？
+# Chapter 1: What can AI do? How does it affect Software Engineers?
 
-## 危机与降维打击
+## Crisis and Disruption
 
-在代码的局部编写和生成层面，目前的生成式 AI 已经展现出了碾压级的优势。
-它精通世界上几乎所有的主流框架、API 细节和语法规则；它能瞬间生成几百行的状态管理逻辑；它不知疲倦，随时待命。
+At the level of localized code generation, modern AI models have already demonstrated a crushing advantage over human output.
+It has mastered intricate syntax rules, obscure APIs, and almost every programming framework on the market. It can instantly generate hundreds of lines of foundational logic layout, and it never tires. 
 
-**“将明确的逻辑翻译为代码”的高级蓝领体力劳动，已经被 AI 彻底接管。**
+**The advanced manual labor of "translating exact business logic into running code" has been completely overtaken by AI.**
 
-## 技术视角的转变
+## The Perspective Shift
 
-这意味着什么？如果你过去的全部竞争力仅仅停留在以下两个方面：
-- “熟练背诵冷门 API”
-- “能把详尽的 PRD（需求文档）照本宣科地翻译成功能页”
+What does this mean for us? If your core competitiveness up to this point has been localized in:
+- "Memorizing syntax and obscure configurations"
+- "Translating detailed Product Requirement Documents (PRDs) into UI code"
 
-那么，这种技能正在以极快的速度贬值。传统的软件生产线上，那些习惯于充当“代码打字机（Coder）”的单纯执行层角色，正在受到最猛烈的降维冲击。
+Then these skills are depreciating at an alarming rate. Those acting purely as "Code Typists (Coders)" on the traditional software assembly line will suffer the most severe disruption in the coming industrial pipeline.
 
-但这并不是末日，反而是一个巨大的转机。这标志着工程界终于将自己从计件式的逻辑敲击泥沼中彻底解放了出来。
+However, this isn't an apocalypse—it is a massive rebirth. It signifies that the engineering world has finally been liberated from the quagmire of repetitive line-by-line keystrokes.

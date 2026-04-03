@@ -1,92 +1,59 @@
 ![The Architect's Protocol](./public/hero-banner.png)
 
-# The Architect's Protocol (架构师协议) — V2.0 Modular MDC
+# The Architect's Protocol — V2.0 Modular MDC
 
-> **别让 AI 变成你的主子，也别让你的项目变成 AI 的“屎山”。**
+> **Don't let AI become your master, and don't let your projects become AI's "Poop-Mountains".**
 
-**The Architect's Protocol** 是一套旨在将 AI 从“冲动的生成器”转变为“精密工程官”的**人机协同工业标准**。通过物理级的阶段闸门与原子审计循环，我们确保 AI 写出的每一行代码都具备：**可维护、可迭代、高质量**。
-
----
-
-## 💎 为什么你需要它？
-
-1.  **从“掷骰子”到“流水线”**：拒绝拼运气的代码生成。强制执行 **调研 (/r) -> 计划 (/p) -> 执行 (/e)**，确保架构始终对齐。
-2.  **应对 AI 熵增的“手刹”**：AI 会一秒吐出 500 行垃圾。我们的 **20/100 原子审计** 强迫它以人类能秒懂的速率演进。
-3.  **沉淀数字资产，而非聊天记录**：让每一次对话都转化为 **ADR (架构决策)** 与 **SOP**，打造可持久维护的工程系统。
+**The Architect's Protocol** is an **AI-Human industrial standard** designed to transform AI from an "impulsive generator" into a "precision engineering officer." Through physical-level gating and atomic audit loops, we ensure every line of code written by AI is: **Maintainable, Iterable, High-Quality**.
 
 ---
 
-## 🏗️ 1. 现状：我们正处于“工程崩溃”的前夜
+## 💎 Why do you NEED it?
 
-### 以前：工匠时代
-我们像木匠一样，一砖一瓦亲手敲代码。慢是慢了点，但每一行逻辑都在脑子里，架构像大树一样长出来。
+1.  **From "Dice-Rolling" to "Pipeline"**: Refuse luck-based code generation. Enforce **Research (/r) -> Plan (/p) -> Execute (/e)**, ensuring architectural alignment.
+2.  **The "Handbrake" against AI Entropy**: AI can vomit 500 lines of junk in a second. Our **20/100 Atomic Audit** forces it to evolve at a speed your brain can "instantly grasp."
+3.  **Digital Assets, Not Just Chat History**: Every task leaves behind **ADRs (Arch Decisions)** and **SOPs**, turning conversations into permanent, maintainable assets.
 
-### 现在：高铁时代
-有了 AI，我们像是雇佣了一支“不知疲惫、知识渊博，但极度冲动”的**实习生工程队**。
-他一秒钟能铺 10 公里铁路，但他：
-- **不负责任**：随手留下 `// TODO` 然后就跑了。
-- **过度自信**：把 100 种功能全塞到一个文件里，跑通就行。
-- **挖坑不填**：为了眼前的快速交付，牺牲了你未来三年的维护寿命。
-
----
-
-## 💔 2. 致命问题：人和 AI 都在犯错
-
-### AI 的毛病
-1.  **逻辑堆叠**：他喜欢把数据库、逻辑分析、UI 样式乱七八糟全堆在一起。
-2.  **幻觉占位**：你让他重构，他会悄悄删掉你 50 行核心逻辑，并留下一句“这里以后再写”。
-
-### 人的毛病
-1.  **审计疲劳**：AI 丢给你 200 行改动，你一眼扫过去觉得“好像能跑”，就点了确认。**这就是屎山的开始。**
-2.  **掌控力丧失**：你开始不敢重构，因为你已经看不懂 AI 写的那些层层嵌套的黑盒逻辑了。
+### Now: The High-Speed Rail Era
+With AI, we have hired a "tireless, knowledgeable, but extremely impulsive" **intern engineering team**.
+They can lay 10km of track in a second, but they:
+- **Are Irresponsible**: Leaving `// TODO` behind and vanishing.
+- **Over-Confident**: Stuffing 100 features into one file as long as it "runs."
+- **Dig Holes without Filling**: Sacrificing your next three years of maintenance for today's quick delivery.
 
 ---
 
-## 🛡️ 3. 我们的解法：建立一套“协作契约”
+## 🛡️ 2. Our Solution: Establishing a "Collaborative Contract"
 
-**The Architect's Protocol** 强制你和 AI 遵守以下四大定律：
+**The Architect's Protocol** forces both you and the AI to follow these four laws:
 
-### 🧱 准则 1：原子审计 (Atomic Audit)
-*   **规则**：逻辑变更 <= **20 行**；UI/模板/配置变更 <= **100 行**。
-*   **逻辑**：20 行是人脑瞬间理解业务逻辑的临界点；100 行是 UI 纯表现层变动的审美上限。确保护理好每一行代码。确保每一行代码，你都是真正看懂了才点“1”的。
+### 🧱 Law 1: Atomic Audit (Don't change too much at once!)
+*   **Rule**: Logic <= **20 lines**; UI/Markup/Config <= **100 lines**.
+*   **Logic**: 20 lines is the human brain's limit for instant logic understanding; 100 lines is the aesthetic limit for pure UI changes. Ensure you understand every byte.
 
-### 🔌 定律二：契约锁定（画完图纸再施工！）
-*   **规则**：不写清楚接口 (Interface)，不准动具体实现。
-*   **白话**：先定规矩，再干活。这能防止 AI 把业务逻辑和 UI 给乱麻一样缠在一起。
+### 🔌 Law 2: Contract Locking (Draw the blueprint before building!)
+*   **Rule**: No implementation without clear **Interfaces/Types**.
+*   **Logic**: Rules first, work second. This prevents messy entanglement of business logic and UI.
 
-### 🏗️ 定律三：三层金字塔（皮肤和骨头分开！）
-*   **规则**：逻辑属于 Logic 层，展示属于 UI 层。
-*   **白话**：让业务逻辑变“纯粹”。这样哪天你想给 App 换个皮肤，业务代码一行都不用动。
+### 🏗️ Law 3: Three-Layer Pyramid (Keep skin and bone separate!)
+*   **Rule**: Logic belongs to the Logic layer; presentation belongs to the UI layer.
+*   **Logic**: Keep business logic "pure" so you can swap UI flavors without touching a single line of core logic.
 
-### 🧹 定律四：上下文 GC（打扫战场，节省 Token！）
-*   **规则**：干完一个活，立刻用 `/c` 删掉过时的调研和计划。
-*   **白话**：**“清空白板”**。AI 的记忆有限（Context），废话多了他就会变傻。定期清理不仅帮你省钱（Token），还能让 AI 保持在最聪明的逻辑状态。
-
----
-
-## ⌨️ 4. 指令集：像操控工业流水线一样操控 AI
-
-| 指令 | 目的 | 潜台词 |
-| :--- | :--- | :--- |
-| `/r` | **调研** | 别瞎猜，先看看这房子地基在哪。 |
-| `/p` | **计划** | 跟我对对图纸，咱们要花多少钱，走哪条路。 |
-| `/e` | **执行** | 按照图纸，现在给我砌这 20 块砖。 |
-| `/d` | **调试** | 别猜了，去埋点日志，把证据拿回来。 |
-| `/c` | **清理** | 任务完成，把废纸篓倒了，咱们清爽地开下一局。 |
-| `/g` | **同步** | 一键执行 add, commit, push，全量同步。 |
+### 🧹 Law 4: Context GC (Clean up to stay smart!)
+*   **Rule**: Delete obsolete research and plans immediately after a task is finished via `/c`.
+*   **Logic**: **"Clear the whiteboard."** AI memory (Context) is finite. Clutter makes it stupid. Regular cleaning keeps the AI in its smartest state.
 
 ---
 
-## 🧱 5. 协议 V2.0：模组化架构 (MDC)
+## 🧱 3. Protocol V2.0: Modular MDC Architecture
 
-为了解决长链路开发下的 AI “阶段漂移”问题，本协议已升级至 V2.0 模组化架构。我们利用 Cursor 的 `.mdc` 机制实现了物理级的权限隔离：
+To solve the "Phase-Drift" issue in long-chain development, the protocol has been upgraded to V2.0 Modular Architecture. We use Cursor's `.mdc` system to implement physical permission isolation:
 
-- **[100-核心指令]**：定义全局身份与语言准则。
-- **[200-研究闸门]**：锁定在 `research_summary.md`，在此阶段 AI 自动丧失代码写权限。
-- **[300-计划闸门]**：锁定在 `implementation_plan.md`，强制方案契约审计。
-- **[400-执行铁锁]**：锁定在源码目录，强制执行“原子审计循环”与“Diff 校验”。
+- **[100-Core]**: Defines global Identity and Language protocols.
+- **[200-Research Gate]**: Locked to `research_summary.md`. AI is in **Read-Only** mode for code during this phase.
+- **[300-Planning Gate]**: Locked to `implementation_plan.md`. Mandates contract/schema auditing.
+- **[400-Execution Iron Lock]**: Locked to source code. Forces "Atomic Audit Loops" and "Diff Checks."
 
 ---
----
 
-"AI 不会毁掉软件工程，只有**不用脑子**地使用 AI 才会。本协议是你拿回工程掌控权的那支笔。"
+"AI won't destroy software engineering; only **thoughtless** usage of AI will. This protocol is the pen with which you reclaim engineering control."
