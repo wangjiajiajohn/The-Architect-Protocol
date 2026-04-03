@@ -6,12 +6,12 @@ Output demo.gif
 
 # ── Terminal appearance ─────────────────────────────────────
 Set Shell "bash"
-Set FontSize 15
+Set FontSize 18
 Set FontFamily "JetBrains Mono"
-Set Width 900
-Set Height 560
+Set Width 1400
+Set Height 820
 Set Theme "Dracula"
-Set Padding 24
+Set Padding 32
 Set LoopOffset 50%
 Set PlaybackSpeed 1.0
 
