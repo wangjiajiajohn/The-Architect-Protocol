@@ -18,15 +18,17 @@ export default defineConfig({
         ],
         sidebar: [
           {
-            text: '🎯 核心价值：可维护 / 高品质 / 无暗坑',
-            items: []
-          },
-          {
             text: '写在前面：拥抱重塑',
             items: [
               { text: '1. AI 到底改变了什么？', link: '/guide/1-crisis' },
               { text: '2. 升维：超级个体的诞生', link: '/guide/2-breakthrough' },
               { text: '3. 协作：如何约束与驾驭', link: '/guide/3-collaboration' }
+            ]
+          },
+          {
+            text: '💡 工程标准：为什么用它？',
+            items: [
+              { text: '💎 核心业务价值', link: '/guide/why-protocol' }
             ]
           },
           {
@@ -60,15 +62,17 @@ export default defineConfig({
         ],
         sidebar: [
           {
-            text: '🎯 Value: Maintainable / High-Quality / No Pits',
-            items: []
-          },
-          {
             text: 'Foreword: Embracing Change',
             items: [
               { text: '1. What AI Changed', link: '/en/guide/1-crisis' },
               { text: '2. The Super Individual', link: '/en/guide/2-breakthrough' },
               { text: '3. Constraint & Synergy', link: '/en/guide/3-collaboration' }
+            ]
+          },
+          {
+            text: '💡 Standards: Why use this?',
+            items: [
+              { text: '💎 Core Business Value', link: '/en/guide/why-protocol' }
             ]
           },
           {
