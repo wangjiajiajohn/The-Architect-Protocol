@@ -17,40 +17,18 @@ hero:
       link: /en/SOP
 
 features:
-  - icon: 🕹️
-    title: Instruction Driven
-    details: No small talk. AI executes precise logic via (/r, /p, /e) instruction sets.
-  - icon: 🏰
-    title: Modular Borders
-    details: Physically isolate phase permissions via V2.0 rules (.mdc) to lock in taste.
-  - icon: 🔬
-    title: Atomic Audit
-    details: 20/100 Rule. Review Diff -> Reply 1 -> Commit. Master every line of change.
+  - icon: 🎯
+    title: Deterministic Pipeline
+    details: Refuse probabilistic "lottery." Enforce context-alignment through instruction sets (/r, /p, /e), transforming AI into a blueprint-driven precision machine.
+  - icon: 🛡️
+    title: Physical Anti-Entropy Defense
+    details: AI vomits 500 lines of junk, Protocol is the handbrake. Use V2.0 rules (.mdc) and 20/100 audit loops to physically lock in architectural integrity.
+  - icon: 🏛️
+    title: Atomic Asset Audit
+    details: Master every line of change. Turn ephemeral chats into permanent digital assets (ADR/SOP), ensuring maintainable, iterable, and high-quality code.
 ---
 
-### 🎯 Core Values: Maintainable / High-Quality / No Pits
-
-<div class="value-grid">
-  <div class="value-card">
-    <div class="value-icon">🎯</div>
-    <h4>Deterministic Pipeline</h4>
-    <p>Refuse probabilistic "lotteries." Transform AI into a blueprint-driven precision machine via gated stages.</p>
-  </div>
-  <div class="value-card">
-    <div class="value-icon">🛡️</div>
-    <h4>Defense Against Entropy</h4>
-    <p>AI vomits 500 lines, Protocol is the handbrake. Ensure you always control the evolution of your project.</p>
-  </div>
-  <div class="value-card">
-    <div class="value-icon">🏛️</div>
-    <h4>Accumulate Digital Assets</h4>
-    <p>Turn conversations into ADRs and SOPs. Ensuring Maintainable, Iterable, and High-Quality code legacy.</p>
-  </div>
-</div>
-
----
-
-[Why use this?](./guide/why-protocol) | [SOP Protocol](./SOP) | [ADR Records](./ARCH) | [Explore the Guide](./guide/1-crisis)
+[Why use this?](./guide/why-protocol) | [SOP Protocol](./SOP) | [ADR Records](./ARCH) | [Guide](./guide/1-crisis)
 
 <div class="premium-dashboard">
 <div class="control-grid">

@@ -17,35 +17,15 @@ hero:
       link: /SOP
 
 features:
-  - icon: 🕹️
-    title: 指令驱动
-    details: 拒绝闲聊。通过精密指令集 (/r, /p, /e) 驱动 AI 执行。
-  - icon: 🏰
-    title: 模组化边界
-    details: 通过 V2.0 规则 (.mdc) 物理隔离阶段权限，锁定工程味觉。
-  - icon: 🔬
-    title: 原子级审计
-    details: 20/100 审计法则。看 Diff -> 回 1 -> 提交，掌控每一行变更。
----
-
-<div class="value-grid">
-  <div class="value-card">
-    <div class="value-icon">🎯</div>
-    <h4>确定性工程流水线</h4>
-    <p>拒绝概率性“抽奖”。通过计划锁定与物理闸门，将 AI 转化为按图纸施工的精密机器。</p>
-  </div>
-  <div class="value-card">
-    <div class="value-icon">🛡️</div>
-    <h4>应对 AI 熵增的防御系统</h4>
-    <p>AI 一秒吐 500 行垃圾，协议是物理断电。确保你永远能看懂并掌控系统的演进。</p>
-  </div>
-  <div class="value-card">
-    <div class="value-icon">🏛️</div>
-    <h4>沉淀核心数字资产</h4>
-    <p>让对话转化为 ADR 与可复用 SOP。每一行代码都符合“可维护、可迭代、高质量”标准。</p>
-  </div>
-</div>
-
+  - icon: 🎯
+    title: 确定性工程流水线
+    details: 拒绝概率性“抽奖”。通过指令集 (/r, /p, /e) 强制执行研发调研与计划锁定，将 AI 转化为按图纸施工的精密机器。
+  - icon: 🛡️
+    title: 物理抗熵增防御
+    details: AI 一秒吐 500 行垃圾，协议是物理断电。通过 V2.0 规则 (.mdc) 与 20/100 审计法则，永久锁定工程味觉与边界。
+  - icon: 🏛️
+    title: 原子级资产审计
+    details: 把每一行变更转化为数字资产。通过原子审核将对话沉淀为 ADR (架构决策) 与可复用 SOP，构建长久的工程遗产。
 ---
 
 [为什么用它？](./guide/why-protocol) | [SOP 协议](./SOP) | [ADR 记录](./ARCH) | [演进向导](./guide/1-crisis)
