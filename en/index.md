@@ -18,69 +18,39 @@ hero:
 
 features:
   - icon: 🕹️
-    title: 1. Instruction-Driven
-    details: Refuse aimless chatter. AI executes logic strictly based on preset cmd sets (/r, /p, /e). Engineers are commanders issuing mission directives, not just writers.
+    title: Instruction Driven
+    details: No small talk. AI executes precise logic via (/r, /p, /e) instruction sets.
   - icon: 🏰
-    title: 2. Rule-Constraint
-    details: Solidify engineering taste into underlying discipline. Lock in SOLID/DRY principles via SOP & .cursorrules, ensuring every line carries architectural integrity.
+    title: Modular Borders
+    details: Physically isolate phase permissions via V2.0 rules (.mdc) to lock in taste.
   - icon: 🔬
-    title: 3. Human-Audit
-    details: Every atomic unit is reviewed via human-level Diff audit. Replying "1" is not just permission—it is the final signature of physical system truth.
-  - icon: ⚡
-    title: 4. Minimal-Interaction
-    details: Pursue minimal cognitive load. Through efficient shortcuts and atomic development, simplify complex refactoring into the high-efficiency "Review Diff -> Reply 1" experience.
+    title: Atomic Audit
+    details: 20/100 Rule. Review Diff -> Reply 1 -> Commit. Master every line of change.
 ---
 
-# 🏆 The Architect's Protocol
-## AI-Human Collaborative Engineering — High-Efficiency Edition (2026)
-
-> [!IMPORTANT]
-> **Reclaiming Control**: This is not just about using AI to code; it's about establishing an **Audit-First** engineering discipline.
-> We transform AI from an "impulsive implementer" into a "precision engineering officer" through a hard-coded **SOP & Gating Matrix**.
-
----
-
-### 🏛️ The Survival Guide for Modern Engineers
-
-In the era of collapsing engineering standards, we provide a **Defense System** for your architecture:
-
-1.  **Atomic Audit Loop**: Logic <= **20 lines**; UI/Markup/Config <= **100 lines**.
-2.  **Modular MDC Rules (V2.0)**: Use Cursor's native `.mdc` to physically isolate phase-permissions.
-3.  **Document-First Gating**: Mandatory Research (/r) and Planning (/p) docs before execution (/e).
-
----
-
-## 💎 Why do you NEED the "Architect's Protocol" in the AI Era?
-### From "Black Box Generation" to "Industrial-Grade Determinism"
-
-| Dimension | Standard AI Chat (Chaos) | Architect Protocol V2.0 (Order) |
-| :--- | :--- | :--- |
-| **Collaboration** | **Rolling the Dice**: Fingers crossed for code, chasing AI bugs | **Pipeline**: Contracts locked in docs, precise delivery via blueprints |
-| **Code Quality** | **"Poop-Mountains"**: Junk logic and hidden pits thrown by AI | **Pure Architecture**: 20/100 physical gating, zero-redundancy audit |
-| **Sovereignty** | **Passive Proofreading**: Lost in AI screen spams | **Absolute Command**: You are the General, AI is the Special Ops |
-| **Knowledge** | **Ephemeral Chats**: Conversations vanish without assets | **Digital Legacy**: ADRs and SOPs lock in your engineering taste |
+### 🎯 Core Values: Maintainable / High-Quality / No Pits
 
 <div class="value-grid">
   <div class="value-card">
     <div class="value-icon">🎯</div>
-    <h4>Deterministic Engineering Pipeline</h4>
-    <p>Refuse probabilistic "lotteries." By forcing research (/r) and planning (/p), AI is transformed from an "impulsive implementer" into a "blueprint-driven precision machine."</p>
+    <h4>Deterministic Pipeline</h4>
+    <p>Refuse probabilistic "lotteries." Transform AI into a blueprint-driven precision machine via gated stages.</p>
   </div>
   <div class="value-card">
     <div class="value-icon">🛡️</div>
-    <h4>Defense against AI Entropy</h4>
-    <p>AI can vomit 500 lines of junk in a second. The 20/100 physical handbrake forces it to evolve at a speed your brain can "instantly grasp," eradicating code-rot.</p>
+    <h4>Defense Against Entropy</h4>
+    <p>AI vomits 500 lines, Protocol is the handbrake. Ensure you always control the evolution of your project.</p>
   </div>
   <div class="value-card">
     <div class="value-icon">🏛️</div>
-    <h4>Micro-Constitution for the AI Era</h4>
-    <p>Built for the future of multi-agent collaboration. Upgrade fleeting verbal agreements to physical-level MDC locks, ensuring every line meets the Architect's standards.</p>
+    <h4>Accumulate Digital Assets</h4>
+    <p>Turn conversations into ADRs and SOPs. Ensuring Maintainable, Iterable, and High-Quality code legacy.</p>
   </div>
 </div>
 
 ---
 
-[Explore the Protocol](./guide/1-crisis) | [SOP Manual](./SOP) | [Usage Example](./USAGE_EXAMPLE) | [ADR Records](./ARCH)
+[Why use this?](./guide/why-protocol) | [SOP Protocol](./SOP) | [ADR Records](./ARCH) | [Explore the Guide](./guide/1-crisis)
 
 <div class="premium-dashboard">
 <div class="control-grid">
