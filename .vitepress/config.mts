@@ -12,23 +12,25 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '首页', link: '/' },
+          { text: '演进向导', link: '/guide/1-crisis' },
           { text: 'SOP 协议', link: '/SOP' },
-          { text: '实战演示', link: '/USAGE_EXAMPLE' },
-          { text: '研发演进', link: '/PHILOSOPHY' }
+          { text: '实战演示', link: '/USAGE_EXAMPLE' }
         ],
         sidebar: [
           {
-            text: '核心体系',
+            text: '写在前面：拥抱重塑',
             items: [
-              { text: 'SOP 核心协议', link: '/SOP' },
-              { text: '实战演示', link: '/USAGE_EXAMPLE' },
-              { text: '全平台提示词', link: '/PROMPTS' }
+              { text: '1. AI 到底改变了什么？', link: '/guide/1-crisis' },
+              { text: '2. 升维：超级个体的诞生', link: '/guide/2-breakthrough' },
+              { text: '3. 协作：如何约束与驾驭', link: '/guide/3-collaboration' }
             ]
           },
           {
-            text: '深度思考',
+            text: '基础设施：架构师协议',
             items: [
-              { text: 'AI时代的工程师', link: '/PHILOSOPHY' }
+              { text: 'SOP 标准控制', link: '/SOP' },
+              { text: '无瑕指令范式', link: '/PROMPTS' },
+              { text: '实战工作流演示', link: '/USAGE_EXAMPLE' }
             ]
           },
           {
@@ -47,16 +49,25 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Home', link: '/en/' },
+          { text: 'Guide', link: '/en/guide/1-crisis' },
           { text: 'Protocol', link: '/en/SOP' },
           { text: 'Usage', link: '/en/USAGE_EXAMPLE' }
         ],
         sidebar: [
           {
-            text: 'Core System',
+            text: 'Foreword: Embracing Change',
+            items: [
+              { text: '1. What AI Changed', link: '/en/guide/1-crisis' },
+              { text: '2. The Super Individual', link: '/en/guide/2-breakthrough' },
+              { text: '3. Constraint & Synergy', link: '/en/guide/3-collaboration' }
+            ]
+          },
+          {
+            text: 'Core Infrastructure',
             items: [
               { text: 'SOP Protocol', link: '/en/SOP' },
-              { text: 'Usage Example', link: '/en/USAGE_EXAMPLE' },
-              { text: 'Universal Prompts', link: '/en/PROMPTS' }
+              { text: 'Universal Prompts', link: '/en/PROMPTS' },
+              { text: 'Usage Example', link: '/en/USAGE_EXAMPLE' }
             ]
           },
           {
