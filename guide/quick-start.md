@@ -12,6 +12,8 @@ You're not sure if it's better or worse. You merge it anyway.
 
 **That's the problem this protocol solves.**
 
+![Protocol before & after demo](/The-Architect-Protocol/demo.gif)
+
 ---
 
 ## Step 1 — Install (30 seconds)
