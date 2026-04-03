@@ -10,7 +10,7 @@ hero:
     alt: The Architect's Protocol
   actions:
     - theme: brand
-      text: 🚀 Quick Start
+      text: 🚀 Guide
       link: /guide/quick-start
     - theme: alt
       text: View SOP Protocol
