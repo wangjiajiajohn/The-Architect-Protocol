@@ -31,9 +31,16 @@ features:
     details: Cursor 原生 MDC 支持；Claude、ChatGPT、GitHub Copilot 使用通用系统提示词。一套协议，覆盖所有工具。
 ---
 
+
 <script setup>
 import { withBase } from 'vitepress'
 </script>
+
+<div class="section-title">💎 为什么需要这个协议？</div>
+<div class="why-exists-block">
+  <p>AI 编程工具通常是冲动的，容易导致“AI 熵增”—即不可维护的代码堆砌。标准的对话模式本质上是一种概率性的“随机碰撞”。</p>
+  <p>本协议将 AI 从一个冲动的生成器转变为一个<strong>精准工程官</strong>。它通过“研究 → 计划 → 执行”的确定性流水线，利用物理闸门锁定，确保你始终是掌控全局的架构师，而不是在 AI 后面追着修 Bug 的调试员。</p>
+</div>
 
 <div class="hero-install">
   <div class="hero-install-terminal">
@@ -415,4 +422,25 @@ import { withBase } from 'vitepress'
 .demo-gif-caption a { color: #50e3c2; text-decoration: none; font-weight: 600; white-space: nowrap; }
 .demo-gif-caption a:hover { text-decoration: underline; }
 @media (max-width: 600px) { .demo-gif-caption { flex-direction: column; align-items: flex-start; } }
+
+.why-exists-block {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  padding: 0 20px;
+}
+.why-exists-block p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--vp-c-text-2);
+  margin-bottom: 1rem;
+}
+.why-exists-block strong {
+  color: #50e3c2;
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 4rem;
+}
 </style>

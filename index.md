@@ -31,9 +31,16 @@ features:
     details: Native MDC support for Cursor. Universal System Prompts for Claude, ChatGPT, and GitHub Copilot. One protocol, every tool.
 ---
 
+
 <script setup>
 import { withBase } from 'vitepress'
 </script>
+
+<div class="section-title">💎 Why This Exists</div>
+<div class="why-exists-block">
+  <p>AI coding tools are often impulsive, leading to "AI Entropy"—unmaintainable code sprawl. Standard chat is a probabilistic "roll of the dice."</p>
+  <p>The Architect's Protocol transforms AI from an impulsive generator into a <strong>Precision Engineering Officer</strong>. It enforces a deterministic pipeline of Research → Plan → Execute, using physical gate-locks to ensure you remain the Architect in control, never a "debugger chasing AI bugs."</p>
+</div>
 
 <div class="hero-install">
   <div class="hero-install-terminal">
@@ -446,5 +453,26 @@ import { withBase } from 'vitepress'
 .demo-gif-caption a:hover { text-decoration: underline; }
 @media (max-width: 600px) {
   .demo-gif-caption { flex-direction: column; align-items: flex-start; }
+}
+
+.why-exists-block {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  padding: 0 20px;
+}
+.why-exists-block p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--vp-c-text-2);
+  margin-bottom: 1rem;
+}
+.why-exists-block strong {
+  color: #50e3c2;
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 4rem;
 }
 </style>

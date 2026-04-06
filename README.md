@@ -99,6 +99,16 @@ No implementation without locked `Interface / Types / Schema`. Rules first, code
 Delete `research_summary.md`, `implementation_plan.md`, `task.md` via `/c` when done.
 AI memory is finite. Clutter makes it stupid.
 
+
+## 💎 Why This Exists
+
+AI coding tools are often impulsive, leading to **"AI Entropy"**—unmaintainable code sprawl. Standard chat-based interactions are a probabilistic "roll of the dice."
+
+The Architect's Protocol transforms AI from an impulsive generator into a **Precision Engineering Officer** through three shifts:
+1.  **Deterministic Pipeline**: Research → Plan → Execute instead of just "guessing."
+2.  **Structural Control**: Physical MDC locks prevent AI from skipping architectural steps.
+3.  **Auditability**: Atomic commits (20 lines logic/100 lines UI) ensure you remain the Architect in control, never a "debugger chasing AI bugs."
+
 ---
 
 ## 🚀 Quick Start (5 minutes)
